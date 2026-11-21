@@ -113,6 +113,8 @@ def main(P=P, verbose=True):
         pendentes = []
         # 1b) saídas
         for ativo, t in list(abertas.items()):
+            if t["entrada"] == str(d.date()):
+                continue  # comprou hoje no fechamento: só pode avaliar a saída a partir de amanhã
             o = ops_cod[t["codigo"]]
             x = ind[ativo].loc[d]
             venc = pd.Timestamp(t["vencimento"])

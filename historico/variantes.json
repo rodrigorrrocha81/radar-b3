@@ -1,0 +1,172 @@
+{
+ "A_aprovada (stop na média de 50 dias, alvo 2,5x)": {
+  "n_operacoes": 318,
+  "pct_acerto": 16.0,
+  "multiplo_medio_ganhos": 2.36,
+  "multiplo_medio_perdas": 0.46,
+  "maior_sequencia_perdas": 26,
+  "capital_final": 0.09,
+  "resultado_pct": -100.0,
+  "pior_queda_pct": -100.0,
+  "por_ano": {
+   "2023": {
+    "ops": 75,
+    "acerto_pct": 14.7,
+    "resultado": -919.78
+   },
+   "2024": {
+    "ops": 95,
+    "acerto_pct": 14.7,
+    "resultado": -75.21
+   },
+   "2025": {
+    "ops": 82,
+    "acerto_pct": 15.9,
+    "resultado": -4.54
+   },
+   "2026": {
+    "ops": 66,
+    "acerto_pct": 19.7,
+    "resultado": -0.44
+   }
+  },
+  "bova11_comprar_e_segurar_pct": 59.4,
+  "resultado_medio_por_operacao_pct": -23.5
+ },
+ "B_estilo_Goes (sem stop: o tiro é o limite, alvo 2,5x)": {
+  "n_operacoes": 203,
+  "pct_acerto": 19.2,
+  "multiplo_medio_ganhos": 2.4,
+  "multiplo_medio_perdas": 0.18,
+  "maior_sequencia_perdas": 15,
+  "capital_final": 0.02,
+  "resultado_pct": -100.0,
+  "pior_queda_pct": -100.0,
+  "por_ano": {
+   "2023": {
+    "ops": 47,
+    "acerto_pct": 17.0,
+    "resultado": -954.78
+   },
+   "2024": {
+    "ops": 56,
+    "acerto_pct": 17.9,
+    "resultado": -43.09
+   },
+   "2025": {
+    "ops": 56,
+    "acerto_pct": 23.2,
+    "resultado": -1.89
+   },
+   "2026": {
+    "ops": 44,
+    "acerto_pct": 18.2,
+    "resultado": -0.16
+   }
+  },
+  "bova11_comprar_e_segurar_pct": 59.4,
+  "resultado_medio_por_operacao_pct": -39.6
+ },
+ "C_sem_stop_alvo_2x": {
+  "n_operacoes": 209,
+  "pct_acerto": 20.6,
+  "multiplo_medio_ganhos": 2.12,
+  "multiplo_medio_perdas": 0.21,
+  "maior_sequencia_perdas": 29,
+  "capital_final": 0.01,
+  "resultado_pct": -100.0,
+  "pior_queda_pct": -100.0,
+  "por_ano": {
+   "2023": {
+    "ops": 48,
+    "acerto_pct": 20.8,
+    "resultado": -961.77
+   },
+   "2024": {
+    "ops": 58,
+    "acerto_pct": 20.7,
+    "resultado": -35.93
+   },
+   "2025": {
+    "ops": 58,
+    "acerto_pct": 25.9,
+    "resultado": -2.14
+   },
+   "2026": {
+    "ops": 45,
+    "acerto_pct": 13.3,
+    "resultado": -0.1
+   }
+  },
+  "bova11_comprar_e_segurar_pct": 59.4,
+  "resultado_medio_por_operacao_pct": -40.0
+ },
+ "D_sem_stop_alvo_3x": {
+  "n_operacoes": 204,
+  "pct_acerto": 18.6,
+  "multiplo_medio_ganhos": 2.56,
+  "multiplo_medio_perdas": 0.19,
+  "maior_sequencia_perdas": 15,
+  "capital_final": 0.03,
+  "resultado_pct": -100.0,
+  "pior_queda_pct": -100.0,
+  "por_ano": {
+   "2023": {
+    "ops": 46,
+    "acerto_pct": 15.2,
+    "resultado": -960.08
+   },
+   "2024": {
+    "ops": 57,
+    "acerto_pct": 17.5,
+    "resultado": -37.79
+   },
+   "2025": {
+    "ops": 56,
+    "acerto_pct": 23.2,
+    "resultado": -1.91
+   },
+   "2026": {
+    "ops": 45,
+    "acerto_pct": 17.8,
+    "resultado": -0.17
+   }
+  },
+  "bova11_comprar_e_segurar_pct": 59.4,
+  "resultado_medio_por_operacao_pct": -37.3
+ },
+ "E_sem_stop_vencimentos_25_a_60_dias": {
+  "n_operacoes": 126,
+  "pct_acerto": 27.8,
+  "multiplo_medio_ganhos": 2.3,
+  "multiplo_medio_perdas": 0.13,
+  "maior_sequencia_perdas": 9,
+  "capital_final": 8.23,
+  "resultado_pct": -99.2,
+  "pior_queda_pct": -99.4,
+  "por_ano": {
+   "2023": {
+    "ops": 30,
+    "acerto_pct": 20.0,
+    "resultado": -818.38
+   },
+   "2024": {
+    "ops": 35,
+    "acerto_pct": 25.7,
+    "resultado": -128.46
+   },
+   "2025": {
+    "ops": 33,
+    "acerto_pct": 30.3,
+    "resultado": -37.82
+   },
+   "2026": {
+    "ops": 28,
+    "acerto_pct": 35.7,
+    "resultado": -7.07
+   }
+  },
+  "bova11_comprar_e_segurar_pct": 59.4,
+  "resultado_medio_por_operacao_pct": -27.0
+ }
+}
