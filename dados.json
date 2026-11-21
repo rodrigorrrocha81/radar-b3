@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-21T11:17",
+ "gerado_em": "2026-11-21T12:34",
  "selic_pct": 13.75,
  "ativos": [
   {
@@ -5864,5 +5864,128 @@
   }
  ],
  "erros": [],
- "pregao_opcoes": "2026-11-19"
+ "pregao_opcoes": "2026-11-19",
+ "carteira_simulada": {
+  "inicio": "2026-11-19",
+  "ultimo_pregao": "2026-11-19",
+  "estrategias": {
+   "compra": {
+    "nome": "Compra de opções (estilo Góes)",
+    "fechadas": 0,
+    "ganhou": 0,
+    "resultado_fechadas": 0,
+    "resultado_abertas": 0,
+    "abertas": [],
+    "ultimas_fechadas": [],
+    "aguardando_entrada": []
+   },
+   "venda": {
+    "nome": "Venda de trava (estilo seguradora)",
+    "fechadas": 0,
+    "ganhou": 0,
+    "resultado_fechadas": 0,
+    "resultado_abertas": 0,
+    "abertas": [],
+    "ultimas_fechadas": [],
+    "aguardando_entrada": [
+     {
+      "estrategia": "venda",
+      "ativo": "PETR4",
+      "tipo": "call",
+      "vendida": "PETRL484",
+      "protecao": "PETRL502",
+      "strike_vendida": 46.16,
+      "strike_protecao": 47.91,
+      "largura": 1.75,
+      "vencimento": "2026-12-18",
+      "sinal": "2026-11-19"
+     },
+     {
+      "estrategia": "venda",
+      "ativo": "VALE3",
+      "tipo": "call",
+      "vendida": "VALEL683",
+      "protecao": "VALEL703",
+      "strike_vendida": 63.2,
+      "strike_protecao": 65.2,
+      "largura": 2.0,
+      "vencimento": "2026-12-18",
+      "sinal": "2026-11-19"
+     },
+     {
+      "estrategia": "venda",
+      "ativo": "ITUB4",
+      "tipo": "call",
+      "vendida": "ITUBL432",
+      "protecao": "ITUBL458",
+      "strike_vendida": 42.41,
+      "strike_protecao": 45.41,
+      "largura": 3.0,
+      "vencimento": "2026-12-18",
+      "sinal": "2026-11-19"
+     },
+     {
+      "estrategia": "venda",
+      "ativo": "BBDC4",
+      "tipo": "call",
+      "vendida": "BBDCL156",
+      "protecao": "BBDCL171",
+      "strike_vendida": 14.91,
+      "strike_protecao": 15.66,
+      "largura": 0.75,
+      "vencimento": "2026-12-18",
+      "sinal": "2026-11-19"
+     },
+     {
+      "estrategia": "venda",
+      "ativo": "BBAS3",
+      "tipo": "call",
+      "vendida": "BBASL153",
+      "protecao": "BBASL170",
+      "strike_vendida": 15.2,
+      "strike_protecao": 16.95,
+      "largura": 1.75,
+      "vencimento": "2026-12-18",
+      "sinal": "2026-11-19"
+     },
+     {
+      "estrategia": "venda",
+      "ativo": "ABEV3",
+      "tipo": "put",
+      "vendida": "ABEVX157",
+      "protecao": "ABEVX150",
+      "strike_vendida": 15.69,
+      "strike_protecao": 14.94,
+      "largura": 0.75,
+      "vencimento": "2026-12-18",
+      "sinal": "2026-11-19"
+     },
+     {
+      "estrategia": "venda",
+      "ativo": "PRIO3",
+      "tipo": "call",
+      "vendida": "PRIOL640",
+      "protecao": "PRIOL695",
+      "strike_vendida": 64.0,
+      "strike_protecao": 69.5,
+      "largura": 5.5,
+      "vencimento": "2026-12-18",
+      "sinal": "2026-11-19"
+     },
+     {
+      "estrategia": "venda",
+      "ativo": "BOVA11",
+      "tipo": "call",
+      "vendida": "BOVAL171",
+      "protecao": "BOVAL67",
+      "strike_vendida": 171.0,
+      "strike_protecao": 177.0,
+      "largura": 6.0,
+      "vencimento": "2026-12-18",
+      "sinal": "2026-11-19"
+     }
+    ]
+   }
+  }
+ }
 }

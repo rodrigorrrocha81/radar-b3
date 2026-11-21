@@ -87,6 +87,12 @@ if __name__ == "__main__":
                 o = a.get("opcoes") or {}
                 if f"{dia_b3},{a['ativo']}," not in linhas_existentes:
                     w.writerow([dia_b3, a["ativo"], o.get("vi_atm"), a["vol20_pct"], a["vol_1ano_pct"], o.get("n_liquidas", 0)])
+        # Carteira simulada (dinheiro de mentira) com as regras testadas
+        try:
+            import carteira_simulada
+            saida["carteira_simulada"] = carteira_simulada.atualizar(texto, dia_b3, saida["ativos"], saida["selic_pct"])
+        except Exception as e:
+            saida["erros"].append(f"carteira simulada: {e}")
     except Exception as e:
         saida["erros"].append(f"opções: {e}")
     # --- Fundamentos e eventos (CVM) ---

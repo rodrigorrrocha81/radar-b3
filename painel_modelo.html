@@ -65,6 +65,14 @@ th:first-child,td:first-child{text-align:left}
 .ev{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:5px;font-size:.78rem}
 .ev a{color:var(--accent);text-decoration:none} .ev a:hover{text-decoration:underline}
 .ev span{color:var(--muted);font-family:var(--mono);font-size:.72rem;margin-right:6px}
+.sim{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;align-items:start}
+.simcard{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;gap:10px;min-width:0}
+.simcard h2{margin:0;font-size:1rem;font-weight:600}
+.big{font-family:var(--mono);font-size:1.4rem;font-variant-numeric:tabular-nums}
+.linha{display:flex;justify-content:space-between;gap:8px;font-size:.84rem;border-bottom:1px solid var(--line);padding-bottom:4px}
+.secao h2.titulo{margin:0 0 4px;font-size:1.15rem;font-weight:600}
+.teste{border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--surface);font-size:.88rem;display:grid;gap:6px}
+.teste b{font-weight:600}
 footer{color:var(--muted);font-size:.82rem;display:grid;gap:6px;max-width:75ch}
 .leg{display:flex;gap:14px;font-size:.78rem;color:var(--muted);align-items:center}
 .leg span::before{content:"";display:inline-block;width:14px;height:2px;margin-right:5px;vertical-align:middle;background:var(--accent)}
@@ -77,6 +85,7 @@ footer{color:var(--muted);font-size:.82rem;display:grid;gap:6px;max-width:75ch}
   </header>
   <div class="resumo" id="resumo"></div>
   <div class="aviso"><strong>Análise, não recomendação.</strong> Todos os números são calculados por programa a partir de dados públicos de fechamento. Nenhum item desta tela é sinal de compra ou venda.</div>
+  <section class="secao" id="secao-sim"></section>
   <div class="leg"><span>Fechamento (120 pregões)</span><span class="mm">Média de 50 dias</span></div>
   <div class="grade" id="grade"></div>
   <footer>
@@ -107,6 +116,25 @@ function spark(h){
     <path d="M${path(h.mm50)}" fill="none" stroke="var(--muted)" stroke-width="1.3" stroke-dasharray="4 3" vector-effect="non-scaling-stroke"/>
     <path d="M${p}" fill="none" stroke="var(--accent)" stroke-width="1.8" vector-effect="non-scaling-stroke"/>
     <circle cx="${x(n-1)}" cy="${y(h.fech[n-1])}" r="3" fill="var(--accent)"/></svg>`;
+}
+function blocoSim(){
+  const c=D.carteira_simulada, el=document.getElementById("secao-sim");
+  const teste=`<div class="teste"><div><b>Teste com o passado (2023 a 2026), com dados oficiais da B3:</b> as duas estratégias abaixo perderam dinheiro.</div>
+   <div>Compra de opções (estilo Góes): ganhou em 27% das vezes; em média, cada R$ 100 voltaram como R$ 72.</div>
+   <div>Venda de trava (estilo seguradora): ganhou em 64% das vezes; em média, cada R$ 100 arriscados viraram uma perda de R$ 16.</div>
+   <div class="sub">A carteira abaixo acompanha as mesmas regras daqui para frente, com dinheiro de mentira, para confirmar ou desmentir o teste.</div></div>`;
+  if(!c){el.innerHTML=`<h2 class="titulo">Carteira simulada</h2>${teste}<div class="sub">Começa no próximo pregão.</div>`;return}
+  const reais=v=>(v>=0?"+":"−")+"R$ "+fmt(Math.abs(v));
+  const cards=Object.values(c.estrategias).map(e=>{
+    const total=e.resultado_fechadas+e.resultado_abertas;
+    const ab=e.abertas.map(t=>`<div class="linha"><span>${t.ativo} · ${t.estrategia==="compra"?"comprou "+t.tipo+" "+t.codigo:"vendeu trava de "+t.tipo+"s"} · desde ${dataCurta(t.entrada)}</span><span class="${cls(t.resultado||0)}">${reais(t.resultado||0)}</span></div>`).join("");
+    const fe=e.ultimas_fechadas.slice().reverse().map(t=>`<div class="linha"><span>${t.ativo} · ${dataCurta(t.entrada)} a ${dataCurta(t.saida)} · ${t.motivo}</span><span class="${cls(t.resultado)}">${reais(t.resultado)}</span></div>`).join("");
+    const ag=e.aguardando_entrada.length?`<div class="sub">Sinais de hoje, entram no próximo pregão: ${e.aguardando_entrada.map(p=>p.ativo).join(", ")}</div>`:"";
+    return `<div class="simcard"><h2>${e.nome}</h2>
+     <div><span class="big ${cls(total)}">${reais(total)}</span> <span class="sub">desde ${c.inicio?c.inicio.split("-").reverse().join("/"):"–"}, com R$ 100 por operação</span></div>
+     <div class="sub">${e.fechadas} encerradas (ganhou em ${e.ganhou}) · ${e.abertas.length} abertas</div>
+     ${ab?`<div>${ab}</div>`:""}${fe?`<details><summary>Últimas encerradas</summary>${fe}</details>`:""}${ag}</div>`}).join("");
+  el.innerHTML=`<h2 class="titulo">Carteira simulada (dinheiro de mentira)</h2>${teste}<div class="sim" style="margin-top:14px">${cards}</div>`;
 }
 function dataCurta(s){const [y,m,d]=s.split("-");return d+"/"+m}
 function blocoFund(a){
@@ -141,6 +169,7 @@ function blocoOpcoes(a){
    <div class="vibar"><span>${vi}</span>${rel}${leit}</div>
    <div class="sub">${o.n_liquidas??0} de ${o.total_series} séries passaram nos filtros de liquidez</div>${tabela}</div>`;
 }
+blocoSim();
 document.getElementById("grade").innerHTML=D.ativos.map(a=>`
  <article class="card">
   <div class="topo"><div><div class="tk">${a.ativo}</div><span class="chip ${a.tendencia}">${a.tendencia}</span></div>
