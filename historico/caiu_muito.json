@@ -1,0 +1,370 @@
+{
+ "qualquer dia (referência)": {
+  "2016-2019": {
+   "casos": 133224,
+   "empresas": 216,
+   "media_pct": 8.4,
+   "mediana_pct": 4.6,
+   "subiu_pct": 61.0,
+   "desastre_pct": 3.2
+  },
+  "2020-2022": {
+   "casos": 164831,
+   "empresas": 314,
+   "media_pct": 0.4,
+   "mediana_pct": -3.6,
+   "subiu_pct": 42.0,
+   "desastre_pct": 10.4
+  },
+  "2023-2026": {
+   "casos": 187674,
+   "empresas": 289,
+   "media_pct": 6.4,
+   "mediana_pct": 0.0,
+   "subiu_pct": 50.0,
+   "desastre_pct": 4.8
+  },
+  "total": {
+   "casos": 485729,
+   "empresas": 383,
+   "media_pct": 4.9,
+   "mediana_pct": 0.2,
+   "subiu_pct": 50.0,
+   "desastre_pct": 6.2
+  }
+ },
+ "S1: 15%+ abaixo da média": {
+  "2016-2019": {
+   "casos": 5217,
+   "empresas": 158,
+   "media_pct": 22.4,
+   "mediana_pct": 7.2,
+   "subiu_pct": 65.0,
+   "desastre_pct": 3.3
+  },
+  "2020-2022": {
+   "casos": 20541,
+   "empresas": 294,
+   "media_pct": 17.1,
+   "mediana_pct": 3.6,
+   "subiu_pct": 54.0,
+   "desastre_pct": 11.6
+  },
+  "2023-2026": {
+   "casos": 12458,
+   "empresas": 208,
+   "media_pct": 25.2,
+   "mediana_pct": 0.0,
+   "subiu_pct": 50.0,
+   "desastre_pct": 12.6
+  },
+  "total": {
+   "casos": 38216,
+   "empresas": 346,
+   "media_pct": 20.4,
+   "mediana_pct": 2.9,
+   "subiu_pct": 54.0,
+   "desastre_pct": 10.8
+  },
+  "aprovado": true
+ },
+ "S2: queda só da empresa": {
+  "2016-2019": {
+   "casos": 4603,
+   "empresas": 156,
+   "media_pct": 25.1,
+   "mediana_pct": 8.1,
+   "subiu_pct": 66.0,
+   "desastre_pct": 3.7
+  },
+  "2020-2022": {
+   "casos": 11260,
+   "empresas": 256,
+   "media_pct": 6.8,
+   "mediana_pct": -7.5,
+   "subiu_pct": 39.0,
+   "desastre_pct": 17.9
+  },
+  "2023-2026": {
+   "casos": 11921,
+   "empresas": 206,
+   "media_pct": 25.3,
+   "mediana_pct": -0.4,
+   "subiu_pct": 49.0,
+   "desastre_pct": 13.1
+  },
+  "total": {
+   "casos": 27784,
+   "empresas": 329,
+   "media_pct": 17.8,
+   "mediana_pct": -1.3,
+   "subiu_pct": 48.0,
+   "desastre_pct": 13.5
+  },
+  "aprovado": false
+ },
+ "S3: queda junto com a Bolsa": {
+  "2016-2019": {
+   "casos": 614,
+   "empresas": 80,
+   "media_pct": 2.5,
+   "mediana_pct": 1.7,
+   "subiu_pct": 57.0,
+   "desastre_pct": 0.7
+  },
+  "2020-2022": {
+   "casos": 9281,
+   "empresas": 287,
+   "media_pct": 29.5,
+   "mediana_pct": 17.2,
+   "subiu_pct": 73.0,
+   "desastre_pct": 4.0
+  },
+  "2023-2026": {
+   "casos": 537,
+   "empresas": 88,
+   "media_pct": 21.2,
+   "mediana_pct": 13.0,
+   "subiu_pct": 73.0,
+   "desastre_pct": 1.3
+  },
+  "total": {
+   "casos": 10432,
+   "empresas": 298,
+   "media_pct": 27.5,
+   "mediana_pct": 15.3,
+   "subiu_pct": 72.0,
+   "desastre_pct": 3.7
+  },
+  "aprovado": true
+ },
+ "piores_casos_S1": [
+  {
+   "acao": "AMBP3",
+   "data": "2025-07-25",
+   "resultado_60d_pct": -99.4
+  },
+  {
+   "acao": "AMBP3",
+   "data": "2025-07-31",
+   "resultado_60d_pct": -99.4
+  },
+  {
+   "acao": "AMBP3",
+   "data": "2025-07-29",
+   "resultado_60d_pct": -99.3
+  },
+  {
+   "acao": "AMBP3",
+   "data": "2025-07-28",
+   "resultado_60d_pct": -99.1
+  },
+  {
+   "acao": "AMBP3",
+   "data": "2025-08-05",
+   "resultado_60d_pct": -95.3
+  },
+  {
+   "acao": "AMBP3",
+   "data": "2025-08-06",
+   "resultado_60d_pct": -95.2
+  },
+  {
+   "acao": "AMBP3",
+   "data": "2025-08-07",
+   "resultado_60d_pct": -95.0
+  },
+  {
+   "acao": "AMBP3",
+   "data": "2025-08-08",
+   "resultado_60d_pct": -94.6
+  },
+  {
+   "acao": "AMBP3",
+   "data": "2025-08-12",
+   "resultado_60d_pct": -94.6
+  },
+  {
+   "acao": "AMBP3",
+   "data": "2025-08-13",
+   "resultado_60d_pct": -94.5
+  },
+  {
+   "acao": "AMBP3",
+   "data": "2025-08-11",
+   "resultado_60d_pct": -94.5
+  },
+  {
+   "acao": "AMBP3",
+   "data": "2025-08-14",
+   "resultado_60d_pct": -94.3
+  },
+  {
+   "acao": "AMBP3",
+   "data": "2025-09-19",
+   "resultado_60d_pct": -94.2
+  },
+  {
+   "acao": "AMBP3",
+   "data": "2025-09-22",
+   "resultado_60d_pct": -94.2
+  },
+  {
+   "acao": "AMBP3",
+   "data": "2025-08-18",
+   "resultado_60d_pct": -94.2
+  }
+ ],
+ "amostra_ajustes": [
+  [
+   "ADMF3",
+   "2025-10-03",
+   0.5003
+  ],
+  [
+   "AFLT3",
+   "2019-09-17",
+   2.0
+  ],
+  [
+   "AFLT3",
+   "2019-09-18",
+   2.9739
+  ],
+  [
+   "AHEB3",
+   "2016-10-13",
+   2.0
+  ],
+  [
+   "AHEB3",
+   "2018-12-05",
+   0.5
+  ],
+  [
+   "AHEB6",
+   "2016-10-13",
+   2.0
+  ],
+  [
+   "AMBP3",
+   "2025-10-03",
+   0.5091
+  ],
+  [
+   "ANIM3",
+   "2021-02-19",
+   0.3371
+  ],
+  [
+   "ASAI3",
+   "2021-08-12",
+   0.1967
+  ],
+  [
+   "AZEV3",
+   "2018-10-19",
+   2.0
+  ],
+  [
+   "AZEV3",
+   "2019-01-10",
+   0.5
+  ],
+  [
+   "AZEV3",
+   "2020-06-08",
+   2.0
+  ],
+  [
+   "AZEV3",
+   "2026-08-28",
+   0.5006
+  ],
+  [
+   "AZEV4",
+   "2018-10-18",
+   2.0
+  ],
+  [
+   "AZEV4",
+   "2018-10-31",
+   2.0069
+  ],
+  [
+   "AZEV4",
+   "2026-06-26",
+   20.1818
+  ],
+  [
+   "B3SA3",
+   "2021-05-17",
+   0.3283
+  ],
+  [
+   "BBAS3",
+   "2024-04-16",
+   0.4943
+  ],
+  [
+   "BBTG12",
+   "2017-09-08",
+   7.875
+  ],
+  [
+   "BLUT4",
+   "2022-09-05",
+   4.05
+  ],
+  [
+   "BMIN3",
+   "2018-01-04",
+   0.4934
+  ],
+  [
+   "BMIN3",
+   "2020-01-22",
+   2.0
+  ],
+  [
+   "BPAC11",
+   "2021-07-01",
+   0.247
+  ],
+  [
+   "BPAC3",
+   "2017-08-30",
+   2.0216
+  ],
+  [
+   "BRGE5",
+   "2019-09-02",
+   1.9784
+  ],
+  [
+   "BRGE5",
+   "2019-12-27",
+   2.0
+  ],
+  [
+   "BRGE5",
+   "2019-12-30",
+   2.0
+  ],
+  [
+   "BRGE5",
+   "2020-01-02",
+   0.5007
+  ],
+  [
+   "BRGE6",
+   "2019-09-04",
+   1.9638
+  ],
+  [
+   "BRGE6",
+   "2019-09-05",
+   1.9806
+  ]
+ ]
+}

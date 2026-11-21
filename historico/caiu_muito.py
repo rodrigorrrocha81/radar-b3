@@ -59,7 +59,7 @@ def main():
 
     def medir(mask, ini, fim):
         m = mask.loc[ini:fim]
-        x = fut.loc[ini:fim][m].stack()
+        x = fut.loc[ini:fim][m].stack().dropna()
         if x.empty: return {"casos": 0}
         return {"casos": int(len(x)), "empresas": int(x.index.get_level_values(1).nunique()),
                 "media_pct": round(x.mean() * 100, 1), "mediana_pct": round(x.median() * 100, 1),
@@ -80,7 +80,7 @@ def main():
             r["total"]["desastre_pct"] <= 2 * ref["total"]["desastre_pct"]
         r["aprovado"] = bool(ok)
     # exemplos de "desastres" (para mostrar o risco real)
-    x = fut[s1].stack()
+    x = fut[s1].stack().dropna()
     piores = x.sort_values().head(15)
     out["piores_casos_S1"] = [{"acao": c, "data": str(d.date()), "resultado_60d_pct": round(v * 100, 1)} for (d, c), v in piores.items()]
     out["amostra_ajustes"] = ajustes[:30]
