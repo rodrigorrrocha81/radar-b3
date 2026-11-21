@@ -1,0 +1,583 @@
+{
+ "resumo": {
+  "2018-2020": {
+   "carteira_radar_pct": 89.8,
+   "bova11_pct": 40.1,
+   "cdi_pct": 14.0
+  },
+  "2021-2023": {
+   "carteira_radar_pct": 65.3,
+   "bova11_pct": 14.3,
+   "cdi_pct": 32.7
+  },
+  "2024-2026": {
+   "carteira_radar_pct": 54.4,
+   "bova11_pct": 27.1,
+   "cdi_pct": 42.5
+  },
+  "total": {
+   "carteira_radar_pct": 383.2,
+   "bova11_pct": 99.9,
+   "cdi_pct": 115.6
+  },
+  "pior_queda_carteira_pct": -35.7,
+  "pior_queda_bova11_pct": -46.9,
+  "carteira_atual": {
+   "data": "2026-11-16",
+   "acoes": [
+    "PETR4",
+    "VBBR3",
+    "DIRR3",
+    "BBSE3",
+    "POMO4",
+    "UGPA3",
+    "CMIG4",
+    "PSSA3",
+    "CYRE3",
+    "CXSE3"
+   ]
+  }
+ },
+ "composicoes": [
+  {
+   "data": "2018-04-02",
+   "acoes": [
+    "EGIE3",
+    "BBSE3",
+    "RADL3",
+    "UGPA3",
+    "CSAN3",
+    "ITUB4",
+    "ITSA4",
+    "PSSA3",
+    "EQTL3",
+    "TAEE4"
+   ]
+  },
+  {
+   "data": "2018-05-16",
+   "acoes": [
+    "EGIE3",
+    "BBSE3",
+    "ITSA4",
+    "ITUB4",
+    "RADL3",
+    "PSSA3",
+    "EQTL3",
+    "CSAN3",
+    "LREN3",
+    "FLRY3"
+   ]
+  },
+  {
+   "data": "2018-08-16",
+   "acoes": [
+    "EGIE3",
+    "PSSA3",
+    "TAEE4",
+    "BBSE3",
+    "CSAN3",
+    "ITSA4",
+    "ITUB4",
+    "EQTL3",
+    "VBBR3",
+    "LREN3"
+   ]
+  },
+  {
+   "data": "2018-11-16",
+   "acoes": [
+    "EGIE3",
+    "TAEE4",
+    "BBSE3",
+    "VBBR3",
+    "PSSA3",
+    "ITSA4",
+    "RADL3",
+    "VIVT3",
+    "PRIO3",
+    "ITUB4"
+   ]
+  },
+  {
+   "data": "2019-04-01",
+   "acoes": [
+    "PRIO3",
+    "VBBR3",
+    "TAEE4",
+    "EGIE3",
+    "CSAN3",
+    "PSSA3",
+    "ENEV3",
+    "BBSE3",
+    "ITSA4",
+    "ITUB4"
+   ]
+  },
+  {
+   "data": "2019-05-16",
+   "acoes": [
+    "VBBR3",
+    "EGIE3",
+    "TAEE4",
+    "CSAN3",
+    "ENEV3",
+    "PSSA3",
+    "ITSA4",
+    "BBSE3",
+    "PRIO3",
+    "ITUB4"
+   ]
+  },
+  {
+   "data": "2019-08-16",
+   "acoes": [
+    "CSAN3",
+    "CMIG4",
+    "VBBR3",
+    "TAEE4",
+    "PRIO3",
+    "PSSA3",
+    "EGIE3",
+    "ITSA4",
+    "BBSE3",
+    "ITUB4"
+   ]
+  },
+  {
+   "data": "2019-11-18",
+   "acoes": [
+    "CSAN3",
+    "VBBR3",
+    "CMIG4",
+    "BBSE3",
+    "EGIE3",
+    "RADL3",
+    "TAEE4",
+    "PSSA3",
+    "ITSA4",
+    "CSMG3"
+   ]
+  },
+  {
+   "data": "2020-04-01",
+   "acoes": [
+    "PRIO3",
+    "CSAN3",
+    "CMIG4",
+    "BBSE3",
+    "VBBR3",
+    "EGIE3",
+    "TAEE4",
+    "ITUB4",
+    "ITSA4",
+    "RADL3"
+   ]
+  },
+  {
+   "data": "2020-05-18",
+   "acoes": [
+    "PRIO3",
+    "BBSE3",
+    "CSAN3",
+    "TAEE4",
+    "EGIE3",
+    "VBBR3",
+    "SANB4",
+    "PSSA3",
+    "RADL3",
+    "CMIG4"
+   ]
+  },
+  {
+   "data": "2020-08-17",
+   "acoes": [
+    "PRIO3",
+    "BBSE3",
+    "TAEE4",
+    "EQTL3",
+    "EGIE3",
+    "PSSA3",
+    "CSAN3",
+    "SANB4",
+    "CPFE3",
+    "CSMG3"
+   ]
+  },
+  {
+   "data": "2020-11-16",
+   "acoes": [
+    "PRIO3",
+    "TAEE4",
+    "CYRE3",
+    "EQTL3",
+    "PSSA3",
+    "BBSE3",
+    "EGIE3",
+    "CPFE3",
+    "B3SA3",
+    "CSMG3"
+   ]
+  },
+  {
+   "data": "2021-04-01",
+   "acoes": [
+    "TAEE4",
+    "CYRE3",
+    "VBBR3",
+    "PSSA3",
+    "EGIE3",
+    "CMIG4",
+    "EQTL3",
+    "BBSE3",
+    "CPFE3",
+    "B3SA3"
+   ]
+  },
+  {
+   "data": "2021-05-17",
+   "acoes": [
+    "TAEE4",
+    "CYRE3",
+    "VBBR3",
+    "PSSA3",
+    "EGIE3",
+    "CMIG4",
+    "BBSE3",
+    "CPFE3",
+    "EQTL3",
+    "VALE3"
+   ]
+  },
+  {
+   "data": "2021-08-16",
+   "acoes": [
+    "CYRE3",
+    "TAEE4",
+    "SUZB3",
+    "PETR4",
+    "VALE3",
+    "CMIG4",
+    "VBBR3",
+    "GGBR4",
+    "BBSE3",
+    "CPFE3"
+   ]
+  },
+  {
+   "data": "2021-11-16",
+   "acoes": [
+    "VALE3",
+    "PETR4",
+    "GGBR4",
+    "SUZB3",
+    "VBBR3",
+    "TAEE4",
+    "BBSE3",
+    "CPFE3",
+    "EQTL3",
+    "EGIE3"
+   ]
+  },
+  {
+   "data": "2022-04-01",
+   "acoes": [
+    "VALE3",
+    "GGBR4",
+    "PETR4",
+    "TAEE4",
+    "SUZB3",
+    "CSAN3",
+    "EQTL3",
+    "CMIG4",
+    "BBSE3",
+    "BBAS3"
+   ]
+  },
+  {
+   "data": "2022-05-16",
+   "acoes": [
+    "GGBR4",
+    "SUZB3",
+    "VALE3",
+    "PETR4",
+    "CMIG4",
+    "TAEE4",
+    "ITSA4",
+    "EQTL3",
+    "PRIO3",
+    "BBSE3"
+   ]
+  },
+  {
+   "data": "2022-08-16",
+   "acoes": [
+    "VALE3",
+    "PETR4",
+    "GGBR4",
+    "SUZB3",
+    "TAEE4",
+    "PRIO3",
+    "CPFE3",
+    "BBAS3",
+    "ITSA4",
+    "BBSE3"
+   ]
+  },
+  {
+   "data": "2022-11-16",
+   "acoes": [
+    "PETR4",
+    "SUZB3",
+    "VALE3",
+    "GGBR4",
+    "BBAS3",
+    "CPFE3",
+    "ITSA4",
+    "TAEE4",
+    "BBSE3",
+    "PRIO3"
+   ]
+  },
+  {
+   "data": "2023-04-03",
+   "acoes": [
+    "PETR4",
+    "SUZB3",
+    "VALE3",
+    "PRIO3",
+    "GGBR4",
+    "BBAS3",
+    "CMIG4",
+    "CPFE3",
+    "BBSE3",
+    "EGIE3"
+   ]
+  },
+  {
+   "data": "2023-05-16",
+   "acoes": [
+    "PETR4",
+    "SUZB3",
+    "VALE3",
+    "GGBR4",
+    "BBAS3",
+    "CPFE3",
+    "PRIO3",
+    "BBSE3",
+    "POMO4",
+    "CMIG4"
+   ]
+  },
+  {
+   "data": "2023-08-16",
+   "acoes": [
+    "SUZB3",
+    "PETR4",
+    "VALE3",
+    "BBAS3",
+    "BBSE3",
+    "GGBR4",
+    "EGIE3",
+    "DIRR3",
+    "POMO4",
+    "CPFE3"
+   ]
+  },
+  {
+   "data": "2023-11-16",
+   "acoes": [
+    "SUZB3",
+    "PETR4",
+    "EGIE3",
+    "BBAS3",
+    "BBSE3",
+    "CMIG4",
+    "POMO4",
+    "PRIO3",
+    "VALE3",
+    "CPFE3"
+   ]
+  },
+  {
+   "data": "2024-04-01",
+   "acoes": [
+    "PETR4",
+    "CMIG4",
+    "EGIE3",
+    "VBBR3",
+    "SUZB3",
+    "PRIO3",
+    "BBAS3",
+    "BBSE3",
+    "CPFE3",
+    "CSMG3"
+   ]
+  },
+  {
+   "data": "2024-05-16",
+   "acoes": [
+    "VBBR3",
+    "EGIE3",
+    "PETR4",
+    "CMIG4",
+    "BBAS3",
+    "CPFE3",
+    "DIRR3",
+    "PRIO3",
+    "BBSE3",
+    "VALE3"
+   ]
+  },
+  {
+   "data": "2024-08-16",
+   "acoes": [
+    "VBBR3",
+    "EGIE3",
+    "VALE3",
+    "CMIG4",
+    "PRIO3",
+    "BBAS3",
+    "CPFE3",
+    "POMO4",
+    "DIRR3",
+    "BBSE3"
+   ]
+  },
+  {
+   "data": "2024-11-18",
+   "acoes": [
+    "VBBR3",
+    "CSMG3",
+    "EGIE3",
+    "CMIG4",
+    "DIRR3",
+    "BBSE3",
+    "PRIO3",
+    "CPFE3",
+    "VALE3",
+    "BBAS3"
+   ]
+  },
+  {
+   "data": "2025-04-01",
+   "acoes": [
+    "PRIO3",
+    "VBBR3",
+    "DIRR3",
+    "EGIE3",
+    "POMO4",
+    "CMIG4",
+    "BBSE3",
+    "TAEE4",
+    "CYRE3",
+    "CSMG3"
+   ]
+  },
+  {
+   "data": "2025-05-16",
+   "acoes": [
+    "PRIO3",
+    "VBBR3",
+    "DIRR3",
+    "POMO4",
+    "CMIG4",
+    "BBSE3",
+    "EGIE3",
+    "TAEE4",
+    "CYRE3",
+    "CSMG3"
+   ]
+  },
+  {
+   "data": "2025-08-18",
+   "acoes": [
+    "PRIO3",
+    "DIRR3",
+    "VBBR3",
+    "BBSE3",
+    "CMIG4",
+    "TAEE4",
+    "POMO4",
+    "PETR4",
+    "EGIE3",
+    "CPFE3"
+   ]
+  },
+  {
+   "data": "2025-11-17",
+   "acoes": [
+    "PRIO3",
+    "BBSE3",
+    "POMO4",
+    "PETR4",
+    "EGIE3",
+    "TAEE4",
+    "CYRE3",
+    "PSSA3",
+    "ITSA4",
+    "UGPA3"
+   ]
+  },
+  {
+   "data": "2026-04-01",
+   "acoes": [
+    "BBSE3",
+    "SUZB3",
+    "POMO4",
+    "PETR4",
+    "DIRR3",
+    "CXSE3",
+    "CYRE3",
+    "PSSA3",
+    "TAEE4",
+    "CPFE3"
+   ]
+  },
+  {
+   "data": "2026-05-18",
+   "acoes": [
+    "BBSE3",
+    "SUZB3",
+    "POMO4",
+    "DIRR3",
+    "PETR4",
+    "PSSA3",
+    "CXSE3",
+    "CPFE3",
+    "CYRE3",
+    "TAEE4"
+   ]
+  },
+  {
+   "data": "2026-08-17",
+   "acoes": [
+    "DIRR3",
+    "PETR4",
+    "POMO4",
+    "BBSE3",
+    "CPFE3",
+    "CYRE3",
+    "SUZB3",
+    "EGIE3",
+    "ITSA4",
+    "VBBR3"
+   ]
+  },
+  {
+   "data": "2026-11-16",
+   "acoes": [
+    "PETR4",
+    "VBBR3",
+    "DIRR3",
+    "BBSE3",
+    "POMO4",
+    "UGPA3",
+    "CMIG4",
+    "PSSA3",
+    "CYRE3",
+    "CXSE3"
+   ]
+  }
+ ]
+}
