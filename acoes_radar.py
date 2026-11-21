@@ -23,6 +23,15 @@ TESTE = {"periodo": "abril/2018 a novembro/2026",
          "pior_queda_radar_pct": -35.7, "pior_queda_bova11_pct": -46.9}
 
 
+# Teste com o passado de "realizar lucro": vender a ação quando sobe X% desde a compra e deixar o dinheiro
+# no CDI até a próxima troca (2018-2026, com dividendos).
+TESTE_LUCRO = {"sem_realizar": {"total_pct": 378.1, "pior_queda_pct": -35.7},
+               "15": {"total_pct": 420.8, "pior_queda_pct": -17.0},
+               "20": {"total_pct": 366.6, "pior_queda_pct": -23.2},
+               "30": {"total_pct": 332.0, "pior_queda_pct": -31.2},
+               "50": {"total_pct": 351.8, "pior_queda_pct": -35.7}}
+
+
 def _baixar(url, destino, max_dias=0):
     if destino.exists() and (dt.date.today() - dt.date.fromtimestamp(destino.stat().st_mtime)).days <= max_dias:
         return destino
@@ -132,6 +141,15 @@ def atualizar(hoje=None):
             a["var_desde_troca_pct"] = round((a["preco_hoje"] / a["preco"] - 1) * 100, 1)
         except Exception:
             pass
+    # Preço de hoje de todas as empresas acompanhadas (para a área "Minha carteira")
+    precos = {}
+    for tk in UNIVERSO:
+        try:
+            precos[tk] = round(_preco(tk), 2)
+        except Exception:
+            pass
+    est["precos"] = precos
+    est["teste_realizar_lucro"] = TESTE_LUCRO
     v = [a["var_desde_troca_pct"] for a in est["acoes"] if "var_desde_troca_pct" in a]
     est["var_media_desde_troca_pct"] = round(sum(v) / len(v), 1) if v else None
     prox = [dt.date(a, m, d) for a in (hoje.year, hoje.year + 1) for m, d in TROCAS]

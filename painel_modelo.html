@@ -84,6 +84,21 @@ th:first-child,td:first-child{text-align:left}
 .comp{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
 .comp div{border:1px solid var(--line);border-radius:8px;padding:8px 10px;background:var(--surface)}
 .comp b{display:block;font-family:var(--mono);font-size:1.15rem;font-weight:500}
+.mc-form{display:flex;flex-wrap:wrap;gap:8px;align-items:end}
+.mc-form label{display:grid;gap:2px;font-size:.78rem;color:var(--muted)}
+.mc-form input{font-family:var(--mono);font-size:.95rem;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);width:8em}
+.mc-form input:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.btn{font:inherit;font-size:.85rem;padding:7px 12px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:var(--surface);cursor:pointer}
+.btn.sec{background:transparent;color:var(--accent)}
+.btn.mini{padding:2px 8px;font-size:.75rem}
+.alertas{display:grid;gap:8px}
+.al{border-radius:8px;padding:10px 12px;font-size:.86rem;display:grid;gap:4px;border:1px solid var(--line)}
+.al.lucro{background:var(--upbg);border-color:transparent}
+.al.troca{background:var(--flatbg);border-color:transparent}
+.al.ok{background:var(--bg)}
+.al strong{font-weight:600}
+.al .acao{font-family:var(--mono);font-weight:500}
+textarea#mc-backup{width:100%;min-height:5em;font-family:var(--mono);font-size:.75rem;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-sizing:border-box}
 footer{color:var(--muted);font-size:.82rem;display:grid;gap:6px;max-width:75ch}
 .leg{display:flex;gap:14px;font-size:.78rem;color:var(--muted);align-items:center}
 .leg span::before{content:"";display:inline-block;width:14px;height:2px;margin-right:5px;vertical-align:middle;background:var(--accent)}
@@ -97,6 +112,7 @@ footer{color:var(--muted);font-size:.82rem;display:grid;gap:6px;max-width:75ch}
   <div class="resumo" id="resumo"></div>
   <div class="aviso"><strong>Análise, não recomendação.</strong> Todos os números são calculados por programa a partir de dados públicos de fechamento. Nenhum item desta tela é sinal de compra ou venda.</div>
   <section class="secao" id="secao-acoes"></section>
+  <section class="secao" id="secao-minha"></section>
   <section class="secao" id="secao-sim"></section>
   <div class="leg"><span>Fechamento (120 pregões)</span><span class="mm">Média de 50 dias</span></div>
   <div class="grade" id="grade"></div>
@@ -160,6 +176,84 @@ function blocoAcoes(){
     document.getElementById("sobra").textContent=`Total investido: R$ ${fmt(gasto)} · sobra: R$ ${fmt(v-gasto)} (pode ficar no Tesouro Selic).`;};
   inp.addEventListener("input",calc);calc();
 }
+/* ---------- Minha carteira: dados ficam só neste navegador ---------- */
+const MC_KEY="radarb3-minha-carteira";
+function mcLer(){try{return JSON.parse(localStorage.getItem(MC_KEY))||{itens:[],pausadas:[]}}catch(e){return {itens:[],pausadas:[]}}}
+function mcSalvar(d){try{localStorage.setItem(MC_KEY,JSON.stringify(d))}catch(e){}}
+function blocoMinha(){
+  const c=D.carteira_acoes, el=document.getElementById("secao-minha");
+  if(!c){el.innerHTML="";return}
+  const precos=c.precos||{}, hoje=D.gerado_em.slice(0,10), prox=c.proxima_troca, proxBR=prox.split("-").reverse().join("/");
+  const lista=c.acoes.map(a=>a.ticker), tl=c.teste_realizar_lucro;
+  let d=mcLer();
+  d.pausadas=(d.pausadas||[]).filter(p=>p.ate>hoje);
+  const reais=v=>(v<0?"−":"")+"R$ "+fmt(Math.abs(v));
+  const itens=d.itens.map(i=>{const ph=precos[i.t]??null;const val=ph!=null?ph*i.q:null;
+    return {...i,ph,val,res:val!=null?val-i.p*i.q:null,pct:ph!=null?(ph/i.p-1)*100:null}});
+  const total=itens.reduce((s,i)=>s+(i.val??i.p*i.q),0), pago=itens.reduce((s,i)=>s+i.p*i.q,0);
+  // ---- alertas ----
+  const al=[];
+  itens.forEach(i=>{ if(i.pct!=null && i.pct>=15) al.push(`<div class="al lucro"><strong>Oportunidade de realizar lucro em ${i.t}</strong>
+    <div>Subiu <b>${fmt(i.pct,1)}%</b> desde a compra (de R$ ${fmt(i.p)} para R$ ${fmt(i.ph)}). Lucro de ${reais(i.res)}.</div>
+    <div><b>Por quê:</b> no teste com o passado (2018-2026), vender quando a ação sobe 15% e deixar o dinheiro no Tesouro Selic até a próxima troca rendeu +${fmt(tl["15"].total_pct,0)}% contra +${fmt(tl.sem_realizar.total_pct,0)}% sem vender, e diminuiu a pior queda de ${fmt(tl.sem_realizar.pior_queda_pct,0)}% para ${fmt(tl["15"].pior_queda_pct,0)}%.</div>
+    <div><b>Cuidado:</b> vender com +20% ou +30% deu resultado pior do que não vender. Isso mostra que a vantagem pode ter sido sorte. Trate como opcional.</div>
+    <div>Se quiser realizar: <span class="acao">Vender ${i.q} ${i.t}F</span> e deixar o dinheiro no Tesouro Selic até ${proxBR}. <button class="btn mini" data-vendi="${i.t}">Vendi</button></div></div>`)});
+  itens.filter(i=>!lista.includes(i.t)).forEach(i=>al.push(`<div class="al troca"><strong>${i.t} não está na lista do Radar</strong>
+    <div>Ela não está entre as 10 escolhidas na troca de ${c.data_troca.split("-").reverse().join("/")} (lucro, retorno e preço). Para seguir a regra testada: <span class="acao">Vender ${i.q} ${i.t}F</span>.</div></div>`));
+  const tenho=new Set(itens.map(i=>i.t)), pausa=new Set(d.pausadas.map(p=>p.t));
+  if(itens.length){
+    const alvo=total/lista.length;
+    lista.filter(t=>!tenho.has(t)&&!pausa.has(t)).forEach(t=>{const p=precos[t];if(!p)return;const q=Math.floor(alvo/p);
+      if(q>0) al.push(`<div class="al troca"><strong>${t} está na lista do Radar e você não tem</strong>
+      <div>Para seguir a regra (10 ações com o mesmo valor): <span class="acao">Comprar ${q} ${t}F</span> (cerca de R$ ${fmt(q*p)}), usando o dinheiro das vendas acima.</div></div>`)});
+  }
+  if(itens.length && !al.length) al.push(`<div class="al ok"><strong>Tudo certo.</strong> Sua carteira segue a regra. Nada a fazer até a próxima troca, em ${proxBR}.</div>`);
+  if(d.pausadas.length) al.push(`<div class="al ok">Aguardando a próxima troca (${proxBR}) depois de realizar lucro: ${d.pausadas.map(p=>p.t).join(", ")}. O dinheiro fica no Tesouro Selic até lá.</div>`);
+  // ---- tabela ----
+  const linhas=itens.map((i,k)=>`<tr><td class="cod">${i.t}F</td><td>${i.q}</td><td>${fmt(i.p)}</td><td>${i.ph!=null?fmt(i.ph):"–"}</td><td>${i.val!=null?fmt(i.val):"–"}</td>
+    <td class="${cls(i.res||0)}">${i.res!=null?reais(i.res)+" ("+fmt(i.pct,1)+"%)":"–"}</td><td><button class="btn sec mini" data-del="${k}" aria-label="Remover ${i.t}">×</button></td></tr>`).join("");
+  const vazio=`<div class="sub">Você ainda não informou suas ações. Se comprou exatamente a sugestão acima, use o botão abaixo; senão, adicione uma por uma.</div>`;
+  el.innerHTML=`<h2 class="titulo">Minha carteira</h2>
+   <div class="simcard">
+    <div class="sub">Os dados ficam guardados só neste navegador: ninguém mais vê, nem o GitHub. Os preços são atualizados todo dia de pregão; os avisos aparecem aqui quando você abrir o painel.</div>
+    ${itens.length?`<div><span class="big ${cls(total-pago)}">${reais(total)}</span> <span class="sub">valor hoje · pago ${reais(pago)} · resultado <span class="${cls(total-pago)}">${reais(total-pago)}</span></span></div>`:vazio}
+    <div class="alertas">${al.join("")}</div>
+    ${itens.length?`<div class="tabacoes"><table><thead><tr><th>Código</th><th>Qtd</th><th>Pago</th><th>Hoje</th><th>Valor</th><th>Resultado</th><th></th></tr></thead><tbody>${linhas}</tbody></table></div>`:""}
+    <div class="mc-form">
+     <label for="mc-t">Código<input id="mc-t" list="mc-lista" placeholder="PETR4" autocomplete="off"></label>
+     <datalist id="mc-lista">${Object.keys(precos).map(t=>`<option value="${t}">`).join("")}</datalist>
+     <label for="mc-q">Quantidade<input id="mc-q" type="number" min="1" step="1" placeholder="2"></label>
+     <label for="mc-p">Preço pago (R$)<input id="mc-p" type="number" min="0" step="0.01" placeholder="42,67"></label>
+     <button class="btn" id="mc-add">Adicionar</button>
+     <button class="btn sec" id="mc-sug">Usei a sugestão acima</button>
+    </div>
+    <div class="sub" id="mc-msg" role="status"></div>
+    <details><summary>Levar para outro aparelho (cópia de segurança)</summary>
+     <div class="sub">Copie o texto e cole no painel do outro aparelho, depois clique em "Carregar".</div>
+     <textarea id="mc-backup" aria-label="Cópia de segurança">${JSON.stringify(d)}</textarea>
+     <div style="display:flex;gap:8px;margin-top:6px"><button class="btn sec mini" id="mc-copiar">Copiar</button><button class="btn sec mini" id="mc-carregar">Carregar</button></div></details>
+   </div>`;
+  const msg=t=>{document.getElementById("mc-msg").textContent=t};
+  const salvarERedesenhar=()=>{mcSalvar(d);blocoMinha()};
+  document.getElementById("mc-add").onclick=()=>{const t=document.getElementById("mc-t").value.trim().toUpperCase().replace(/F$/,"");
+    const q=parseInt(document.getElementById("mc-q").value),p=parseFloat(document.getElementById("mc-p").value);
+    if(!t||!(q>0)||!(p>0)){msg("Preencha o código, a quantidade e o preço pago.");return}
+    const ex=d.itens.find(i=>i.t===t);
+    if(ex){ex.p=(ex.p*ex.q+p*q)/(ex.q+q);ex.q+=q}else d.itens.push({t,q,p,data:hoje});
+    salvarERedesenhar()};
+  document.getElementById("mc-sug").onclick=()=>{const rows=[...document.querySelectorAll("#tb-acoes tr")];let n=0;
+    rows.forEach((tr,k)=>{const q=parseInt(tr.querySelector(".qtd").textContent),p=+tr.dataset.p,t=c.acoes[k].ticker;
+      if(q>0){const ex=d.itens.find(i=>i.t===t);if(ex){ex.p=(ex.p*ex.q+p*q)/(ex.q+q);ex.q+=q}else d.itens.push({t,q,p,data:hoje});n++}});
+    if(!n){msg("A sugestão acima está vazia: digite um valor na calculadora primeiro.");return}
+    salvarERedesenhar()};
+  el.querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>{d.itens.splice(+b.dataset.del,1);salvarERedesenhar()});
+  el.querySelectorAll("[data-vendi]").forEach(b=>b.onclick=()=>{const t=b.dataset.vendi;d.itens=d.itens.filter(i=>i.t!==t);
+    d.pausadas.push({t,ate:prox});salvarERedesenhar()});
+  document.getElementById("mc-copiar").onclick=e=>{const ta=document.getElementById("mc-backup");
+    (navigator.clipboard?navigator.clipboard.writeText(ta.value):Promise.reject()).then(()=>msg("Copiado.")).catch(()=>{ta.select();msg("Selecionado: use Ctrl+C (ou copiar do celular).")})};
+  document.getElementById("mc-carregar").onclick=()=>{try{const x=JSON.parse(document.getElementById("mc-backup").value);
+    if(!Array.isArray(x.itens))throw 0;d={itens:x.itens,pausadas:x.pausadas||[]};salvarERedesenhar()}catch(e){msg("Texto inválido: cole exatamente o que foi copiado no outro aparelho.")}};
+}
 function blocoSim(){
   const c=D.carteira_simulada, el=document.getElementById("secao-sim");
   const teste=`<div class="teste"><div><b>Teste com o passado (2023 a 2026), com dados oficiais da B3:</b> as duas estratégias abaixo perderam dinheiro.</div>
@@ -213,6 +307,7 @@ function blocoOpcoes(a){
    <div class="sub">${o.n_liquidas??0} de ${o.total_series} séries passaram nos filtros de liquidez</div>${tabela}</div>`;
 }
 blocoAcoes();
+blocoMinha();
 blocoSim();
 document.getElementById("grade").innerHTML=D.ativos.map(a=>`
  <article class="card">

@@ -6121,6 +6121,74 @@
    },
    "pior_queda_radar_pct": -35.7,
    "pior_queda_bova11_pct": -46.9
+  },
+  "precos": {
+   "PETR4": 42.67,
+   "VALE3": 58.48,
+   "ITUB4": 40.07,
+   "BBDC4": 13.83,
+   "BBAS3": 14.3,
+   "B3SA3": 14.28,
+   "ABEV3": 16.08,
+   "WEGE3": 51.13,
+   "PRIO3": 60.2,
+   "ITSA4": 13.17,
+   "SBSP3": 27.35,
+   "EQTL3": 32.9,
+   "RENT3": 28.86,
+   "SUZB3": 55.32,
+   "GGBR4": 25.86,
+   "RADL3": 13.72,
+   "RDOR3": 35.91,
+   "LREN3": 9.1,
+   "MGLU3": 8.2,
+   "TIMS3": 22.0,
+   "VIVT3": 35.22,
+   "CMIG4": 10.94,
+   "BBSE3": 36.99,
+   "CXSE3": 20.57,
+   "HYPE3": 21.77,
+   "UGPA3": 31.36,
+   "VBBR3": 30.13,
+   "ENEV3": 26.22,
+   "TOTS3": 31.11,
+   "RAIL3": 16.8,
+   "CMIN3": 5.02,
+   "CSAN3": 3.08,
+   "EGIE3": 25.32,
+   "CPFE3": 43.78,
+   "CSMG3": 56.09,
+   "FLRY3": 21.51,
+   "MULT3": 26.4,
+   "CYRE3": 18.43,
+   "DIRR3": 8.74,
+   "POMO4": 3.62,
+   "PSSA3": 43.96,
+   "KLBN4": 3.34,
+   "TAEE4": 13.45,
+   "SANB4": 14.07
+  },
+  "teste_realizar_lucro": {
+   "sem_realizar": {
+    "total_pct": 378.1,
+    "pior_queda_pct": -35.7
+   },
+   "15": {
+    "total_pct": 420.8,
+    "pior_queda_pct": -17.0
+   },
+   "20": {
+    "total_pct": 366.6,
+    "pior_queda_pct": -23.2
+   },
+   "30": {
+    "total_pct": 332.0,
+    "pior_queda_pct": -31.2
+   },
+   "50": {
+    "total_pct": 351.8,
+    "pior_queda_pct": -35.7
+   }
   }
  }
 }
