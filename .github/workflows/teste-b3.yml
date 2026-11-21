@@ -1,7 +1,5 @@
 name: Teste download B3
 on:
-  push:
-    branches: [teste-b3]
   workflow_dispatch:
 jobs:
   teste:
