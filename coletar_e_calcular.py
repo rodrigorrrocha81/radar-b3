@@ -63,7 +63,7 @@ def selic():
     return float(r.json()[0]["valor"])
 
 if __name__ == "__main__":
-    saida = {"gerado_em": dt.datetime.now().isoformat(timespec="minutes"), "selic_pct": selic(), "ativos": [], "erros": []}
+    saida = {"gerado_em": (dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=3)).replace(tzinfo=None).isoformat(timespec="minutes"), "selic_pct": selic(), "ativos": [], "erros": []}
     for t in ATIVOS:
         try: saida["ativos"].append(analisar(t))
         except Exception as e: saida["erros"].append(f"{t}: {e}")
