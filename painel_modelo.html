@@ -56,6 +56,15 @@ th{font-family:var(--sans);font-weight:500;color:var(--muted);text-align:right;p
 td{text-align:right;padding:3px 6px;white-space:nowrap;border-bottom:1px solid var(--line)}
 th:first-child,td:first-child{text-align:left}
 .tc{color:var(--accent)} .tp{color:var(--flat)}
+.fund{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 10px;margin:0}
+@media (max-width:420px){.fund{grid-template-columns:repeat(2,1fr)}}
+.fund div{display:grid;gap:1px;min-width:0}
+.fund dt{color:var(--muted);font-size:.72rem}
+.fund dd{margin:0;font-family:var(--mono);font-size:.84rem;font-variant-numeric:tabular-nums}
+.alerta{font-size:.8rem;color:var(--flat);background:var(--flatbg);border-radius:6px;padding:5px 8px}
+.ev{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:5px;font-size:.78rem}
+.ev a{color:var(--accent);text-decoration:none} .ev a:hover{text-decoration:underline}
+.ev span{color:var(--muted);font-family:var(--mono);font-size:.72rem;margin-right:6px}
 footer{color:var(--muted);font-size:.82rem;display:grid;gap:6px;max-width:75ch}
 .leg{display:flex;gap:14px;font-size:.78rem;color:var(--muted);align-items:center}
 .leg span::before{content:"";display:inline-block;width:14px;height:2px;margin-right:5px;vertical-align:middle;background:var(--accent)}
@@ -63,7 +72,7 @@ footer{color:var(--muted);font-size:.82rem;display:grid;gap:6px;max-width:75ch}
 </style>
 <div class="wrap">
   <header>
-    <div><h1>Radar B3</h1><div class="sub">Leitura técnica diária de 10 ativos líquidos e de suas opções.</div></div>
+    <div><h1>Radar B3</h1><div class="sub">Leitura diária de 10 ativos líquidos: técnica, fundamentos, eventos e opções.</div></div>
     <div class="meta" id="meta"></div>
   </header>
   <div class="resumo" id="resumo"></div>
@@ -74,7 +83,8 @@ footer{color:var(--muted);font-size:.82rem;display:grid;gap:6px;max-width:75ch}
     <div><b>Tendência:</b> alta quando preço &gt; média 50 &gt; média 200; baixa quando preço &lt; média 50 &lt; média 200; senão lateral.</div>
     <div><b>IFR 14:</b> abaixo de 30 = sobrevendido, acima de 70 = sobrecomprado. <b>Volatilidade:</b> anualizada, últimos 20 pregões e último ano. <b>ATR:</b> oscilação média diária.</div>
     <div><b>Opções:</b> entram só séries com 20 negócios ou mais, R$ 100 mil ou mais negociados, oferta de compra e de venda com diferença de até 40%, vencimento entre 5 e 60 dias úteis e strike entre 85% e 115% do preço da ação. <b>VI no dinheiro:</b> volatilidade implícita média das séries mais próximas do preço, no primeiro vencimento com 10 dias úteis ou mais. <b>Caras/baratas:</b> VI acima de 1,2× ou abaixo de 0,8× da volatilidade de 1 ano da ação. Gregas por Black-Scholes (aproximação europeia; as calls da B3 são americanas). Theta em R$ por dia útil; vega em R$ por 1 ponto de volatilidade.</div>
-    <div>Fontes: arquivo oficial de cotações da B3 (opções e preço da ação), Yahoo Finance (histórico de preços, não oficial), Banco Central (Selic). Dados de fechamento, sem tempo real.</div>
+    <div><b>Fundamentos:</b> dados oficiais dos balanços entregues à CVM, consolidados. Lucro, receita e EBIT dos últimos 12 meses; P/L e P/VP usam o preço desta ação para todas as classes de ação (aproximação). "Cresc. lucro": lucro acumulado no ano contra o mesmo período do ano anterior. Data do próximo balanço estimada pela data de entrega do ano anterior. Proventos dos últimos 12 meses via Yahoo.</div>
+    <div>Fontes: arquivo oficial de cotações da B3 (opções e preço da ação), Yahoo Finance (histórico de preços, não oficial), Banco Central (Selic), CVM (balanços e documentos). Dados de fechamento, sem tempo real.</div>
   </footer>
 </div>
 <script>
@@ -99,6 +109,24 @@ function spark(h){
     <circle cx="${x(n-1)}" cy="${y(h.fech[n-1])}" r="3" fill="var(--accent)"/></svg>`;
 }
 function dataCurta(s){const [y,m,d]=s.split("-");return d+"/"+m}
+function blocoFund(a){
+  const f=a.fundamentos;
+  if(!f) return a.ativo==="BOVA11"?"":`<div class="opc"><h3>Fundamentos</h3><div class="sub">Sem dados da CVM.</div></div>`;
+  if(f.erro) return `<div class="opc"><h3>Fundamentos</h3><div class="sub">Erro ao ler a CVM: ${f.erro}</div></div>`;
+  const it=(r,v,suf="",d=1)=>`<div><dt>${r}</dt><dd>${v==null?"–":fmt(v,d)+suf}</dd></div>`;
+  const banco=f.tipo==="banco";
+  const itens=[it("P/L",f.p_l,"",1),it("P/VP",f.p_vp,"",2),it("ROE",f.roe_pct,"%"),it("Div. yield",f.dividend_yield_pct,"%"),
+    it("Cresc. lucro",f.cresc_lucro_pct,"%"),
+    banco?"":it("Margem líq.",f.margem_liquida_pct,"%"),
+    banco?"":it("Dív. líq./EBIT",f.div_liq_ebit,"×",2)].join("");
+  const balanco=`Balanço de ${dataCurta(f.data_balanco)}/${f.data_balanco.slice(2,4)} · próximo estimado ${f.proximo_balanco_estimado?f.proximo_balanco_estimado.split("-").reverse().join("/"):"–"}${f.dias_ate_balanco!=null?` (${f.dias_ate_balanco} dias)`:""}`;
+  const al=(f.alertas||[]).map(x=>`<div class="alerta">⚠ ${x}</div>`).join("");
+  const ev=(f.eventos_30d||[]).map(e=>`<li><span>${dataCurta(e.data)}</span><a href="${e.link}" target="_blank" rel="noopener">${e.assunto||e.categoria}</a></li>`).join("");
+  return `<div class="opc"><h3>Fundamentos e eventos</h3>
+   <dl class="fund">${itens}</dl>
+   <div class="sub">${balanco}${banco?" · banco: margem e dívida não se aplicam":""}</div>${al}
+   ${ev?`<details><summary>Documentos na CVM nos últimos 30 dias (${f.eventos_30d.length})</summary><ul class="ev">${ev}</ul></details>`:""}</div>`;
+}
 function blocoOpcoes(a){
   const o=a.opcoes;
   if(!o) return `<div class="opc"><h3>Opções</h3><div class="sub">Sem dados da B3 hoje.</div></div>`;
@@ -131,6 +159,7 @@ document.getElementById("grade").innerHTML=D.ativos.map(a=>`
    <div><dt>ATR 14</dt><dd>${fmt(a.atr_pct)}%</dd></div>
    <div><dt>Volume/média</dt><dd>${fmt(a.volume_vs_media20)}×</dd></div>
   </dl>
+  ${blocoFund(a)}
   ${blocoOpcoes(a)}
  </article>`).join("");
 </script>

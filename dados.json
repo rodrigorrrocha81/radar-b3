@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-21T10:17",
+ "gerado_em": "2026-11-21T11:06",
  "selic_pct": 13.75,
  "ativos": [
   {
@@ -601,6 +601,89 @@
     "leitura_vi": "em linha",
     "vi_vs_vol20": 0.75,
     "n_liquidas": 27
+   },
+   "fundamentos": {
+    "tipo": "industria",
+    "fonte": "CVM",
+    "data_balanco": "2026-09-30",
+    "entregue_em": "2026-11-10",
+    "lucro_12m": 140421000000.0,
+    "patrimonio": 505631000000.0,
+    "acoes": 12888732761.0,
+    "lpa": 10.89,
+    "p_l": 3.9,
+    "p_vp": 1.09,
+    "roe_pct": 27.8,
+    "cresc_lucro_pct": 32.0,
+    "margem_liquida_pct": 23.8,
+    "margem_ebit_pct": 34.2,
+    "divida_liquida": 299869000000.0,
+    "div_liq_ebit": 1.49,
+    "proventos_12m": 3.66,
+    "dividend_yield_pct": 8.6,
+    "ultimos_proventos": [
+     {
+      "data": "2026-08-24",
+      "valor": 1.3481
+     },
+     {
+      "data": "2026-06-02",
+      "valor": 0.701
+     },
+     {
+      "data": "2026-04-23",
+      "valor": 0.6631
+     },
+     {
+      "data": "2025-12-23",
+      "valor": 0.9521
+     }
+    ],
+    "proximo_balanco_ref": "2026-12-31",
+    "proximo_balanco_estimado": "2027-03-05",
+    "eventos_30d": [
+     {
+      "data": "2026-11-12",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Petrobras celebra acordo para assumir 100% da Logum",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1588095&numSequencia=1112801&numVersao=1"
+     },
+     {
+      "data": "2026-11-10",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Desempenho 3T26",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1587572&numSequencia=1112278&numVersao=1"
+     },
+     {
+      "data": "2026-11-10",
+      "categoria": "Fato Relevante",
+      "assunto": "Petrobras informa sobre remuneração aos acionistas",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1587545&numSequencia=1112251&numVersao=1"
+     },
+     {
+      "data": "2026-11-10",
+      "categoria": "Fato Relevante",
+      "assunto": "Petrobras atualiza projeções operacionais e financeiras para 2026",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1587552&numSequencia=1112258&numVersao=1"
+     },
+     {
+      "data": "2026-11-04",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Fitch eleva o Perfil de Crédito Individual da Petrobras",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1583667&numSequencia=1108373&numVersao=1"
+     },
+     {
+      "data": "2026-11-04",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Petrobras informa novo horário de webcast de resultados do 3T26",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1583678&numSequencia=1108384&numVersao=1"
+     }
+    ],
+    "provento_anunciado_30d": true,
+    "dias_ate_balanco": 104,
+    "alertas": [
+     "provento anunciado nos últimos 30 dias: confira a data-com (strikes podem ser ajustados)"
+    ]
    }
   },
   {
@@ -1202,6 +1285,73 @@
     "leitura_vi": "em linha",
     "vi_vs_vol20": 0.76,
     "n_liquidas": 30
+   },
+   "fundamentos": {
+    "tipo": "industria",
+    "fonte": "CVM",
+    "data_balanco": "2026-09-30",
+    "entregue_em": "2026-10-29",
+    "lucro_12m": 2188000000.0,
+    "patrimonio": 199718000000.0,
+    "acoes": 4072366000.0,
+    "lpa": 0.54,
+    "p_l": 108.8,
+    "p_vp": 1.19,
+    "roe_pct": 1.1,
+    "cresc_lucro_pct": -33.3,
+    "margem_liquida_pct": 1.0,
+    "margem_ebit_pct": 11.7,
+    "divida_liquida": 67850000000.0,
+    "div_liq_ebit": 2.69,
+    "proventos_12m": 5.61,
+    "dividend_yield_pct": 9.6,
+    "ultimos_proventos": [
+     {
+      "data": "2026-08-12",
+      "valor": 2.0307
+     },
+     {
+      "data": "2025-12-12",
+      "valor": 3.5818
+     }
+    ],
+    "proximo_balanco_ref": "2026-12-31",
+    "proximo_balanco_estimado": "2027-03-12",
+    "eventos_30d": [
+     {
+      "data": "2026-11-10",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Política Corporativa de Regulamento Interno da Auditoria Interna",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1587172&numSequencia=1111878&numVersao=1"
+     },
+     {
+      "data": "2026-11-10",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Política de Indenidade",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1587226&numSequencia=1111932&numVersao=1"
+     },
+     {
+      "data": "2026-11-06",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Apresentação Institucional da Vale",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1585807&numSequencia=1110513&numVersao=1"
+     },
+     {
+      "data": "2026-11-06",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Política de Sanções e Controles de Exportação",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1585790&numSequencia=1110496&numVersao=1"
+     },
+     {
+      "data": "2026-10-30",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Desempenho da Vale no 3T26",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1582008&numSequencia=1106714&numVersao=1"
+     }
+    ],
+    "provento_anunciado_30d": false,
+    "dias_ate_balanco": 111,
+    "alertas": []
    }
   },
   {
@@ -1683,6 +1833,83 @@
     "leitura_vi": "em linha",
     "vi_vs_vol20": 0.45,
     "n_liquidas": 4
+   },
+   "fundamentos": {
+    "tipo": "banco",
+    "fonte": "CVM",
+    "data_balanco": "2026-09-30",
+    "entregue_em": "2026-11-03",
+    "lucro_12m": 47749000000.0,
+    "patrimonio": 239262000000.0,
+    "acoes": 11022026000.0,
+    "lpa": 4.33,
+    "p_l": 9.2,
+    "p_vp": 1.85,
+    "roe_pct": 20.0,
+    "cresc_lucro_pct": 8.8,
+    "proventos_12m": 3.06,
+    "dividend_yield_pct": 7.6,
+    "ultimos_proventos": [
+     {
+      "data": "2026-11-03",
+      "valor": 0.0182
+     },
+     {
+      "data": "2026-08-03",
+      "valor": 0.0182
+     },
+     {
+      "data": "2026-07-01",
+      "valor": 0.0182
+     },
+     {
+      "data": "2026-06-19",
+      "valor": 0.3619
+     }
+    ],
+    "proximo_balanco_ref": "2026-12-31",
+    "proximo_balanco_estimado": "2027-02-12",
+    "eventos_30d": [
+     {
+      "data": "2026-11-03",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Apresentação com a Imprensa sobre os Resultados do 3º Trimestre de 2026.",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1583276&numSequencia=1107982&numVersao=1"
+     },
+     {
+      "data": "2026-11-03",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Reunião pública com analistas e de divulgação de resultados 3T26",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1583280&numSequencia=1107986&numVersao=1"
+     },
+     {
+      "data": "2026-11-03",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Gerenciamento de Riscos e Capital - Pilar 3 (3T26)",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1583272&numSequencia=1107978&numVersao=1"
+     },
+     {
+      "data": "2026-11-03",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Press Release",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1583273&numSequencia=1107979&numVersao=1"
+     },
+     {
+      "data": "2026-11-03",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Apresentação Institucional do Resultado do 3º Trimestre de 2026.",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1583279&numSequencia=1107985&numVersao=1"
+     },
+     {
+      "data": "2026-11-03",
+      "categoria": "Fato Relevante",
+      "assunto": "Projeções 2026",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1583271&numSequencia=1107977&numVersao=1"
+     }
+    ],
+    "provento_anunciado_30d": false,
+    "dias_ate_balanco": 83,
+    "alertas": []
    }
   },
   {
@@ -2284,6 +2511,65 @@
     "leitura_vi": "em linha",
     "vi_vs_vol20": 0.34,
     "n_liquidas": 14
+   },
+   "fundamentos": {
+    "tipo": "banco",
+    "fonte": "CVM",
+    "data_balanco": "2026-09-30",
+    "entregue_em": "2026-10-26",
+    "lucro_12m": 26453793000.0,
+    "patrimonio": 195045587000.0,
+    "acoes": 10570712028.0,
+    "lpa": 2.5,
+    "p_l": 5.5,
+    "p_vp": 0.75,
+    "roe_pct": 13.6,
+    "cresc_lucro_pct": 14.5,
+    "proventos_12m": 1.22,
+    "dividend_yield_pct": 8.8,
+    "ultimos_proventos": [
+     {
+      "data": "2026-11-04",
+      "valor": 0.019
+     },
+     {
+      "data": "2026-08-04",
+      "valor": 0.0189
+     },
+     {
+      "data": "2026-07-06",
+      "valor": 0.3463
+     },
+     {
+      "data": "2026-07-02",
+      "valor": 0.0189
+     }
+    ],
+    "proximo_balanco_ref": "2026-12-31",
+    "proximo_balanco_estimado": "2027-03-25",
+    "eventos_30d": [
+     {
+      "data": "2026-10-22",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Bradesco 3T26 - Apresentação Resultados",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1579526&numSequencia=1104232&numVersao=1"
+     },
+     {
+      "data": "2026-10-22",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Report On Economic and Financial Analysis",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1579518&numSequencia=1104224&numVersao=1"
+     },
+     {
+      "data": "2026-10-22",
+      "categoria": "Fato Relevante",
+      "assunto": "Renovação do Programa de Recompra de Ações de própria emissão",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1579530&numSequencia=1104236&numVersao=1"
+     }
+    ],
+    "provento_anunciado_30d": false,
+    "dias_ate_balanco": 124,
+    "alertas": []
    }
   },
   {
@@ -2885,6 +3171,85 @@
     "leitura_vi": "em linha",
     "vi_vs_vol20": 0.33,
     "n_liquidas": 29
+   },
+   "fundamentos": {
+    "tipo": "banco",
+    "fonte": "CVM",
+    "data_balanco": "2026-09-30",
+    "entregue_em": "2026-11-11",
+    "lucro_12m": 14148828000.0,
+    "patrimonio": 186146636000.0,
+    "acoes": 5709020778.0,
+    "lpa": 2.48,
+    "p_l": 5.8,
+    "p_vp": 0.44,
+    "roe_pct": 7.6,
+    "cresc_lucro_pct": -24.5,
+    "proventos_12m": 0.65,
+    "dividend_yield_pct": 4.6,
+    "ultimos_proventos": [
+     {
+      "data": "2026-09-02",
+      "valor": 0.1053
+     },
+     {
+      "data": "2026-06-02",
+      "valor": 0.1413
+     },
+     {
+      "data": "2026-03-03",
+      "valor": 0.0701
+     },
+     {
+      "data": "2026-02-24",
+      "valor": 0.2205
+     }
+    ],
+    "proximo_balanco_ref": "2026-12-31",
+    "proximo_balanco_estimado": "2027-02-11",
+    "eventos_30d": [
+     {
+      "data": "2026-11-12",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Apresentação do Resultado 3T26",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1588142&numSequencia=1112848&numVersao=2"
+     },
+     {
+      "data": "2026-11-11",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Apresentação do Resultado 3T26",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1587989&numSequencia=1112695&numVersao=1"
+     },
+     {
+      "data": "2026-11-11",
+      "categoria": "Fato Relevante",
+      "assunto": "Remuneração aos acionistas para 2026 e 2027",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1587981&numSequencia=1112687&numVersao=1"
+     },
+     {
+      "data": "2026-11-11",
+      "categoria": "Fato Relevante",
+      "assunto": "Projeções 2026 - revisadas",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1587982&numSequencia=1112688&numVersao=1"
+     },
+     {
+      "data": "2026-10-28",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Renúncia e indicação de administrador",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1581266&numSequencia=1105972&numVersao=1"
+     },
+     {
+      "data": "2026-10-27",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Período de Silêncio 3T26",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1580428&numSequencia=1105134&numVersao=1"
+     }
+    ],
+    "provento_anunciado_30d": true,
+    "dias_ate_balanco": 82,
+    "alertas": [
+     "provento anunciado nos últimos 30 dias: confira a data-com (strikes podem ser ajustados)"
+    ]
    }
   },
   {
@@ -3366,6 +3731,75 @@
     "leitura_vi": "baratas",
     "vi_vs_vol20": 0.25,
     "n_liquidas": 4
+   },
+   "fundamentos": {
+    "tipo": "industria",
+    "fonte": "CVM",
+    "data_balanco": "2026-09-30",
+    "entregue_em": "2026-11-12",
+    "lucro_12m": 5710039000.0,
+    "patrimonio": 18905007000.0,
+    "acoes": 4976128403.0,
+    "lpa": 1.15,
+    "p_l": 12.4,
+    "p_vp": 3.76,
+    "roe_pct": 30.2,
+    "cresc_lucro_pct": 30.6,
+    "margem_liquida_pct": 46.4,
+    "margem_ebit_pct": 59.9,
+    "divida_liquida": -2813435000.0,
+    "div_liq_ebit": -0.38,
+    "proventos_12m": 0.9,
+    "dividend_yield_pct": 6.3,
+    "ultimos_proventos": [
+     {
+      "data": "2026-09-23",
+      "valor": 0.2266
+     },
+     {
+      "data": "2026-06-25",
+      "valor": 0.2212
+     },
+     {
+      "data": "2026-04-01",
+      "valor": 0.0743
+     },
+     {
+      "data": "2026-01-02",
+      "valor": 0.3805
+     }
+    ],
+    "proximo_balanco_ref": "2026-12-31",
+    "proximo_balanco_estimado": "2027-02-26",
+    "eventos_30d": [
+     {
+      "data": "2026-11-12",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Apresentação de Resultados do 3T26",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1588764&numSequencia=1113470&numVersao=1"
+     },
+     {
+      "data": "2026-11-12",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Dados Operacionais - outubro 2026",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1588817&numSequencia=1113523&numVersao=1"
+     },
+     {
+      "data": "2026-11-11",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Investimento na IDEX Analytics",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1587854&numSequencia=1112560&numVersao=1"
+     },
+     {
+      "data": "2026-11-09",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Alterações na composição da Diretoria Estatutária",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1586335&numSequencia=1111041&numVersao=1"
+     }
+    ],
+    "provento_anunciado_30d": false,
+    "dias_ate_balanco": 97,
+    "alertas": []
    }
   },
   {
@@ -3784,6 +4218,59 @@
     "vi_atm": null,
     "vencimento_ref": null,
     "n_liquidas": 1
+   },
+   "fundamentos": {
+    "tipo": "industria",
+    "fonte": "CVM",
+    "data_balanco": "2026-09-30",
+    "entregue_em": "2026-10-29",
+    "lucro_12m": 15747175000.0,
+    "patrimonio": 91441947000.0,
+    "acoes": 15416487000.0,
+    "lpa": 1.02,
+    "p_l": 15.7,
+    "p_vp": 2.71,
+    "roe_pct": 17.2,
+    "cresc_lucro_pct": 2.2,
+    "margem_liquida_pct": 17.7,
+    "margem_ebit_pct": 26.3,
+    "divida_liquida": -19199355000.0,
+    "div_liq_ebit": -0.82,
+    "proventos_12m": 0.85,
+    "dividend_yield_pct": 5.3,
+    "ultimos_proventos": [
+     {
+      "data": "2026-09-22",
+      "valor": 0.0713
+     },
+     {
+      "data": "2026-06-23",
+      "valor": 0.0449
+     },
+     {
+      "data": "2025-12-19",
+      "valor": 0.7302
+     }
+    ],
+    "proximo_balanco_ref": "2026-12-31",
+    "proximo_balanco_estimado": "2027-02-12",
+    "eventos_30d": [
+     {
+      "data": "2026-10-29",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Apresentação Call de Resultados do Terceiro Trimestre de 2026",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1581541&numSequencia=1106247&numVersao=1"
+     },
+     {
+      "data": "2026-10-29",
+      "categoria": "Fato Relevante",
+      "assunto": "Aquisição de Ações de Emissão da Própria Companhia",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1581367&numSequencia=1106073&numVersao=1"
+     }
+    ],
+    "provento_anunciado_30d": false,
+    "dias_ate_balanco": 83,
+    "alertas": []
    }
   },
   {
@@ -4245,6 +4732,75 @@
     "leitura_vi": "em linha",
     "vi_vs_vol20": 0.7,
     "n_liquidas": 3
+   },
+   "fundamentos": {
+    "tipo": "industria",
+    "fonte": "CVM",
+    "data_balanco": "2026-09-30",
+    "entregue_em": "2026-10-21",
+    "lucro_12m": 6268804000.0,
+    "patrimonio": 21367143000.0,
+    "acoes": 4195829691.0,
+    "lpa": 1.49,
+    "p_l": 34.2,
+    "p_vp": 10.04,
+    "roe_pct": 29.3,
+    "cresc_lucro_pct": -2.2,
+    "margem_liquida_pct": 15.4,
+    "margem_ebit_pct": 19.4,
+    "divida_liquida": -2585002000.0,
+    "div_liq_ebit": -0.33,
+    "proventos_12m": 2.0,
+    "dividend_yield_pct": 3.9,
+    "ultimos_proventos": [
+     {
+      "data": "2026-09-21",
+      "valor": 0.1072
+     },
+     {
+      "data": "2026-06-22",
+      "valor": 0.1044
+     },
+     {
+      "data": "2026-03-23",
+      "valor": 0.1001
+     },
+     {
+      "data": "2025-12-22",
+      "valor": 1.2385
+     }
+    ],
+    "proximo_balanco_ref": "2026-12-31",
+    "proximo_balanco_estimado": "2027-02-25",
+    "eventos_30d": [
+     {
+      "data": "2026-11-04",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Aquisição de terreno para expansão das operações na Índia",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1583624&numSequencia=1108330&numVersao=1"
+     },
+     {
+      "data": "2026-10-29",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Transcrição da Teleconferência de Resultados do 3T26",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1581597&numSequencia=1106303&numVersao=1"
+     },
+     {
+      "data": "2026-10-26",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Aquisição do negócio de Power Controls Solutions da L&ampS   Electric nos Estados Unidos",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1580062&numSequencia=1104768&numVersao=1"
+     },
+     {
+      "data": "2026-10-22",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Apresentação da Teleconferência de Resultados do 3T26",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1579252&numSequencia=1103958&numVersao=1"
+     }
+    ],
+    "provento_anunciado_30d": false,
+    "dias_ate_balanco": 96,
+    "alertas": []
    }
   },
   {
@@ -4663,6 +5219,46 @@
     "vi_atm": null,
     "vencimento_ref": null,
     "n_liquidas": 1
+   },
+   "fundamentos": {
+    "tipo": "industria",
+    "fonte": "CVM",
+    "data_balanco": "2026-09-30",
+    "entregue_em": "2026-11-04",
+    "lucro_12m": 6156242000.0,
+    "patrimonio": 30852862000.0,
+    "acoes": 792111206.0,
+    "lpa": 7.77,
+    "p_l": 7.7,
+    "p_vp": 1.55,
+    "roe_pct": 20.0,
+    "cresc_lucro_pct": 125.9,
+    "margem_liquida_pct": 23.5,
+    "margem_ebit_pct": 36.3,
+    "divida_liquida": 18533374000.0,
+    "div_liq_ebit": 1.95,
+    "proventos_12m": 0,
+    "dividend_yield_pct": 0.0,
+    "ultimos_proventos": [],
+    "proximo_balanco_ref": "2026-12-31",
+    "proximo_balanco_estimado": "2027-03-10",
+    "eventos_30d": [
+     {
+      "data": "2026-11-05",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Apresentação de Resultados 3T26",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1584653&numSequencia=1109359&numVersao=1"
+     },
+     {
+      "data": "2026-11-03",
+      "categoria": "Comunicado ao Mercado",
+      "assunto": "Dados Operacionais - Outubro/2026",
+      "link": "https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo=1583265&numSequencia=1107971&numVersao=1"
+     }
+    ],
+    "provento_anunciado_30d": false,
+    "dias_ate_balanco": 109,
+    "alertas": []
    }
   },
   {

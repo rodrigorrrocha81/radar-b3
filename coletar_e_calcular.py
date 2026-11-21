@@ -89,7 +89,32 @@ if __name__ == "__main__":
                     w.writerow([dia_b3, a["ativo"], o.get("vi_atm"), a["vol20_pct"], a["vol_1ano_pct"], o.get("n_liquidas", 0)])
     except Exception as e:
         saida["erros"].append(f"opções: {e}")
-    json.dump(saida, open("dados.json", "w"), ensure_ascii=False, indent=1)
+    # --- Fundamentos e eventos (CVM) ---
+    try:
+        import fundamentos
+        fund = fundamentos.analisar({a["ativo"]: a["preco"] for a in saida["ativos"]})
+        hoje = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=3)).date()
+        for a in saida["ativos"]:
+            f = fund.get(a["ativo"])
+            if not f:
+                continue
+            alertas = []
+            est = f.get("proximo_balanco_estimado")
+            if est:
+                dias = (dt.date.fromisoformat(est) - hoje).days
+                f["dias_ate_balanco"] = dias
+                venc = (a.get("opcoes") or {}).get("vencimento_ref")
+                if venc and est <= venc:
+                    alertas.append("balanço previsto antes do vencimento das opções de referência")
+                elif 0 <= dias <= 21:
+                    alertas.append(f"balanço previsto em cerca de {dias} dias")
+            if f.get("provento_anunciado_30d"):
+                alertas.append("provento anunciado nos últimos 30 dias: confira a data-com (strikes podem ser ajustados)")
+            f["alertas"] = alertas
+            a["fundamentos"] = f
+    except Exception as e:
+        saida["erros"].append(f"fundamentos: {e}")
+    json.dump(saida, open("dados.json", "w"), ensure_ascii=False, indent=1, default=str)
     for a in saida["ativos"]:
         print(f'{a["ativo"]:7} {a["data"]} R${a["preco"]:>7} dia {a["var_dia_pct"]:>6}% IFR {a["ifr14"]:>5} vol20 {a["vol20_pct"]:>5}% tend {a["tendencia"]}')
     for a in saida["ativos"]:
