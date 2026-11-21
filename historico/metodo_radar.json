@@ -1,0 +1,57 @@
+{
+ "H1 compra de call barata": {
+  "2023-2024 (desenvolvimento)": {
+   "ops": 21,
+   "acerto_pct": 33.3,
+   "resultado_R$_com_tiros_de_100": -391.0,
+   "media_por_operacao_pct": -18.6
+  },
+  "2025-2026 (confirmação)": {
+   "ops": 15,
+   "acerto_pct": 46.7,
+   "resultado_R$_com_tiros_de_100": 218.0,
+   "media_por_operacao_pct": 14.5
+  },
+  "total": {
+   "ops": 36,
+   "acerto_pct": 38.9,
+   "resultado_R$_com_tiros_de_100": -173.0,
+   "media_por_operacao_pct": -4.8
+  },
+  "por_motivo": {
+   "vencimento": 24,
+   "alvo": 12
+  },
+  "preco_medio_por_opcao_ou_credito": 2.34,
+  "dias_medios": 37.3
+ },
+ "H2 venda de trava de put com seguro caro": {
+  "2023-2024 (desenvolvimento)": {
+   "ops": 9,
+   "acerto_pct": 44.4,
+   "resultado_R$_com_tiros_de_100": -127.0,
+   "media_por_operacao_pct": -14.1
+  },
+  "2025-2026 (confirmação)": {
+   "ops": 12,
+   "acerto_pct": 83.3,
+   "resultado_R$_com_tiros_de_100": -80.0,
+   "media_por_operacao_pct": -6.7
+  },
+  "total": {
+   "ops": 21,
+   "acerto_pct": 66.7,
+   "resultado_R$_com_tiros_de_100": -207.0,
+   "media_por_operacao_pct": -9.9
+  },
+  "por_motivo": {
+   "lucro": 14,
+   "vencimento": 7
+  },
+  "preco_medio_por_opcao_ou_credito": 0.93,
+  "dias_medios": 20.2
+ },
+ "H3 venda de trava de put depois de susto": {
+  "ops": 0
+ }
+}
