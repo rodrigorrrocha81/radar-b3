@@ -9,9 +9,10 @@ FERIADOS = {
  "2027-01-01","2027-02-08","2027-02-09","2027-03-26","2027-04-21","2027-05-27",
  "2027-09-07","2027-10-12","2027-11-02","2027-11-15","2027-12-24","2027-12-31",
 }
-hoje = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=3)).date()
-pregao = hoje.weekday() < 5 and str(hoje) not in FERIADOS
-if hoje.year > 2027: print("AVISO: atualizar lista de feriados", file=sys.stderr)
-print(f"{hoje}: {'dia de pregão' if pregao else 'sem pregão'}")
-with open(os.environ.get("GITHUB_OUTPUT", os.devnull), "a") as f:
-    f.write(f"pregao={'sim' if pregao else 'nao'}\n")
+if __name__ == "__main__":
+    hoje = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=3)).date()
+    pregao = hoje.weekday() < 5 and str(hoje) not in FERIADOS
+    if hoje.year > 2027: print("AVISO: atualizar lista de feriados", file=sys.stderr)
+    print(f"{hoje}: {'dia de pregão' if pregao else 'sem pregão'}")
+    with open(os.environ.get("GITHUB_OUTPUT", os.devnull), "a") as f:
+        f.write(f"pregao={'sim' if pregao else 'nao'}\n")

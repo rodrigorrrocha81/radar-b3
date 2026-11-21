@@ -26,7 +26,7 @@ h1{margin:0;font-size:1.7rem;font-weight:600;letter-spacing:-.01em}
 .alta{color:var(--up);background:var(--upbg)} .baixa{color:var(--down);background:var(--downbg)} .lateral{color:var(--flat);background:var(--flatbg)}
 .aviso{border:1px dashed var(--line);border-radius:8px;padding:12px 14px;color:var(--muted);font-size:.88rem}
 .aviso strong{color:var(--fg)}
-.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
+.grade{display:grid;align-items:start;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
 @media (max-width:420px){.grade{grid-template-columns:1fr}}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;gap:12px;min-width:0}
 .topo{display:flex;justify-content:space-between;align-items:start;gap:8px}
@@ -42,6 +42,20 @@ svg.spark{width:100%;height:70px;display:block}
 .ifr{height:6px;border-radius:3px;background:linear-gradient(90deg,var(--upbg) 0 30%,var(--line) 30% 70%,var(--downbg) 70%);position:relative}
 .ifr i{position:absolute;top:-3px;width:3px;height:12px;background:var(--fg);border-radius:1px}
 .ifrlab{display:flex;justify-content:space-between;font-size:.75rem;color:var(--muted)}
+.opc{border-top:1px solid var(--line);padding-top:10px;display:grid;gap:8px;min-width:0}
+.opc>*,.card>*{min-width:0}
+.opc h3{margin:0;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.vibar{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:.82rem}
+.vibar b{font-family:var(--mono);font-weight:500}
+.caras{color:var(--down);background:var(--downbg)} .baratas{color:var(--up);background:var(--upbg)} .em-linha,.sem{color:var(--muted);background:var(--bg)}
+details summary{cursor:pointer;font-size:.82rem;color:var(--accent)}
+details summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tab{overflow-x:auto;margin-top:6px}
+table{border-collapse:collapse;font-family:var(--mono);font-size:.74rem;font-variant-numeric:tabular-nums;width:100%}
+th{font-family:var(--sans);font-weight:500;color:var(--muted);text-align:right;padding:3px 6px;white-space:nowrap;border-bottom:1px solid var(--line)}
+td{text-align:right;padding:3px 6px;white-space:nowrap;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}
+.tc{color:var(--accent)} .tp{color:var(--flat)}
 footer{color:var(--muted);font-size:.82rem;display:grid;gap:6px;max-width:75ch}
 .leg{display:flex;gap:14px;font-size:.78rem;color:var(--muted);align-items:center}
 .leg span::before{content:"";display:inline-block;width:14px;height:2px;margin-right:5px;vertical-align:middle;background:var(--accent)}
@@ -49,17 +63,18 @@ footer{color:var(--muted);font-size:.82rem;display:grid;gap:6px;max-width:75ch}
 </style>
 <div class="wrap">
   <header>
-    <div><h1>Radar B3</h1><div class="sub">Leitura técnica diária de 10 ativos líquidos. Protótipo: ainda sem opções.</div></div>
+    <div><h1>Radar B3</h1><div class="sub">Leitura técnica diária de 10 ativos líquidos e de suas opções.</div></div>
     <div class="meta" id="meta"></div>
   </header>
   <div class="resumo" id="resumo"></div>
-  <div class="aviso"><strong>Opções: aguardando fonte de dados.</strong> A fonte gratuita da B3 bloqueia acesso automático deste servidor. Esta tela mostra só indicadores das ações, calculados por programa. Não é recomendação de compra ou venda.</div>
+  <div class="aviso"><strong>Análise, não recomendação.</strong> Todos os números são calculados por programa a partir de dados públicos de fechamento. Nenhum item desta tela é sinal de compra ou venda.</div>
   <div class="leg"><span>Fechamento (120 pregões)</span><span class="mm">Média de 50 dias</span></div>
   <div class="grade" id="grade"></div>
   <footer>
     <div><b>Tendência:</b> alta quando preço &gt; média 50 &gt; média 200; baixa quando preço &lt; média 50 &lt; média 200; senão lateral.</div>
     <div><b>IFR 14:</b> abaixo de 30 = sobrevendido, acima de 70 = sobrecomprado. <b>Volatilidade:</b> anualizada, últimos 20 pregões e último ano. <b>ATR:</b> oscilação média diária.</div>
-    <div>Fontes: preços via Yahoo Finance (não oficial), Selic via Banco Central. Dados de fechamento, sem tempo real.</div>
+    <div><b>Opções:</b> entram só séries com 20 negócios ou mais, R$ 100 mil ou mais negociados, oferta de compra e de venda com diferença de até 40%, vencimento entre 5 e 60 dias úteis e strike entre 85% e 115% do preço da ação. <b>VI no dinheiro:</b> volatilidade implícita média das séries mais próximas do preço, no primeiro vencimento com 10 dias úteis ou mais. <b>Caras/baratas:</b> VI acima de 1,2× ou abaixo de 0,8× da volatilidade de 1 ano da ação. Gregas por Black-Scholes (aproximação europeia; as calls da B3 são americanas). Theta em R$ por dia útil; vega em R$ por 1 ponto de volatilidade.</div>
+    <div>Fontes: arquivo oficial de cotações da B3 (opções e preço da ação), Yahoo Finance (histórico de preços, não oficial), Banco Central (Selic). Dados de fechamento, sem tempo real.</div>
   </footer>
 </div>
 <script>
@@ -68,7 +83,7 @@ const fmt=(n,d=2)=>n==null?"–":n.toLocaleString("pt-BR",{minimumFractionDigits
 const sinal=n=>(n>0?"+":"")+fmt(n)+"%";
 const cls=n=>n>0?"pos":n<0?"neg":"";
 document.getElementById("meta").innerHTML=
-  `<span>Pregão <b>${D.ativos[0].data.split("-").reverse().join("/")}</b></span><span>Selic <b>${fmt(D.selic_pct)}%</b></span><span>Gerado <b>${D.gerado_em.replace("T"," ")}</b></span>`;
+  `<span>Opções <b>${D.pregao_opcoes?D.pregao_opcoes.split("-").reverse().join("/"):"indisponível"}</b></span><span>Pregão <b>${D.ativos[0].data.split("-").reverse().join("/")}</b></span><span>Selic <b>${fmt(D.selic_pct)}%</b></span><span>Gerado <b>${D.gerado_em.replace("T"," ")}</b></span>`;
 const cont={alta:0,baixa:0,lateral:0}; D.ativos.forEach(a=>cont[a.tendencia]++);
 document.getElementById("resumo").innerHTML=Object.entries(cont).map(([k,v])=>`<span class="chip ${k}">${v} em ${k}</span>`).join("");
 function spark(h){
@@ -82,6 +97,21 @@ function spark(h){
     <path d="M${path(h.mm50)}" fill="none" stroke="var(--muted)" stroke-width="1.3" stroke-dasharray="4 3" vector-effect="non-scaling-stroke"/>
     <path d="M${p}" fill="none" stroke="var(--accent)" stroke-width="1.8" vector-effect="non-scaling-stroke"/>
     <circle cx="${x(n-1)}" cy="${y(h.fech[n-1])}" r="3" fill="var(--accent)"/></svg>`;
+}
+function dataCurta(s){const [y,m,d]=s.split("-");return d+"/"+m}
+function blocoOpcoes(a){
+  const o=a.opcoes;
+  if(!o) return `<div class="opc"><h3>Opções</h3><div class="sub">Sem dados da B3 hoje.</div></div>`;
+  const leit=o.leitura_vi?`<span class="chip ${o.leitura_vi.replace(" ","-")}">${o.leitura_vi}</span>`:`<span class="chip sem">poucas séries</span>`;
+  const vi=o.vi_atm!=null?`VI no dinheiro <b>${fmt(o.vi_atm,1)}%</b> <span class="sub">(venc. ${dataCurta(o.vencimento_ref)})</span>`:`VI no dinheiro <b>–</b>`;
+  const rel=o.vi_vs_vol_ano!=null?`<span>÷ vol. 1 ano <b>${fmt(o.vi_vs_vol_ano)}×</b></span>`:"";
+  const linhas=o.liquidas.map(x=>`<tr><td>${x.codigo}</td><td class="${x.tipo==="call"?"tc":"tp"}">${x.tipo}</td><td>${fmt(x.strike)}</td><td>${dataCurta(x.vencimento)} · ${x.dias_uteis}d</td><td>${fmt(x.preco)}</td><td>${fmt(x.spread_pct,1)}%</td><td>${fmt(x.vi_pct,1)}%</td><td>${fmt(x.delta)}</td><td>${fmt(x.theta_dia,3)}</td><td>${x.negocios}</td></tr>`).join("");
+  const tabela=o.liquidas.length?`<details><summary>Ver ${o.liquidas.length} séries mais negociadas</summary><div class="tab"><table>
+   <thead><tr><th>Código</th><th>Tipo</th><th>Strike</th><th>Venc.</th><th>Preço</th><th>Spread</th><th>VI</th><th>Delta</th><th>Theta</th><th>Negócios</th></tr></thead>
+   <tbody>${linhas}</tbody></table></div></details>`:"";
+  return `<div class="opc"><h3>Opções</h3>
+   <div class="vibar"><span>${vi}</span>${rel}${leit}</div>
+   <div class="sub">${o.n_liquidas??0} de ${o.total_series} séries passaram nos filtros de liquidez</div>${tabela}</div>`;
 }
 document.getElementById("grade").innerHTML=D.ativos.map(a=>`
  <article class="card">
@@ -101,5 +131,6 @@ document.getElementById("grade").innerHTML=D.ativos.map(a=>`
    <div><dt>ATR 14</dt><dd>${fmt(a.atr_pct)}%</dd></div>
    <div><dt>Volume/média</dt><dd>${fmt(a.volume_vs_media20)}×</dd></div>
   </dl>
+  ${blocoOpcoes(a)}
  </article>`).join("");
 </script>

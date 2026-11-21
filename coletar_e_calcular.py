@@ -67,7 +67,32 @@ if __name__ == "__main__":
     for t in ATIVOS:
         try: saida["ativos"].append(analisar(t))
         except Exception as e: saida["erros"].append(f"{t}: {e}")
+    # --- Opções (arquivo oficial da B3) ---
+    try:
+        import baixar_b3, opcoes, csv, pathlib
+        dia_b3, texto = baixar_b3.ultimo_pregao()
+        raizes = {t[:4]: t for t in ATIVOS}
+        vh = {a["ativo"]: {"vol20": a["vol20_pct"], "vol_ano": a["vol_1ano_pct"]} for a in saida["ativos"]}
+        res = opcoes.analisar_opcoes(texto, raizes, saida["selic_pct"], vh)
+        saida["pregao_opcoes"] = str(dia_b3)
+        for a in saida["ativos"]:
+            a["opcoes"] = res.get(a["ativo"])
+        # Histórico diário da volatilidade implícita (base para comparações futuras)
+        hist = pathlib.Path("historico_vi.csv"); novo = not hist.exists()
+        linhas_existentes = hist.read_text() if hist.exists() else ""
+        with hist.open("a", newline="") as f:
+            w = csv.writer(f)
+            if novo: w.writerow(["pregao", "ativo", "vi_atm", "vol20", "vol_ano", "series_liquidas"])
+            for a in saida["ativos"]:
+                o = a.get("opcoes") or {}
+                if f"{dia_b3},{a['ativo']}," not in linhas_existentes:
+                    w.writerow([dia_b3, a["ativo"], o.get("vi_atm"), a["vol20_pct"], a["vol_1ano_pct"], o.get("n_liquidas", 0)])
+    except Exception as e:
+        saida["erros"].append(f"opções: {e}")
     json.dump(saida, open("dados.json", "w"), ensure_ascii=False, indent=1)
     for a in saida["ativos"]:
         print(f'{a["ativo"]:7} {a["data"]} R${a["preco"]:>7} dia {a["var_dia_pct"]:>6}% IFR {a["ifr14"]:>5} vol20 {a["vol20_pct"]:>5}% tend {a["tendencia"]}')
+    for a in saida["ativos"]:
+        o = a.get("opcoes") or {}
+        print(f'  {a["ativo"]:7} opções líquidas {o.get("n_liquidas")}, VI no dinheiro {o.get("vi_atm")}% ({o.get("leitura_vi")})')
     print("Selic:", saida["selic_pct"], "| erros:", saida["erros"])
