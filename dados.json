@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-21T12:34",
+ "gerado_em": "2026-11-21T13:22",
  "selic_pct": 13.75,
  "ativos": [
   {
@@ -5986,6 +5986,141 @@
      }
     ]
    }
+  }
+ },
+ "carteira_acoes": {
+  "data_troca": "2026-11-16",
+  "acoes": [
+   {
+    "ticker": "PETR4",
+    "setor": "Petróleo e Gás",
+    "preco": 42.67,
+    "roe_pct": 27.8,
+    "p_l": 3.9,
+    "balanco": "2026-09-30",
+    "preco_hoje": 42.67,
+    "var_desde_troca_pct": 0.0
+   },
+   {
+    "ticker": "VBBR3",
+    "setor": "Comércio (Atacado e Varejo)",
+    "preco": 30.13,
+    "roe_pct": 27.9,
+    "p_l": 5.1,
+    "balanco": "2026-09-30",
+    "preco_hoje": 30.13,
+    "var_desde_troca_pct": 0.0
+   },
+   {
+    "ticker": "DIRR3",
+    "setor": "Construção Civil, Mat. Constr. e Decoração",
+    "preco": 8.74,
+    "roe_pct": 27.9,
+    "p_l": 5.5,
+    "balanco": "2026-09-30",
+    "preco_hoje": 8.74,
+    "var_desde_troca_pct": 0.0
+   },
+   {
+    "ticker": "POMO4",
+    "setor": "Máquinas, Equipamentos, Veículos e Peças",
+    "preco": 3.62,
+    "roe_pct": 24.7,
+    "p_l": 4.2,
+    "balanco": "2026-09-30",
+    "preco_hoje": 3.62,
+    "var_desde_troca_pct": 0.0
+   },
+   {
+    "ticker": "BBSE3",
+    "setor": "Emp. Adm. Part. - Seguradoras e Corretoras",
+    "preco": 36.99,
+    "roe_pct": 68.2,
+    "p_l": 7.8,
+    "balanco": "2026-09-30",
+    "preco_hoje": 36.99,
+    "var_desde_troca_pct": 0.0
+   },
+   {
+    "ticker": "UGPA3",
+    "setor": "Emp. Adm. Part. - Petróleo e Gás",
+    "preco": 31.36,
+    "roe_pct": 25.0,
+    "p_l": 6.3,
+    "balanco": "2026-09-30",
+    "preco_hoje": 31.36,
+    "var_desde_troca_pct": 0.0
+   },
+   {
+    "ticker": "PSSA3",
+    "setor": "Seguradoras e Corretoras",
+    "preco": 43.96,
+    "roe_pct": 22.0,
+    "p_l": 7.6,
+    "balanco": "2026-09-30",
+    "preco_hoje": 43.96,
+    "var_desde_troca_pct": 0.0
+   },
+   {
+    "ticker": "CMIG4",
+    "setor": "Energia Elétrica",
+    "preco": 10.94,
+    "roe_pct": 18.0,
+    "p_l": 5.7,
+    "balanco": "2026-09-30",
+    "preco_hoje": 10.94,
+    "var_desde_troca_pct": 0.0
+   },
+   {
+    "ticker": "CYRE3",
+    "setor": "Construção Civil, Mat. Constr. e Decoração",
+    "preco": 18.43,
+    "roe_pct": 15.0,
+    "p_l": 4.1,
+    "balanco": "2026-09-30",
+    "preco_hoje": 18.43,
+    "var_desde_troca_pct": 0.0
+   },
+   {
+    "ticker": "CXSE3",
+    "setor": "Emp. Adm. Part. - Seguradoras e Corretoras",
+    "preco": 20.57,
+    "roe_pct": 32.6,
+    "p_l": 13.5,
+    "balanco": "2026-09-30",
+    "preco_hoje": 20.57,
+    "var_desde_troca_pct": 0.0
+   }
+  ],
+  "analisadas": 42,
+  "aprovadas_no_filtro": 32,
+  "montada_em": "2026-11-21",
+  "var_media_desde_troca_pct": 0.0,
+  "proxima_troca": "2027-04-01",
+  "teste": {
+   "periodo": "abril/2018 a novembro/2026",
+   "radar_pct": 383.2,
+   "bova11_pct": 99.9,
+   "cdi_pct": 115.6,
+   "partes": {
+    "2018-2020": [
+     89.8,
+     40.1,
+     14.0
+    ],
+    "2021-2023": [
+     65.3,
+     14.3,
+     32.7
+    ],
+    "2024-2026": [
+     54.4,
+     27.1,
+     42.5
+    ]
+   },
+   "pior_queda_radar_pct": -35.7,
+   "pior_queda_bova11_pct": -46.9
   }
  }
 }

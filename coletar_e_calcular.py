@@ -120,6 +120,12 @@ if __name__ == "__main__":
             a["fundamentos"] = f
     except Exception as e:
         saida["erros"].append(f"fundamentos: {e}")
+    # --- Carteira de ações do Radar (troca a cada 3 meses) ---
+    try:
+        import acoes_radar
+        saida["carteira_acoes"] = acoes_radar.atualizar()
+    except Exception as e:
+        saida["erros"].append(f"carteira de ações: {e}")
     json.dump(saida, open("dados.json", "w"), ensure_ascii=False, indent=1, default=str)
     for a in saida["ativos"]:
         print(f'{a["ativo"]:7} {a["data"]} R${a["preco"]:>7} dia {a["var_dia_pct"]:>6}% IFR {a["ifr14"]:>5} vol20 {a["vol20_pct"]:>5}% tend {a["tendencia"]}')

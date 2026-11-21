@@ -73,6 +73,17 @@ th:first-child,td:first-child{text-align:left}
 .secao h2.titulo{margin:0 0 4px;font-size:1.15rem;font-weight:600}
 .teste{border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--surface);font-size:.88rem;display:grid;gap:6px}
 .teste b{font-weight:600}
+.calc{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font-size:.9rem}
+.calc input{font-family:var(--mono);font-size:1rem;padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);width:9em}
+.calc input:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.tabacoes{overflow-x:auto}
+.tabacoes table{font-size:.8rem}
+.tabacoes td.cod{font-family:var(--mono);font-weight:500}
+.tabacoes .st{text-align:left;font-family:var(--sans);max-width:16em;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:560px){.tabacoes .st{display:none}}
+.comp{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.comp div{border:1px solid var(--line);border-radius:8px;padding:8px 10px;background:var(--surface)}
+.comp b{display:block;font-family:var(--mono);font-size:1.15rem;font-weight:500}
 footer{color:var(--muted);font-size:.82rem;display:grid;gap:6px;max-width:75ch}
 .leg{display:flex;gap:14px;font-size:.78rem;color:var(--muted);align-items:center}
 .leg span::before{content:"";display:inline-block;width:14px;height:2px;margin-right:5px;vertical-align:middle;background:var(--accent)}
@@ -80,11 +91,12 @@ footer{color:var(--muted);font-size:.82rem;display:grid;gap:6px;max-width:75ch}
 </style>
 <div class="wrap">
   <header>
-    <div><h1>Radar B3</h1><div class="sub">Leitura diária de 10 ativos líquidos: técnica, fundamentos, eventos e opções.</div></div>
+    <div><h1>Radar B3</h1><div class="sub">Ações para o longo prazo, laboratório de opções e leitura diária de 10 ativos.</div></div>
     <div class="meta" id="meta"></div>
   </header>
   <div class="resumo" id="resumo"></div>
   <div class="aviso"><strong>Análise, não recomendação.</strong> Todos os números são calculados por programa a partir de dados públicos de fechamento. Nenhum item desta tela é sinal de compra ou venda.</div>
+  <section class="secao" id="secao-acoes"></section>
   <section class="secao" id="secao-sim"></section>
   <div class="leg"><span>Fechamento (120 pregões)</span><span class="mm">Média de 50 dias</span></div>
   <div class="grade" id="grade"></div>
@@ -117,6 +129,37 @@ function spark(h){
     <path d="M${p}" fill="none" stroke="var(--accent)" stroke-width="1.8" vector-effect="non-scaling-stroke"/>
     <circle cx="${x(n-1)}" cy="${y(h.fech[n-1])}" r="3" fill="var(--accent)"/></svg>`;
 }
+function blocoAcoes(){
+  const c=D.carteira_acoes, el=document.getElementById("secao-acoes");
+  if(!c){el.innerHTML="";return}
+  const t=c.teste;
+  const pct=v=>(v>0?"+":"")+fmt(v,1)+"%";
+  const comp=`<div class="comp">
+    <div><span class="sub">Carteira do Radar</span><b class="pos">${pct(t.radar_pct)}</b></div>
+    <div><span class="sub">Índice da Bolsa (BOVA11)</span><b>${pct(t.bova11_pct)}</b></div>
+    <div><span class="sub">CDI / Tesouro Selic</span><b>${pct(t.cdi_pct)}</b></div>
+    <div><span class="sub">Pior queda no caminho</span><b class="neg">${fmt(t.pior_queda_radar_pct,1)}%</b></div></div>`;
+  const linhas=c.acoes.map(a=>`<tr data-p="${a.preco_hoje||a.preco}"><td class="cod">${a.ticker}F</td><td class="st" title="${a.setor}">${a.setor}</td><td>${fmt(a.preco_hoje||a.preco)}</td><td>${fmt(a.p_l,1)}</td><td>${fmt(a.roe_pct,1)}%</td><td class="qtd">–</td><td class="val">–</td></tr>`).join("");
+  el.innerHTML=`<h2 class="titulo">Ações do Radar (longo prazo)</h2>
+   <div class="teste">
+    <div><b>Teste com o passado (${t.periodo}), com dividendos:</b> a regra ganhou do índice da Bolsa nos 3 períodos testados (2018-2020, 2021-2023 e 2024-2026).</div>
+    ${comp}
+    <div class="sub">Atenção: o teste usou empresas que existem hoje, o que deixa o resultado mais bonito do que seria na prática. No caminho houve uma queda de até ${fmt(-t.pior_queda_radar_pct,1)}%. Dinheiro com data marcada (como a entrada de um imóvel) não deve ficar em ações. Nada aqui é recomendação; é o resultado de uma regra.</div>
+   </div>
+   <div class="simcard" style="margin-top:14px">
+    <div class="calc"><label for="valor-inv">Quanto você quer colocar?</label> R$ <input id="valor-inv" type="number" min="0" step="50" value="1000">
+     <span class="sub">Divide igualmente entre as 10 ações, no mercado fracionário (código com F, compra de 1 em 1).</span></div>
+    <div class="tabacoes"><table><thead><tr><th>Código</th><th class="st">Setor</th><th>Preço</th><th>P/L</th><th>ROE</th><th>Quantas</th><th>Total</th></tr></thead><tbody id="tb-acoes">${linhas}</tbody></table></div>
+    <div class="sub" id="sobra"></div>
+    <div class="sub">Carteira montada em ${c.montada_em.split("-").reverse().join("/")}${c.var_media_desde_troca_pct!=null?` · variação média desde então: <span class="${cls(c.var_media_desde_troca_pct)}">${pct(c.var_media_desde_troca_pct)}</span>`:""} · próxima troca: ${c.proxima_troca.split("-").reverse().join("/")} · P/L: anos de lucro para pagar o preço (menor = mais barata) · ROE: lucro sobre o patrimônio (maior = mais rentável)</div>
+   </div>`;
+  const inp=document.getElementById("valor-inv");
+  const calc=()=>{const v=Math.max(0,parseFloat(inp.value)||0),cota=v/c.acoes.length;let gasto=0;
+    document.querySelectorAll("#tb-acoes tr").forEach(tr=>{const p=+tr.dataset.p,q=Math.floor(cota/p);gasto+=q*p;
+      tr.querySelector(".qtd").textContent=q;tr.querySelector(".val").textContent="R$ "+fmt(q*p)});
+    document.getElementById("sobra").textContent=`Total investido: R$ ${fmt(gasto)} · sobra: R$ ${fmt(v-gasto)} (pode ficar no Tesouro Selic).`;};
+  inp.addEventListener("input",calc);calc();
+}
 function blocoSim(){
   const c=D.carteira_simulada, el=document.getElementById("secao-sim");
   const teste=`<div class="teste"><div><b>Teste com o passado (2023 a 2026), com dados oficiais da B3:</b> as duas estratégias abaixo perderam dinheiro.</div>
@@ -134,7 +177,7 @@ function blocoSim(){
      <div><span class="big ${cls(total)}">${reais(total)}</span> <span class="sub">desde ${c.inicio?c.inicio.split("-").reverse().join("/"):"–"}, com R$ 100 por operação</span></div>
      <div class="sub">${e.fechadas} encerradas (ganhou em ${e.ganhou}) · ${e.abertas.length} abertas</div>
      ${ab?`<div>${ab}</div>`:""}${fe?`<details><summary>Últimas encerradas</summary>${fe}</details>`:""}${ag}</div>`}).join("");
-  el.innerHTML=`<h2 class="titulo">Carteira simulada (dinheiro de mentira)</h2>${teste}<div class="sim" style="margin-top:14px">${cards}</div>`;
+  el.innerHTML=`<h2 class="titulo">Laboratório de opções: carteira simulada (dinheiro de mentira)</h2>${teste}<div class="sim" style="margin-top:14px">${cards}</div>`;
 }
 function dataCurta(s){const [y,m,d]=s.split("-");return d+"/"+m}
 function blocoFund(a){
@@ -169,6 +212,7 @@ function blocoOpcoes(a){
    <div class="vibar"><span>${vi}</span>${rel}${leit}</div>
    <div class="sub">${o.n_liquidas??0} de ${o.total_series} séries passaram nos filtros de liquidez</div>${tabela}</div>`;
 }
+blocoAcoes();
 blocoSim();
 document.getElementById("grade").innerHTML=D.ativos.map(a=>`
  <article class="card">
