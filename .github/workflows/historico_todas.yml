@@ -1,0 +1,19 @@
+name: Todas as ações da B3 (teste caiu muito)
+on:
+  push:
+    branches: [dados-historicos]
+    paths: [historico/extrair_todas.py, .github/workflows/historico_todas.yml]
+permissions:
+  contents: write
+jobs:
+  extrair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install requests && python historico/extrair_todas.py && ls -la historico/todas_*
+      - run: |
+          git config user.name "radar-b3-bot"; git config user.email "radar-b3-bot@users.noreply.github.com"
+          git add historico/todas_*.csv.gz && git commit -m "Preços de todas as ações da B3 (2016-2026)" && git pull --rebase origin dados-historicos && git push
