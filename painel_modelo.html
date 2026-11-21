@@ -96,6 +96,7 @@ th:first-child,td:first-child{text-align:left}
 .al.lucro{background:var(--upbg);border-color:transparent}
 .al.troca{background:var(--flatbg);border-color:transparent}
 .al.ok{background:var(--bg)}
+.al.geral{background:var(--downbg);border-color:transparent}
 .al strong{font-weight:600}
 .al .acao{font-family:var(--mono);font-weight:500}
 textarea#mc-backup{width:100%;min-height:5em;font-family:var(--mono);font-size:.75rem;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:6px;box-sizing:border-box}
@@ -156,7 +157,12 @@ function blocoAcoes(){
     <div><span class="sub">CDI / Tesouro Selic</span><b>${pct(t.cdi_pct)}</b></div>
     <div><span class="sub">Pior queda no caminho</span><b class="neg">${fmt(t.pior_queda_radar_pct,1)}%</b></div></div>`;
   const linhas=c.acoes.map(a=>`<tr data-p="${a.preco_hoje||a.preco}"><td class="cod">${a.ticker}F</td><td class="st" title="${a.setor}">${a.setor}</td><td>${fmt(a.preco_hoje||a.preco)}</td><td>${fmt(a.p_l,1)}</td><td>${fmt(a.roe_pct,1)}%</td><td class="qtd">–</td><td class="val">–</td></tr>`).join("");
-  el.innerHTML=`<h2 class="titulo">Ações do Radar (longo prazo)</h2>
+  const m=D.mercado;
+  const geral=(m&&m.queda_geral)?`<div class="al geral" style="margin-bottom:12px"><strong>Queda geral da Bolsa: as ações estão, em média, ${fmt(-m.dist_mercado_pct,1)}% abaixo da média dos últimos 50 pregões</strong>
+    <div><b>Por que isso importa:</b> no teste com todas as ações da B3 (2016-2026, inclusive as que quebraram), comprar uma ação que caiu junto com a Bolsa inteira deu certo em ${m.teste.subiu_pct}% das vezes em 3 meses (caso típico: +${fmt(m.teste.mediana_pct,1)}%), contra ${m.teste.ref_subiu_pct}% num dia qualquer. Quando cai tudo, o medo derruba as boas junto com as ruins.</div>
+    <div>Mais caídas da carteira do Radar: ${m.carteira_radar.filter(x=>x.dist_pct<=-10).map(x=>`<span class="acao">${x.ticker}</span> (${fmt(x.dist_pct,1)}%)`).join(", ")||"nenhuma caiu 10% ou mais"}.</div>
+    <div><b>Cuidado:</b> isso só aconteceu em uns 6 episódios (${m.teste.episodios}) e a pandemia pesou muito no resultado. Em 2021-2022 a Bolsa ficou meses lá embaixo. Se for colocar dinheiro novo na carteira, é historicamente um momento favorável. Nunca use dinheiro com data marcada (como o do apartamento).</div></div>`:"";
+  el.innerHTML=`<h2 class="titulo">Ações do Radar (longo prazo)</h2>${geral}
    <div class="teste">
     <div><b>Teste com o passado (${t.periodo}), com dividendos:</b> a regra ganhou do índice da Bolsa nos 3 períodos testados (2018-2020, 2021-2023 e 2024-2026).</div>
     ${comp}

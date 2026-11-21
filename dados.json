@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-21T13:22",
+ "gerado_em": "2026-11-21T16:18",
  "selic_pct": 13.75,
  "ativos": [
   {
@@ -6189,6 +6189,63 @@
     "total_pct": 351.8,
     "pior_queda_pct": -35.7
    }
+  }
+ },
+ "mercado": {
+  "data": "2026-11-19",
+  "acoes_liquidas": 194,
+  "dist_mercado_pct": -13.0,
+  "queda_geral": true,
+  "carteira_radar": [
+   {
+    "ticker": "CYRE3",
+    "dist_pct": -28.3
+   },
+   {
+    "ticker": "PETR4",
+    "dist_pct": -15.7
+   },
+   {
+    "ticker": "POMO4",
+    "dist_pct": -14.4
+   },
+   {
+    "ticker": "VBBR3",
+    "dist_pct": -13.9
+   },
+   {
+    "ticker": "UGPA3",
+    "dist_pct": -13.4
+   },
+   {
+    "ticker": "DIRR3",
+    "dist_pct": -13.0
+   },
+   {
+    "ticker": "PSSA3",
+    "dist_pct": -9.8
+   },
+   {
+    "ticker": "BBSE3",
+    "dist_pct": -7.7
+   },
+   {
+    "ticker": "CMIG4",
+    "dist_pct": -1.7
+   },
+   {
+    "ticker": "CXSE3",
+    "dist_pct": -1.2
+   }
+  ],
+  "teste": {
+   "subiu_pct": 72,
+   "mediana_pct": 15.3,
+   "desastre_pct": 3.7,
+   "ref_subiu_pct": 50,
+   "ref_mediana_pct": 0.2,
+   "ref_desastre_pct": 6.2,
+   "episodios": "2018, 2020, 2021-2022, final de 2024 e 2026"
   }
  }
 }

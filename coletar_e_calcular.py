@@ -126,6 +126,16 @@ if __name__ == "__main__":
         saida["carteira_acoes"] = acoes_radar.atualizar()
     except Exception as e:
         saida["erros"].append(f"carteira de ações: {e}")
+    # --- Sinal "queda geral da Bolsa" (todas as ações, arquivo oficial da B3) ---
+    try:
+        import mercado
+        if "texto" not in dir():
+            import baixar_b3
+            _, texto = baixar_b3.ultimo_pregao()
+        lista = [a["ticker"] for a in (saida.get("carteira_acoes") or {}).get("acoes", [])]
+        saida["mercado"] = mercado.atualizar(texto, lista)
+    except Exception as e:
+        saida["erros"].append(f"queda geral: {e}")
     json.dump(saida, open("dados.json", "w"), ensure_ascii=False, indent=1, default=str)
     for a in saida["ativos"]:
         print(f'{a["ativo"]:7} {a["data"]} R${a["preco"]:>7} dia {a["var_dia_pct"]:>6}% IFR {a["ifr14"]:>5} vol20 {a["vol20_pct"]:>5}% tend {a["tendencia"]}')
