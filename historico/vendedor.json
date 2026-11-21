@@ -1,0 +1,104 @@
+{
+ "segue a tendência longa | com stop (perda de 1x o crédito)": {
+  "2023-2024 (desenvolvimento)": {
+   "ops": 404,
+   "acerto_pct": 30.2,
+   "resultado_R$_com_tiros_de_100": -5107.0,
+   "media_por_operacao_pct": -12.6
+  },
+  "2025-2026 (confirmação)": {
+   "ops": 396,
+   "acerto_pct": 21.0,
+   "resultado_R$_com_tiros_de_100": -7312.0,
+   "media_por_operacao_pct": -18.5
+  },
+  "total": {
+   "ops": 800,
+   "acerto_pct": 25.6,
+   "resultado_R$_com_tiros_de_100": -12419.0,
+   "media_por_operacao_pct": -15.5
+  },
+  "por_motivo": {
+   "stop": 590,
+   "lucro": 204,
+   "vencimento": 6
+  },
+  "pior_operacao": -100.58
+ },
+ "segue a tendência longa | sem stop": {
+  "2023-2024 (desenvolvimento)": {
+   "ops": 140,
+   "acerto_pct": 64.3,
+   "resultado_R$_com_tiros_de_100": -1820.0,
+   "media_por_operacao_pct": -13.0
+  },
+  "2025-2026 (confirmação)": {
+   "ops": 127,
+   "acerto_pct": 63.8,
+   "resultado_R$_com_tiros_de_100": -2484.0,
+   "media_por_operacao_pct": -19.6
+  },
+  "total": {
+   "ops": 267,
+   "acerto_pct": 64.0,
+   "resultado_R$_com_tiros_de_100": -4304.0,
+   "media_por_operacao_pct": -16.1
+  },
+  "por_motivo": {
+   "lucro": 165,
+   "vencimento": 102
+  },
+  "pior_operacao": -100.58
+ },
+ "só em tendência clara | com stop (perda de 1x o crédito)": {
+  "2023-2024 (desenvolvimento)": {
+   "ops": 297,
+   "acerto_pct": 28.6,
+   "resultado_R$_com_tiros_de_100": -4129.0,
+   "media_por_operacao_pct": -13.9
+  },
+  "2025-2026 (confirmação)": {
+   "ops": 291,
+   "acerto_pct": 26.5,
+   "resultado_R$_com_tiros_de_100": -5005.0,
+   "media_por_operacao_pct": -17.2
+  },
+  "total": {
+   "ops": 588,
+   "acerto_pct": 27.6,
+   "resultado_R$_com_tiros_de_100": -9134.0,
+   "media_por_operacao_pct": -15.5
+  },
+  "por_motivo": {
+   "stop": 425,
+   "lucro": 160,
+   "vencimento": 3
+  },
+  "pior_operacao": -100.58
+ },
+ "só em tendência clara | sem stop": {
+  "2023-2024 (desenvolvimento)": {
+   "ops": 125,
+   "acerto_pct": 69.6,
+   "resultado_R$_com_tiros_de_100": -1656.0,
+   "media_por_operacao_pct": -13.2
+  },
+  "2025-2026 (confirmação)": {
+   "ops": 117,
+   "acerto_pct": 62.4,
+   "resultado_R$_com_tiros_de_100": -2487.0,
+   "media_por_operacao_pct": -21.3
+  },
+  "total": {
+   "ops": 242,
+   "acerto_pct": 66.1,
+   "resultado_R$_com_tiros_de_100": -4143.0,
+   "media_por_operacao_pct": -17.1
+  },
+  "por_motivo": {
+   "lucro": 150,
+   "vencimento": 92
+  },
+  "pior_operacao": -100.13
+ }
+}

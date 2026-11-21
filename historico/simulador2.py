@@ -84,7 +84,10 @@ def rodar(acoes, ops, ind, nome_sinal, estrutura, P=P):
 
     def cot(cod, d, campo):
         o = ops_cod[cod]
-        return float(o.loc[d, campo]) if d in o.index else 0.0
+        if d not in o.index: return 0.0
+        if P.get("usar_meio") and o.loc[d, "compra"] > 0 and o.loc[d, "venda"] > 0:  # teste ideal, sem custo de spread
+            return float((o.loc[d, "compra"] + o.loc[d, "venda"]) / 2)
+        return float(o.loc[d, campo])
 
     inicio = pd.Timestamp("2023-01-02")
     pend, abertas, trades = [], {}, []

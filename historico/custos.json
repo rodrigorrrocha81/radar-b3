@@ -1,0 +1,62 @@
+{
+ "comprador: recuo (Góes) + compra seca | preço do meio": {
+  "2023-2024 (desenvolvimento)": {
+   "ops": 70,
+   "acerto_pct": 34.3,
+   "resultado_R$_com_tiros_de_100": -165.0,
+   "media_por_operacao_pct": -2.4
+  },
+  "2025-2026 (confirmação)": {
+   "ops": 66,
+   "acerto_pct": 33.3,
+   "resultado_R$_com_tiros_de_100": 193.0,
+   "media_por_operacao_pct": 2.9
+  },
+  "total": {
+   "ops": 136,
+   "acerto_pct": 33.8,
+   "resultado_R$_com_tiros_de_100": 28.0,
+   "media_por_operacao_pct": 0.2
+  }
+ },
+ "vendedor: segue a tendência longa sem stop | preço do meio": {
+  "2023-2024 (desenvolvimento)": {
+   "ops": 190,
+   "acerto_pct": 82.6,
+   "resultado_R$_com_tiros_de_100": -77.0,
+   "media_por_operacao_pct": -0.4
+  },
+  "2025-2026 (confirmação)": {
+   "ops": 171,
+   "acerto_pct": 79.5,
+   "resultado_R$_com_tiros_de_100": -434.0,
+   "media_por_operacao_pct": -2.5
+  },
+  "total": {
+   "ops": 361,
+   "acerto_pct": 81.2,
+   "resultado_R$_com_tiros_de_100": -512.0,
+   "media_por_operacao_pct": -1.4
+  }
+ },
+ "vendedor: só em tendência clara sem stop | preço do meio": {
+  "2023-2024 (desenvolvimento)": {
+   "ops": 181,
+   "acerto_pct": 81.2,
+   "resultado_R$_com_tiros_de_100": -396.0,
+   "media_por_operacao_pct": -2.2
+  },
+  "2025-2026 (confirmação)": {
+   "ops": 170,
+   "acerto_pct": 77.1,
+   "resultado_R$_com_tiros_de_100": -680.0,
+   "media_por_operacao_pct": -4.0
+  },
+  "total": {
+   "ops": 351,
+   "acerto_pct": 79.2,
+   "resultado_R$_com_tiros_de_100": -1075.0,
+   "media_por_operacao_pct": -3.1
+  }
+ }
+}
