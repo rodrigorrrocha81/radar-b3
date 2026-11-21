@@ -16,4 +16,4 @@ jobs:
       - run: pip install requests && python historico/extrair_b3.py && ls -la historico
       - run: |
           git config user.name "radar-b3-bot"; git config user.email "radar-b3-bot@users.noreply.github.com"
-          git add historico/*.csv.gz && git commit -m "Dados históricos da B3 (ações e opções)" && git push
+          git add historico/*.csv.gz && git commit -m "Dados históricos da B3 (ações e opções)" && git pull --rebase origin dados-historicos && git push
