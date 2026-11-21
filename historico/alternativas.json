@@ -1,0 +1,122 @@
+{
+ "recuo (Góes) | seca": {
+  "2023-2024 (desenvolvimento)": {
+   "ops": 64,
+   "acerto_pct": 23.4,
+   "resultado_R$_com_tiros_de_100": -2311.0,
+   "media_por_operacao_pct": -36.1
+  },
+  "2025-2026 (confirmação)": {
+   "ops": 61,
+   "acerto_pct": 31.1,
+   "resultado_R$_com_tiros_de_100": -1227.0,
+   "media_por_operacao_pct": -20.1
+  },
+  "total": {
+   "ops": 125,
+   "acerto_pct": 27.2,
+   "resultado_R$_com_tiros_de_100": -3538.0,
+   "media_por_operacao_pct": -28.3
+  }
+ },
+ "recuo (Góes) | trava": {
+  "2023-2024 (desenvolvimento)": {
+   "ops": 62,
+   "acerto_pct": 22.6,
+   "resultado_R$_com_tiros_de_100": -3060.0,
+   "media_por_operacao_pct": -49.4
+  },
+  "2025-2026 (confirmação)": {
+   "ops": 58,
+   "acerto_pct": 25.9,
+   "resultado_R$_com_tiros_de_100": -2726.0,
+   "media_por_operacao_pct": -47.0
+  },
+  "total": {
+   "ops": 120,
+   "acerto_pct": 24.2,
+   "resultado_R$_com_tiros_de_100": -5786.0,
+   "media_por_operacao_pct": -48.2
+  }
+ },
+ "rompimento | seca": {
+  "2023-2024 (desenvolvimento)": {
+   "ops": 53,
+   "acerto_pct": 24.5,
+   "resultado_R$_com_tiros_de_100": -1639.0,
+   "media_por_operacao_pct": -30.9
+  },
+  "2025-2026 (confirmação)": {
+   "ops": 60,
+   "acerto_pct": 28.3,
+   "resultado_R$_com_tiros_de_100": -1564.0,
+   "media_por_operacao_pct": -26.1
+  },
+  "total": {
+   "ops": 113,
+   "acerto_pct": 26.5,
+   "resultado_R$_com_tiros_de_100": -3203.0,
+   "media_por_operacao_pct": -28.3
+  }
+ },
+ "rompimento | trava": {
+  "2023-2024 (desenvolvimento)": {
+   "ops": 41,
+   "acerto_pct": 22.0,
+   "resultado_R$_com_tiros_de_100": -1991.0,
+   "media_por_operacao_pct": -48.6
+  },
+  "2025-2026 (confirmação)": {
+   "ops": 53,
+   "acerto_pct": 24.5,
+   "resultado_R$_com_tiros_de_100": -2451.0,
+   "media_por_operacao_pct": -46.3
+  },
+  "total": {
+   "ops": 94,
+   "acerto_pct": 23.4,
+   "resultado_R$_com_tiros_de_100": -4443.0,
+   "media_por_operacao_pct": -47.3
+  }
+ },
+ "exagero | seca": {
+  "2023-2024 (desenvolvimento)": {
+   "ops": 22,
+   "acerto_pct": 22.7,
+   "resultado_R$_com_tiros_de_100": -940.0,
+   "media_por_operacao_pct": -42.7
+  },
+  "2025-2026 (confirmação)": {
+   "ops": 18,
+   "acerto_pct": 38.9,
+   "resultado_R$_com_tiros_de_100": -50.0,
+   "media_por_operacao_pct": -2.8
+  },
+  "total": {
+   "ops": 40,
+   "acerto_pct": 30.0,
+   "resultado_R$_com_tiros_de_100": -990.0,
+   "media_por_operacao_pct": -24.8
+  }
+ },
+ "exagero | trava": {
+  "2023-2024 (desenvolvimento)": {
+   "ops": 21,
+   "acerto_pct": 23.8,
+   "resultado_R$_com_tiros_de_100": -957.0,
+   "media_por_operacao_pct": -45.6
+  },
+  "2025-2026 (confirmação)": {
+   "ops": 16,
+   "acerto_pct": 31.2,
+   "resultado_R$_com_tiros_de_100": -465.0,
+   "media_por_operacao_pct": -29.1
+  },
+  "total": {
+   "ops": 37,
+   "acerto_pct": 27.0,
+   "resultado_R$_com_tiros_de_100": -1422.0,
+   "media_por_operacao_pct": -38.4
+  }
+ }
+}
