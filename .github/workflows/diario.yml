@@ -1,7 +1,8 @@
 name: Atualização diária
 on:
   schedule:
-    - cron: "17 22 * * 1-5"   # 19h17 de Brasília, depois do fechamento
+    - cron: "17 22 * * 1-5"   # 19h17 de Brasília: preços das ações do dia
+    - cron: "17 11 * * 2-6"   # 8h17 de Brasília do dia seguinte: arquivo oficial da B3 do pregão anterior (opções, carteira simulada, queda geral)
   workflow_dispatch:
 permissions:
   contents: write
@@ -14,7 +15,7 @@ jobs:
         with: {python-version: "3.12"}
       - id: dia
         run: python dia_de_pregao.py
-      - if: steps.dia.outputs.pregao == 'sim' || github.event_name == 'workflow_dispatch'
+      - if: steps.dia.outputs.pregao == 'sim' || github.event_name == 'workflow_dispatch' || github.event.schedule == '17 11 * * 2-6'
         run: |
           pip install -r requirements.txt
           python coletar_e_calcular.py
