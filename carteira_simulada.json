@@ -1,7 +1,8 @@
 {
  "inicio": "2026-11-19",
- "ultimo_pregao": "2026-11-19",
- "pendentes": [
+ "ultimo_pregao": "2026-11-23",
+ "pendentes": [],
+ "abertas": [
   {
    "estrategia": "venda",
    "ativo": "PETR4",
@@ -12,7 +13,12 @@
    "strike_protecao": 47.91,
    "largura": 1.75,
    "vencimento": "2026-12-18",
-   "sinal": "2026-11-19"
+   "sinal": "2026-11-19",
+   "entrada": "2026-11-23",
+   "credito": 0.11,
+   "qtd": 60.975609756097555,
+   "custo_zerar": 0.18,
+   "resultado": -4.27
   },
   {
    "estrategia": "venda",
@@ -24,19 +30,12 @@
    "strike_protecao": 65.2,
    "largura": 2.0,
    "vencimento": "2026-12-18",
-   "sinal": "2026-11-19"
-  },
-  {
-   "estrategia": "venda",
-   "ativo": "ITUB4",
-   "tipo": "call",
-   "vendida": "ITUBL432",
-   "protecao": "ITUBL458",
-   "strike_vendida": 42.41,
-   "strike_protecao": 45.41,
-   "largura": 3.0,
-   "vencimento": "2026-12-18",
-   "sinal": "2026-11-19"
+   "sinal": "2026-11-19",
+   "entrada": "2026-11-23",
+   "credito": 0.05,
+   "qtd": 51.282051282051285,
+   "custo_zerar": 0.36,
+   "resultado": -15.9
   },
   {
    "estrategia": "venda",
@@ -48,7 +47,12 @@
    "strike_protecao": 15.66,
    "largura": 0.75,
    "vencimento": "2026-12-18",
-   "sinal": "2026-11-19"
+   "sinal": "2026-11-19",
+   "entrada": "2026-11-23",
+   "credito": 0.07,
+   "qtd": 147.05882352941177,
+   "custo_zerar": 0.09,
+   "resultado": -2.94
   },
   {
    "estrategia": "venda",
@@ -60,7 +64,12 @@
    "strike_protecao": 16.95,
    "largura": 1.75,
    "vencimento": "2026-12-18",
-   "sinal": "2026-11-19"
+   "sinal": "2026-11-19",
+   "entrada": "2026-11-23",
+   "credito": 0.2,
+   "qtd": 64.51612903225806,
+   "custo_zerar": 0.24,
+   "resultado": -2.58
   },
   {
    "estrategia": "venda",
@@ -72,33 +81,13 @@
    "strike_protecao": 14.94,
    "largura": 0.75,
    "vencimento": "2026-12-18",
-   "sinal": "2026-11-19"
-  },
-  {
-   "estrategia": "venda",
-   "ativo": "PRIO3",
-   "tipo": "call",
-   "vendida": "PRIOL640",
-   "protecao": "PRIOL695",
-   "strike_vendida": 64.0,
-   "strike_protecao": 69.5,
-   "largura": 5.5,
-   "vencimento": "2026-12-18",
-   "sinal": "2026-11-19"
-  },
-  {
-   "estrategia": "venda",
-   "ativo": "BOVA11",
-   "tipo": "call",
-   "vendida": "BOVAL171",
-   "protecao": "BOVAL67",
-   "strike_vendida": 171.0,
-   "strike_protecao": 177.0,
-   "largura": 6.0,
-   "vencimento": "2026-12-18",
-   "sinal": "2026-11-19"
+   "sinal": "2026-11-19",
+   "entrada": "2026-11-23",
+   "credito": 0.12,
+   "qtd": 158.73015873015873,
+   "custo_zerar": 0.18,
+   "resultado": -9.52
   }
  ],
- "abertas": [],
  "fechadas": []
 }
