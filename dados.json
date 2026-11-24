@@ -6360,6 +6360,107 @@
  "mercado": {
   "data": "2026-11-23",
   "acoes_liquidas": 194,
+  "destaques": {
+   "altas": [
+    {
+     "ticker": "FIQE3",
+     "preco": 6.85,
+     "var_pct": 19.55,
+     "volume_mi": 40.7
+    },
+    {
+     "ticker": "AZEV3",
+     "preco": 11.95,
+     "var_pct": 13.7,
+     "volume_mi": 25.3
+    },
+    {
+     "ticker": "MGLU3",
+     "preco": 8.99,
+     "var_pct": 9.63,
+     "volume_mi": 471.3
+    },
+    {
+     "ticker": "RADL3",
+     "preco": 14.69,
+     "var_pct": 7.07,
+     "volume_mi": 441.6
+    },
+    {
+     "ticker": "AZUL3",
+     "preco": 11.27,
+     "var_pct": 6.32,
+     "volume_mi": 1.6
+    }
+   ],
+   "quedas": [
+    {
+     "ticker": "INTB3",
+     "preco": 14.46,
+     "var_pct": -5.92,
+     "volume_mi": 39.9
+    },
+    {
+     "ticker": "HAPV3",
+     "preco": 5.8,
+     "var_pct": -5.84,
+     "volume_mi": 96.2
+    },
+    {
+     "ticker": "PFRM3",
+     "preco": 7.05,
+     "var_pct": -5.11,
+     "volume_mi": 1.8
+    },
+    {
+     "ticker": "TRIS3",
+     "preco": 4.27,
+     "var_pct": -4.9,
+     "volume_mi": 1.2
+    },
+    {
+     "ticker": "JALL3",
+     "preco": 2.16,
+     "var_pct": -4.85,
+     "volume_mi": 2.4
+    }
+   ],
+   "mais_negociadas": [
+    {
+     "ticker": "PETR4",
+     "preco": 41.3,
+     "var_pct": -3.21,
+     "volume_mi": 1944.6
+    },
+    {
+     "ticker": "ITUB4",
+     "preco": 39.73,
+     "var_pct": -0.85,
+     "volume_mi": 1147.2
+    },
+    {
+     "ticker": "BPAC11",
+     "preco": 49.76,
+     "var_pct": 0.14,
+     "volume_mi": 1067.4
+    },
+    {
+     "ticker": "AXIA3",
+     "preco": 45.52,
+     "var_pct": -1.04,
+     "volume_mi": 945.1
+    },
+    {
+     "ticker": "VALE3",
+     "preco": 58.41,
+     "var_pct": -0.12,
+     "volume_mi": 920.6
+    }
+   ],
+   "subiram": 65,
+   "cairam": 124,
+   "media_pct": -0.36
+  },
   "dist_mercado_pct": -13.1,
   "queda_geral": true,
   "carteira_radar": [

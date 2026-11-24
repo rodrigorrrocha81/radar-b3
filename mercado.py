@@ -50,7 +50,18 @@ def atualizar(texto_b3, carteira_radar):
     mercado = dist[liquida & dist.notna()].mean()
     quedas = sorted(({"ticker": t, "dist_pct": round(dist[t] * 100, 1)} for t in carteira_radar if t in dist and pd.notna(dist[t])),
                     key=lambda x: x["dist_pct"])
-    return {"data": str(pd.Timestamp(datas[-1]).date()), "acoes_liquidas": int(liquida.sum()),
+    # Destaques do pregão: maiores altas, maiores quedas e mais negociadas (só ações com bom volume)
+    var = (A.iloc[-1] / A.iloc[-2] - 1) if len(A) >= 2 else pd.Series(dtype=float)
+    vol = V.iloc[-1]
+    ok = liquida & var.notna() & vol.notna()
+    item = lambda t: {"ticker": t, "preco": round(float(P.iloc[-1][t]), 2), "var_pct": round(float(var[t]) * 100, 2),
+                      "volume_mi": round(float(vol[t]) / 1e6, 1)}
+    destaques = {"altas": [item(t) for t in var[ok].sort_values(ascending=False).index[:5]],
+                 "quedas": [item(t) for t in var[ok].sort_values().index[:5]],
+                 "mais_negociadas": [item(t) for t in vol[ok].sort_values(ascending=False).index[:5]],
+                 "subiram": int((var[ok] > 0).sum()), "cairam": int((var[ok] < 0).sum()),
+                 "media_pct": round(float(var[ok].mean()) * 100, 2) if ok.any() else None}
+    return {"data": str(pd.Timestamp(datas[-1]).date()), "acoes_liquidas": int(liquida.sum()), "destaques": destaques,
             "dist_mercado_pct": None if pd.isna(mercado) else round(mercado * 100, 1),
             "queda_geral": bool(pd.notna(mercado) and mercado <= -0.10),
             "carteira_radar": quedas, "teste": TESTE}

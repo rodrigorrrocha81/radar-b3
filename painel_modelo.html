@@ -96,6 +96,9 @@ th:first-child,td:first-child{text-align:left}
 .al.lucro{background:var(--upbg);border-color:transparent}
 .al.troca{background:var(--flatbg);border-color:transparent}
 .al.ok{background:var(--bg)}
+.dest{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.dest .simcard h2{font-size:.9rem}
+.dest .linha span:last-child{font-family:var(--mono);font-variant-numeric:tabular-nums}
 .al.geral{background:var(--downbg);border-color:transparent}
 .al strong{font-weight:600}
 .al .acao{font-family:var(--mono);font-weight:500}
@@ -112,6 +115,7 @@ footer{color:var(--muted);font-size:.82rem;display:grid;gap:6px;max-width:75ch}
   </header>
   <div class="resumo" id="resumo"></div>
   <div class="aviso"><strong>Análise, não recomendação.</strong> Todos os números são calculados por programa a partir de dados públicos de fechamento. Nenhum item desta tela é sinal de compra ou venda.</div>
+  <section class="secao" id="secao-destaques"></section>
   <section class="secao" id="secao-acoes"></section>
   <section class="secao" id="secao-minha"></section>
   <section class="secao" id="secao-sim"></section>
@@ -145,6 +149,19 @@ function spark(h){
     <path d="M${path(h.mm50)}" fill="none" stroke="var(--muted)" stroke-width="1.3" stroke-dasharray="4 3" vector-effect="non-scaling-stroke"/>
     <path d="M${p}" fill="none" stroke="var(--accent)" stroke-width="1.8" vector-effect="non-scaling-stroke"/>
     <circle cx="${x(n-1)}" cy="${y(h.fech[n-1])}" r="3" fill="var(--accent)"/></svg>`;
+}
+function blocoDestaques(){
+  const m=D.mercado, el=document.getElementById("secao-destaques");
+  if(!m||!m.destaques){el.innerHTML="";return}
+  const d=m.destaques, pct=v=>(v>0?"+":"")+fmt(v,2)+"%";
+  const lista=(arr,campo)=>arr.map(x=>`<div class="linha"><span class="cod">${x.ticker} <span class="sub">R$ ${fmt(x.preco)}</span></span><span class="${campo==="vol"?"":cls(x.var_pct)}">${campo==="vol"?"R$ "+fmt(x.volume_mi,1)+" mi":pct(x.var_pct)}</span></div>`).join("");
+  el.innerHTML=`<h2 class="titulo">Destaques do pregão de ${m.data.split("-").reverse().join("/")}</h2>
+   <div class="sub" style="margin-bottom:10px">Entre ${m.acoes_liquidas} ações com bom volume de negócios: ${d.subiram} subiram e ${d.cairam} caíram (média <span class="${cls(d.media_pct)}">${pct(d.media_pct)}</span>). Fonte: arquivo oficial da B3.</div>
+   <div class="dest">
+    <div class="simcard"><h2>Maiores altas</h2>${lista(d.altas)}</div>
+    <div class="simcard"><h2>Maiores quedas</h2>${lista(d.quedas)}</div>
+    <div class="simcard"><h2>Mais negociadas (valor do dia)</h2>${lista(d.mais_negociadas,"vol")}</div>
+   </div>`;
 }
 function blocoAcoes(){
   const c=D.carteira_acoes, el=document.getElementById("secao-acoes");
@@ -312,6 +329,7 @@ function blocoOpcoes(a){
    <div class="vibar"><span>${vi}</span>${rel}${leit}</div>
    <div class="sub">${o.n_liquidas??0} de ${o.total_series} séries passaram nos filtros de liquidez</div>${tabela}</div>`;
 }
+blocoDestaques();
 blocoAcoes();
 blocoMinha();
 blocoSim();
