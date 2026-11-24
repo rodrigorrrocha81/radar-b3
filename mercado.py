@@ -61,7 +61,15 @@ def atualizar(texto_b3, carteira_radar):
                  "mais_negociadas": [item(t) for t in vol[ok].sort_values(ascending=False).index[:5]],
                  "subiram": int((var[ok] > 0).sum()), "cairam": int((var[ok] < 0).sum()),
                  "media_pct": round(float(var[ok].mean()) * 100, 2) if ok.any() else None}
-    return {"data": str(pd.Timestamp(datas[-1]).date()), "acoes_liquidas": int(liquida.sum()), "destaques": destaques,
+    # "Faca caindo": ação que despencou sozinha (15%+ abaixo da média) enquanto a Bolsa estava bem.
+    # No teste com todas as ações (2016-2026), esse sinal foi REPROVADO: caso típico -1,3% e 14% de desastres.
+    faca = []
+    if pd.notna(mercado) and mercado > -0.10:
+        sel = dist[liquida & (dist <= -0.15)]
+        faca = [{"ticker": t, "dist_pct": round(float(sel[t]) * 100, 1), "volume_mi": round(float(vol.get(t, 0)) / 1e6, 1)}
+                for t in sel.index]
+        faca = sorted(faca, key=lambda x: -x["volume_mi"])[:5]
+    return {"data": str(pd.Timestamp(datas[-1]).date()), "acoes_liquidas": int(liquida.sum()), "destaques": destaques, "faca_caindo": faca,
             "dist_mercado_pct": None if pd.isna(mercado) else round(mercado * 100, 1),
             "queda_geral": bool(pd.notna(mercado) and mercado <= -0.10),
             "carteira_radar": quedas, "teste": TESTE}

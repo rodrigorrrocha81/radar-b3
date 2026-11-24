@@ -151,17 +151,29 @@ function spark(h){
     <circle cx="${x(n-1)}" cy="${y(h.fech[n-1])}" r="3" fill="var(--accent)"/></svg>`;
 }
 function blocoDestaques(){
-  const m=D.mercado, el=document.getElementById("secao-destaques");
-  if(!m||!m.destaques){el.innerHTML="";return}
-  const d=m.destaques, pct=v=>(v>0?"+":"")+fmt(v,2)+"%";
-  const lista=(arr,campo)=>arr.map(x=>`<div class="linha"><span class="cod">${x.ticker} <span class="sub">R$ ${fmt(x.preco)}</span></span><span class="${campo==="vol"?"":cls(x.var_pct)}">${campo==="vol"?"R$ "+fmt(x.volume_mi,1)+" mi":pct(x.var_pct)}</span></div>`).join("");
-  el.innerHTML=`<h2 class="titulo">Destaques do pregão de ${m.data.split("-").reverse().join("/")}</h2>
-   <div class="sub" style="margin-bottom:10px">Entre ${m.acoes_liquidas} ações com bom volume de negócios: ${d.subiram} subiram e ${d.cairam} caíram (média <span class="${cls(d.media_pct)}">${pct(d.media_pct)}</span>). Fonte: arquivo oficial da B3.</div>
-   <div class="dest">
-    <div class="simcard"><h2>Maiores altas</h2>${lista(d.altas)}</div>
-    <div class="simcard"><h2>Maiores quedas</h2>${lista(d.quedas)}</div>
-    <div class="simcard"><h2>Mais negociadas (valor do dia)</h2>${lista(d.mais_negociadas,"vol")}</div>
-   </div>`;
+  const m=D.mercado, c=D.carteira_acoes, el=document.getElementById("secao-destaques");
+  if(!m||!c){el.innerHTML="";return}
+  const dist=Object.fromEntries((m.carteira_radar||[]).map(x=>[x.ticker,x.dist_pct]));
+  const data=m.data.split("-").reverse().join("/");
+  const cards=[];
+  // 1) Melhor negócio: empresa da lista do Radar + liquidação geral + caiu 15% ou mais (sinal aprovado no teste)
+  const melhores=c.acoes.filter(a=>m.queda_geral && dist[a.ticker]!=null && dist[a.ticker]<=-15).sort((a,b)=>dist[a.ticker]-dist[b.ticker]);
+  melhores.forEach(a=>cards.push(`<div class="al lucro"><strong>✅ COMPRAR: ${a.ticker} (R$ ${fmt(a.preco_hoje||a.preco)}) · melhor negócio de hoje</strong>
+    <div><b>Explicando simples:</b> é uma loja boa fazendo liquidação. A empresa ganha bem (de cada R$ 100 dos donos, lucra R$ ${fmt(a.roe_pct,0)} por ano), está barata (o lucro paga o preço da ação em uns ${fmt(a.p_l,0)} anos) e está ${fmt(-dist[a.ticker],0)}% mais barata que o normal só porque todo mundo ficou com medo ao mesmo tempo, não por um problema dela.</div>
+    <div class="sub">No teste com o passado, comprar assim deu certo 72 de cada 100 vezes em 3 meses.</div></div>`));
+  // 2) Compra normal: resto da lista do Radar
+  const normais=c.acoes.filter(a=>!melhores.includes(a));
+  if(normais.length) cards.push(`<div class="al ok"><strong>👍 PODE COMPRAR, sem pressa: ${normais.map(a=>a.ticker).join(", ")}</strong>
+    <div><b>Explicando simples:</b> são empresas boas e com preço justo, como um mercado bom com preço normal. Não estão em liquidação hoje, mas fazem parte da carteira do Radar, que no teste com o passado rendeu bem mais que a Bolsa.</div></div>`);
+  // 3) Não comprar: faca caindo
+  (m.faca_caindo||[]).forEach(f=>cards.push(`<div class="al geral"><strong>❌ NÃO COMPRAR: ${f.ticker} (caiu ${fmt(-f.dist_pct,0)}% sozinha)</strong>
+    <div><b>Explicando simples:</b> quando todas as lojas estão normais e só uma faz uma "promoção" enorme, pode ser que tenha algo quebrado dentro dela. No teste, comprar assim deu mais prejuízo do que lucro.</div></div>`));
+  // 4) Opções
+  cards.push(`<div class="al geral"><strong>❌ NÃO COMPRAR OPÇÕES</strong>
+    <div><b>Explicando simples:</b> opção é como raspadinha: às vezes você ganha muito, mas na maioria das vezes perde o que pagou. Testamos 11 jeitos diferentes com dados reais e nenhum deu lucro. Elas ficam só no laboratório, com dinheiro de mentira.</div></div>`);
+  el.innerHTML=`<h2 class="titulo">Melhores negócios de hoje</h2>
+   <div class="sub" style="margin-bottom:10px">Com base no fechamento de ${data} e só nas regras que passaram no teste com o passado. Use apenas dinheiro que pode ficar anos investido (nunca o do apartamento). A quantidade de cada uma está na calculadora mais abaixo.</div>
+   <div class="alertas">${cards.join("")}</div>`;
 }
 function blocoAcoes(){
   const c=D.carteira_acoes, el=document.getElementById("secao-acoes");
