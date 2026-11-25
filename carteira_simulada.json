@@ -1,7 +1,29 @@
 {
  "inicio": "2026-11-19",
- "ultimo_pregao": "2026-11-23",
- "pendentes": [],
+ "ultimo_pregao": "2026-11-24",
+ "pendentes": [
+  {
+   "estrategia": "compra",
+   "ativo": "WEGE3",
+   "tipo": "call",
+   "codigo": "WEGEA510",
+   "strike": 51.03,
+   "vencimento": "2027-01-15",
+   "sinal": "2026-11-24"
+  },
+  {
+   "estrategia": "venda",
+   "ativo": "BOVA11",
+   "tipo": "call",
+   "vendida": "BOVAA170",
+   "protecao": "BOVAA18",
+   "strike_vendida": 170.0,
+   "strike_protecao": 180.0,
+   "largura": 10.0,
+   "vencimento": "2027-01-15",
+   "sinal": "2026-11-24"
+  }
+ ],
  "abertas": [
   {
    "estrategia": "venda",
@@ -17,8 +39,8 @@
    "entrada": "2026-11-23",
    "credito": 0.11,
    "qtd": 60.975609756097555,
-   "custo_zerar": 0.18,
-   "resultado": -4.27
+   "custo_zerar": 0.17,
+   "resultado": -3.66
   },
   {
    "estrategia": "venda",
@@ -34,8 +56,8 @@
    "entrada": "2026-11-23",
    "credito": 0.05,
    "qtd": 51.282051282051285,
-   "custo_zerar": 0.36,
-   "resultado": -15.9
+   "custo_zerar": 0.16,
+   "resultado": -5.64
   },
   {
    "estrategia": "venda",
@@ -85,8 +107,8 @@
    "entrada": "2026-11-23",
    "credito": 0.12,
    "qtd": 158.73015873015873,
-   "custo_zerar": 0.18,
-   "resultado": -9.52
+   "custo_zerar": 0.13,
+   "resultado": -1.59
   }
  ],
  "fechadas": []
