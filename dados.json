@@ -1,30 +1,29 @@
 {
- "gerado_em": "2026-11-26T09:15",
+ "gerado_em": "2026-11-26T20:12",
  "selic_pct": 13.75,
  "ativos": [
   {
    "ativo": "PETR4",
-   "data": "2026-11-25",
-   "preco": 41.36,
-   "var_dia_pct": 2.0,
-   "var_21d_pct": -29.52,
-   "mm21": 46.38,
-   "mm50": 50.16,
-   "mm200": 44.91,
-   "dist_mm50_pct": -17.54,
-   "ifr14": 28.6,
-   "ifr_leitura": "sobrevendido (<30)",
-   "atr14": 1.63,
+   "data": "2026-11-26",
+   "preco": 43.19,
+   "var_dia_pct": 4.42,
+   "var_21d_pct": -19.84,
+   "mm21": 45.87,
+   "mm50": 50.04,
+   "mm200": 44.94,
+   "dist_mm50_pct": -13.69,
+   "ifr14": 37.8,
+   "ifr_leitura": "neutro",
+   "atr14": 1.7,
    "atr_pct": 3.95,
-   "vol20_pct": 36.0,
-   "vol_1ano_pct": 32.0,
+   "vol20_pct": 41.1,
+   "vol_1ano_pct": 32.3,
    "suporte_20d": 40.41,
-   "resistencia_20d": 53.7,
-   "volume_vs_media20": 1.18,
+   "resistencia_20d": 53.66,
+   "volume_vs_media20": 0.83,
    "tendencia": "lateral",
    "historico": {
     "datas": [
-     "2026-06-05",
      "2026-06-08",
      "2026-06-09",
      "2026-06-10",
@@ -143,10 +142,10 @@
      "2026-11-19",
      "2026-11-23",
      "2026-11-24",
-     "2026-11-25"
+     "2026-11-25",
+     "2026-11-26"
     ],
     "fech": [
-     40.89,
      41.22,
      41.17,
      41.65,
@@ -265,10 +264,10 @@
      42.67,
      41.3,
      40.55,
-     41.36
+     41.36,
+     43.19
     ],
     "mm50": [
-     46.4,
      46.28,
      46.15,
      46.03,
@@ -387,7 +386,8 @@
      50.62,
      50.48,
      50.31,
-     50.16
+     50.16,
+     50.04
     ]
    },
    "opcoes": {
@@ -597,9 +597,9 @@
     ],
     "vi_atm": 33.1,
     "vencimento_ref": "2026-12-18",
-    "vi_vs_vol_ano": 1.03,
+    "vi_vs_vol_ano": 1.02,
     "leitura_vi": "em linha",
-    "vi_vs_vol20": 0.92,
+    "vi_vs_vol20": 0.81,
     "n_liquidas": 47
    },
    "fundamentos": {
@@ -611,8 +611,8 @@
     "patrimonio": 505631000000.0,
     "acoes": 12888732761.0,
     "lpa": 10.89,
-    "p_l": 3.8,
-    "p_vp": 1.05,
+    "p_l": 4.0,
+    "p_vp": 1.1,
     "roe_pct": 27.8,
     "cresc_lucro_pct": 32.0,
     "margem_liquida_pct": 23.8,
@@ -620,7 +620,7 @@
     "divida_liquida": 299869000000.0,
     "div_liq_ebit": 1.49,
     "proventos_12m": 3.66,
-    "dividend_yield_pct": 8.9,
+    "dividend_yield_pct": 8.5,
     "ultimos_proventos": [
      {
       "data": "2026-08-24",
@@ -688,27 +688,26 @@
   },
   {
    "ativo": "VALE3",
-   "data": "2026-11-25",
-   "preco": 56.9,
-   "var_dia_pct": 3.1,
-   "var_21d_pct": -8.08,
-   "mm21": 61.52,
-   "mm50": 66.12,
-   "mm200": 76.67,
-   "dist_mm50_pct": -13.95,
-   "ifr14": 33.2,
+   "data": "2026-11-26",
+   "preco": 58.73,
+   "var_dia_pct": 3.22,
+   "var_21d_pct": -8.78,
+   "mm21": 61.25,
+   "mm50": 65.79,
+   "mm200": 76.53,
+   "dist_mm50_pct": -10.73,
+   "ifr14": 40.0,
    "ifr_leitura": "neutro",
-   "atr14": 2.0,
-   "atr_pct": 3.52,
-   "vol20_pct": 41.1,
-   "vol_1ano_pct": 29.8,
+   "atr14": 1.99,
+   "atr_pct": 3.39,
+   "vol20_pct": 42.8,
+   "vol_1ano_pct": 30.0,
    "suporte_20d": 54.61,
    "resistencia_20d": 66.3,
-   "volume_vs_media20": 1.5,
+   "volume_vs_media20": 0.78,
    "tendencia": "baixa",
    "historico": {
     "datas": [
-     "2026-06-05",
      "2026-06-08",
      "2026-06-09",
      "2026-06-10",
@@ -827,10 +826,10 @@
      "2026-11-19",
      "2026-11-23",
      "2026-11-24",
-     "2026-11-25"
+     "2026-11-25",
+     "2026-11-26"
     ],
     "fech": [
-     78.7,
      78.07,
      78.5,
      77.7,
@@ -949,10 +948,10 @@
      58.48,
      58.41,
      55.19,
-     56.9
+     56.9,
+     58.73
     ],
     "mm50": [
-     83.15,
      83.15,
      83.13,
      83.1,
@@ -1071,7 +1070,8 @@
      67.42,
      67.01,
      66.55,
-     66.12
+     66.12,
+     65.79
     ]
    },
    "opcoes": {
@@ -1281,9 +1281,9 @@
     ],
     "vi_atm": 33.9,
     "vencimento_ref": "2026-12-18",
-    "vi_vs_vol_ano": 1.14,
+    "vi_vs_vol_ano": 1.13,
     "leitura_vi": "em linha",
-    "vi_vs_vol20": 0.82,
+    "vi_vs_vol20": 0.79,
     "n_liquidas": 38
    },
    "fundamentos": {
@@ -1295,8 +1295,8 @@
     "patrimonio": 199718000000.0,
     "acoes": 4072366000.0,
     "lpa": 0.54,
-    "p_l": 105.9,
-    "p_vp": 1.16,
+    "p_l": 109.3,
+    "p_vp": 1.2,
     "roe_pct": 1.1,
     "cresc_lucro_pct": -33.3,
     "margem_liquida_pct": 1.0,
@@ -1304,7 +1304,7 @@
     "divida_liquida": 67850000000.0,
     "div_liq_ebit": 2.69,
     "proventos_12m": 5.61,
-    "dividend_yield_pct": 9.9,
+    "dividend_yield_pct": 9.6,
     "ultimos_proventos": [
      {
       "data": "2026-08-12",
@@ -1356,27 +1356,26 @@
   },
   {
    "ativo": "ITUB4",
-   "data": "2026-11-25",
-   "preco": 40.01,
-   "var_dia_pct": 0.68,
-   "var_21d_pct": -17.16,
-   "mm21": 40.48,
+   "data": "2026-11-26",
+   "preco": 42.56,
+   "var_dia_pct": 6.37,
+   "var_21d_pct": 2.06,
+   "mm21": 40.52,
    "mm50": 43.57,
-   "mm200": 42.72,
-   "dist_mm50_pct": -8.17,
-   "ifr14": 39.2,
+   "mm200": 42.71,
+   "dist_mm50_pct": -2.32,
+   "ifr14": 53.8,
    "ifr_leitura": "neutro",
-   "atr14": 1.21,
-   "atr_pct": 3.01,
-   "vol20_pct": 26.9,
-   "vol_1ano_pct": 31.5,
+   "atr14": 1.3,
+   "atr_pct": 3.06,
+   "vol20_pct": 34.8,
+   "vol_1ano_pct": 32.1,
    "suporte_20d": 38.11,
-   "resistencia_20d": 42.6,
-   "volume_vs_media20": 1.02,
+   "resistencia_20d": 42.56,
+   "volume_vs_media20": 0.92,
    "tendencia": "lateral",
    "historico": {
     "datas": [
-     "2026-06-05",
      "2026-06-08",
      "2026-06-09",
      "2026-06-10",
@@ -1495,10 +1494,10 @@
      "2026-11-19",
      "2026-11-23",
      "2026-11-24",
-     "2026-11-25"
+     "2026-11-25",
+     "2026-11-26"
     ],
     "fech": [
-     38.83,
      38.52,
      39.22,
      39.36,
@@ -1617,10 +1616,10 @@
      40.07,
      39.73,
      39.74,
-     40.01
+     40.01,
+     42.56
     ],
     "mm50": [
-     42.31,
      42.23,
      42.16,
      42.1,
@@ -1739,6 +1738,7 @@
      43.71,
      43.67,
      43.62,
+     43.57,
      43.57
     ]
    },
@@ -1909,9 +1909,9 @@
     ],
     "vi_atm": 29.7,
     "vencimento_ref": "2026-12-18",
-    "vi_vs_vol_ano": 0.94,
+    "vi_vs_vol_ano": 0.93,
     "leitura_vi": "em linha",
-    "vi_vs_vol20": 1.1,
+    "vi_vs_vol20": 0.85,
     "n_liquidas": 8
    },
    "fundamentos": {
@@ -1923,12 +1923,12 @@
     "patrimonio": 239262000000.0,
     "acoes": 11022026000.0,
     "lpa": 4.33,
-    "p_l": 9.2,
-    "p_vp": 1.84,
+    "p_l": 9.8,
+    "p_vp": 1.96,
     "roe_pct": 20.0,
     "cresc_lucro_pct": 8.8,
     "proventos_12m": 3.06,
-    "dividend_yield_pct": 7.7,
+    "dividend_yield_pct": 7.2,
     "ultimos_proventos": [
      {
       "data": "2026-11-03",
@@ -1994,27 +1994,26 @@
   },
   {
    "ativo": "BBDC4",
-   "data": "2026-11-25",
-   "preco": 14.19,
-   "var_dia_pct": 4.19,
-   "var_21d_pct": -30.34,
-   "mm21": 14.31,
-   "mm50": 17.37,
-   "mm200": 18.33,
-   "dist_mm50_pct": -18.3,
-   "ifr14": 37.8,
+   "data": "2026-11-26",
+   "preco": 15.83,
+   "var_dia_pct": 11.56,
+   "var_21d_pct": -0.75,
+   "mm21": 14.3,
+   "mm50": 17.32,
+   "mm200": 18.3,
+   "dist_mm50_pct": -8.59,
+   "ifr14": 53.4,
    "ifr_leitura": "neutro",
-   "atr14": 0.6,
-   "atr_pct": 4.22,
-   "vol20_pct": 42.9,
-   "vol_1ano_pct": 40.0,
+   "atr14": 0.67,
+   "atr_pct": 4.25,
+   "vol20_pct": 59.1,
+   "vol_1ano_pct": 41.4,
    "suporte_20d": 13.44,
-   "resistencia_20d": 16.3,
-   "volume_vs_media20": 0.9,
+   "resistencia_20d": 15.83,
+   "volume_vs_media20": 1.53,
    "tendencia": "baixa",
    "historico": {
     "datas": [
-     "2026-06-05",
      "2026-06-08",
      "2026-06-09",
      "2026-06-10",
@@ -2133,10 +2132,10 @@
      "2026-11-19",
      "2026-11-23",
      "2026-11-24",
-     "2026-11-25"
+     "2026-11-25",
+     "2026-11-26"
     ],
     "fech": [
-     17.47,
      17.2,
      17.43,
      17.26,
@@ -2255,10 +2254,10 @@
      13.83,
      13.71,
      13.62,
-     14.19
+     14.19,
+     15.83
     ],
     "mm50": [
-     18.93,
      18.89,
      18.85,
      18.82,
@@ -2377,7 +2376,8 @@
      17.64,
      17.55,
      17.46,
-     17.37
+     17.37,
+     17.32
     ]
    },
    "opcoes": {
@@ -2587,9 +2587,9 @@
     ],
     "vi_atm": 37.4,
     "vencimento_ref": "2026-12-18",
-    "vi_vs_vol_ano": 0.94,
+    "vi_vs_vol_ano": 0.9,
     "leitura_vi": "em linha",
-    "vi_vs_vol20": 0.87,
+    "vi_vs_vol20": 0.63,
     "n_liquidas": 21
    },
    "fundamentos": {
@@ -2601,12 +2601,12 @@
     "patrimonio": 195045587000.0,
     "acoes": 10570712028.0,
     "lpa": 2.5,
-    "p_l": 5.7,
-    "p_vp": 0.77,
+    "p_l": 6.3,
+    "p_vp": 0.86,
     "roe_pct": 13.6,
     "cresc_lucro_pct": 14.5,
     "proventos_12m": 1.22,
-    "dividend_yield_pct": 8.6,
+    "dividend_yield_pct": 7.7,
     "ultimos_proventos": [
      {
       "data": "2026-11-04",
@@ -2635,27 +2635,26 @@
   },
   {
    "ativo": "BBAS3",
-   "data": "2026-11-25",
-   "preco": 14.69,
-   "var_dia_pct": 3.6,
-   "var_21d_pct": -40.57,
-   "mm21": 15.88,
-   "mm50": 20.23,
-   "mm200": 21.48,
-   "dist_mm50_pct": -27.39,
-   "ifr14": 29.3,
-   "ifr_leitura": "sobrevendido (<30)",
-   "atr14": 0.81,
-   "atr_pct": 5.5,
-   "vol20_pct": 42.9,
-   "vol_1ano_pct": 48.1,
+   "data": "2026-11-26",
+   "preco": 16.54,
+   "var_dia_pct": 12.59,
+   "var_21d_pct": -5.32,
+   "mm21": 15.84,
+   "mm50": 20.12,
+   "mm200": 21.44,
+   "dist_mm50_pct": -17.79,
+   "ifr14": 46.2,
+   "ifr_leitura": "neutro",
+   "atr14": 0.88,
+   "atr_pct": 5.34,
+   "vol20_pct": 62.4,
+   "vol_1ano_pct": 49.5,
    "suporte_20d": 14.02,
-   "resistencia_20d": 18.31,
-   "volume_vs_media20": 0.75,
+   "resistencia_20d": 17.58,
+   "volume_vs_media20": 0.95,
    "tendencia": "baixa",
    "historico": {
     "datas": [
-     "2026-06-05",
      "2026-06-08",
      "2026-06-09",
      "2026-06-10",
@@ -2774,10 +2773,10 @@
      "2026-11-19",
      "2026-11-23",
      "2026-11-24",
-     "2026-11-25"
+     "2026-11-25",
+     "2026-11-26"
     ],
     "fech": [
-     19.17,
      19.1,
      19.11,
      19.0,
@@ -2896,10 +2895,10 @@
      14.3,
      14.2,
      14.18,
-     14.69
+     14.69,
+     16.54
     ],
     "mm50": [
-     22.26,
      22.17,
      22.07,
      21.99,
@@ -3018,7 +3017,8 @@
      20.72,
      20.56,
      20.39,
-     20.23
+     20.23,
+     20.12
     ]
    },
    "opcoes": {
@@ -3228,9 +3228,9 @@
     ],
     "vi_atm": 42.7,
     "vencimento_ref": "2026-12-18",
-    "vi_vs_vol_ano": 0.89,
+    "vi_vs_vol_ano": 0.86,
     "leitura_vi": "em linha",
-    "vi_vs_vol20": 1.0,
+    "vi_vs_vol20": 0.68,
     "n_liquidas": 21
    },
    "fundamentos": {
@@ -3242,12 +3242,12 @@
     "patrimonio": 186146636000.0,
     "acoes": 5709020778.0,
     "lpa": 2.48,
-    "p_l": 5.9,
-    "p_vp": 0.45,
+    "p_l": 6.7,
+    "p_vp": 0.51,
     "roe_pct": 7.6,
     "cresc_lucro_pct": -24.5,
     "proventos_12m": 0.65,
-    "dividend_yield_pct": 4.5,
+    "dividend_yield_pct": 4.0,
     "ultimos_proventos": [
      {
       "data": "2026-09-02",
@@ -3315,27 +3315,26 @@
   },
   {
    "ativo": "B3SA3",
-   "data": "2026-11-25",
-   "preco": 14.58,
-   "var_dia_pct": 2.82,
-   "var_21d_pct": -38.35,
-   "mm21": 14.49,
-   "mm50": 17.88,
+   "data": "2026-11-26",
+   "preco": 16.16,
+   "var_dia_pct": 10.84,
+   "var_21d_pct": 7.23,
+   "mm21": 14.54,
+   "mm50": 17.86,
    "mm200": 16.93,
-   "dist_mm50_pct": -18.46,
-   "ifr14": 38.5,
+   "dist_mm50_pct": -9.5,
+   "ifr14": 52.2,
    "ifr_leitura": "neutro",
-   "atr14": 0.82,
-   "atr_pct": 5.63,
-   "vol20_pct": 42.0,
-   "vol_1ano_pct": 61.7,
+   "atr14": 0.88,
+   "atr_pct": 5.42,
+   "vol20_pct": 55.7,
+   "vol_1ano_pct": 62.6,
    "suporte_20d": 13.15,
-   "resistencia_20d": 15.78,
-   "volume_vs_media20": 0.58,
+   "resistencia_20d": 16.17,
+   "volume_vs_media20": 0.77,
    "tendencia": "lateral",
    "historico": {
     "datas": [
-     "2026-06-05",
      "2026-06-08",
      "2026-06-09",
      "2026-06-10",
@@ -3454,10 +3453,10 @@
      "2026-11-19",
      "2026-11-23",
      "2026-11-24",
-     "2026-11-25"
+     "2026-11-25",
+     "2026-11-26"
     ],
     "fech": [
-     15.41,
      15.22,
      15.39,
      15.12,
@@ -3576,10 +3575,10 @@
      14.28,
      14.16,
      14.18,
-     14.58
+     14.58,
+     16.16
     ],
     "mm50": [
-     17.79,
      17.75,
      17.7,
      17.64,
@@ -3698,7 +3697,8 @@
      18.07,
      18.0,
      17.93,
-     17.88
+     17.88,
+     17.86
     ]
    },
    "opcoes": {
@@ -3848,9 +3848,9 @@
     ],
     "vi_atm": 46.7,
     "vencimento_ref": "2026-12-18",
-    "vi_vs_vol_ano": 0.76,
+    "vi_vs_vol_ano": 0.75,
     "leitura_vi": "baratas",
-    "vi_vs_vol20": 1.11,
+    "vi_vs_vol20": 0.84,
     "n_liquidas": 7
    },
    "fundamentos": {
@@ -3862,8 +3862,8 @@
     "patrimonio": 18905007000.0,
     "acoes": 4976128403.0,
     "lpa": 1.15,
-    "p_l": 12.7,
-    "p_vp": 3.84,
+    "p_l": 14.1,
+    "p_vp": 4.25,
     "roe_pct": 30.2,
     "cresc_lucro_pct": 30.6,
     "margem_liquida_pct": 46.4,
@@ -3871,7 +3871,7 @@
     "divida_liquida": -2813435000.0,
     "div_liq_ebit": -0.38,
     "proventos_12m": 0.9,
-    "dividend_yield_pct": 6.2,
+    "dividend_yield_pct": 5.6,
     "ultimos_proventos": [
      {
       "data": "2026-09-23",
@@ -3925,27 +3925,26 @@
   },
   {
    "ativo": "ABEV3",
-   "data": "2026-11-25",
-   "preco": 15.81,
-   "var_dia_pct": -1.8,
-   "var_21d_pct": -5.22,
-   "mm21": 15.56,
-   "mm50": 15.8,
+   "data": "2026-11-26",
+   "preco": 16.43,
+   "var_dia_pct": 3.92,
+   "var_21d_pct": 6.9,
+   "mm21": 15.61,
+   "mm50": 15.81,
    "mm200": 15.72,
-   "dist_mm50_pct": 0.07,
-   "ifr14": 50.0,
+   "dist_mm50_pct": 3.92,
+   "ifr14": 60.3,
    "ifr_leitura": "neutro",
-   "atr14": 0.35,
-   "atr_pct": 2.18,
-   "vol20_pct": 26.2,
-   "vol_1ano_pct": 27.1,
+   "atr14": 0.36,
+   "atr_pct": 2.22,
+   "vol20_pct": 29.1,
+   "vol_1ano_pct": 27.4,
    "suporte_20d": 14.35,
-   "resistencia_20d": 16.25,
-   "volume_vs_media20": 1.14,
+   "resistencia_20d": 16.43,
+   "volume_vs_media20": 0.84,
    "tendencia": "alta",
    "historico": {
     "datas": [
-     "2026-06-05",
      "2026-06-08",
      "2026-06-09",
      "2026-06-10",
@@ -4064,10 +4063,10 @@
      "2026-11-19",
      "2026-11-23",
      "2026-11-24",
-     "2026-11-25"
+     "2026-11-25",
+     "2026-11-26"
     ],
     "fech": [
-     16.17,
      16.08,
      16.21,
      16.28,
@@ -4186,10 +4185,10 @@
      16.08,
      15.94,
      16.1,
-     15.81
+     15.81,
+     16.43
     ],
     "mm50": [
-     15.66,
      15.69,
      15.71,
      15.74,
@@ -4308,7 +4307,8 @@
      15.78,
      15.79,
      15.8,
-     15.8
+     15.8,
+     15.81
     ]
    },
    "opcoes": {
@@ -4328,8 +4328,8 @@
     "patrimonio": 91441947000.0,
     "acoes": 15416487000.0,
     "lpa": 1.02,
-    "p_l": 15.5,
-    "p_vp": 2.67,
+    "p_l": 16.1,
+    "p_vp": 2.77,
     "roe_pct": 17.2,
     "cresc_lucro_pct": 2.2,
     "margem_liquida_pct": 17.7,
@@ -4337,7 +4337,7 @@
     "divida_liquida": -19199355000.0,
     "div_liq_ebit": -0.82,
     "proventos_12m": 0.85,
-    "dividend_yield_pct": 5.4,
+    "dividend_yield_pct": 5.2,
     "ultimos_proventos": [
      {
       "data": "2026-09-22",
@@ -4375,27 +4375,26 @@
   },
   {
    "ativo": "WEGE3",
-   "data": "2026-11-25",
-   "preco": 49.65,
-   "var_dia_pct": -1.1,
-   "var_21d_pct": 16.19,
-   "mm21": 49.59,
-   "mm50": 49.74,
-   "mm200": 47.87,
-   "dist_mm50_pct": -0.19,
-   "ifr14": 49.2,
+   "data": "2026-11-26",
+   "preco": 51.36,
+   "var_dia_pct": 3.44,
+   "var_21d_pct": 15.34,
+   "mm21": 49.91,
+   "mm50": 49.76,
+   "mm200": 47.86,
+   "dist_mm50_pct": 3.23,
+   "ifr14": 56.4,
    "ifr_leitura": "neutro",
-   "atr14": 1.64,
-   "atr_pct": 3.3,
-   "vol20_pct": 35.5,
-   "vol_1ano_pct": 31.1,
-   "suporte_20d": 45.06,
+   "atr14": 1.72,
+   "atr_pct": 3.35,
+   "vol20_pct": 35.2,
+   "vol_1ano_pct": 31.2,
+   "suporte_20d": 45.77,
    "resistencia_20d": 52.5,
-   "volume_vs_media20": 0.87,
-   "tendencia": "lateral",
+   "volume_vs_media20": 0.77,
+   "tendencia": "alta",
    "historico": {
     "datas": [
-     "2026-06-05",
      "2026-06-08",
      "2026-06-09",
      "2026-06-10",
@@ -4514,10 +4513,10 @@
      "2026-11-19",
      "2026-11-23",
      "2026-11-24",
-     "2026-11-25"
+     "2026-11-25",
+     "2026-11-26"
     ],
     "fech": [
-     42.46,
      44.0,
      43.33,
      42.39,
@@ -4636,10 +4635,10 @@
      51.13,
      49.91,
      50.2,
-     49.65
+     49.65,
+     51.36
     ],
     "mm50": [
-     46.36,
      46.29,
      46.2,
      46.09,
@@ -4758,7 +4757,8 @@
      49.85,
      49.82,
      49.78,
-     49.74
+     49.74,
+     49.76
     ]
    },
    "opcoes": {
@@ -4819,8 +4819,8 @@
     "patrimonio": 21367143000.0,
     "acoes": 4195829691.0,
     "lpa": 1.49,
-    "p_l": 33.2,
-    "p_vp": 9.75,
+    "p_l": 34.4,
+    "p_vp": 10.09,
     "roe_pct": 29.3,
     "cresc_lucro_pct": -2.2,
     "margem_liquida_pct": 15.4,
@@ -4828,7 +4828,7 @@
     "divida_liquida": -2585002000.0,
     "div_liq_ebit": -0.33,
     "proventos_12m": 2.0,
-    "dividend_yield_pct": 4.0,
+    "dividend_yield_pct": 3.9,
     "ultimos_proventos": [
      {
       "data": "2026-09-21",
@@ -4870,27 +4870,26 @@
   },
   {
    "ativo": "PRIO3",
-   "data": "2026-11-25",
-   "preco": 60.5,
-   "var_dia_pct": 1.51,
-   "var_21d_pct": -18.02,
-   "mm21": 63.9,
-   "mm50": 64.44,
-   "mm200": 61.59,
-   "dist_mm50_pct": -6.12,
-   "ifr14": 42.1,
+   "data": "2026-11-26",
+   "preco": 62.45,
+   "var_dia_pct": 3.22,
+   "var_21d_pct": -12.22,
+   "mm21": 63.49,
+   "mm50": 64.41,
+   "mm200": 61.66,
+   "dist_mm50_pct": -3.05,
+   "ifr14": 47.8,
    "ifr_leitura": "neutro",
-   "atr14": 2.45,
-   "atr_pct": 4.05,
-   "vol20_pct": 47.4,
-   "vol_1ano_pct": 38.2,
+   "atr14": 2.42,
+   "atr_pct": 3.87,
+   "vol20_pct": 49.4,
+   "vol_1ano_pct": 38.3,
    "suporte_20d": 56.9,
    "resistencia_20d": 72.9,
-   "volume_vs_media20": 0.69,
+   "volume_vs_media20": 0.51,
    "tendencia": "lateral",
    "historico": {
     "datas": [
-     "2026-06-05",
      "2026-06-08",
      "2026-06-09",
      "2026-06-10",
@@ -5009,10 +5008,10 @@
      "2026-11-19",
      "2026-11-23",
      "2026-11-24",
-     "2026-11-25"
+     "2026-11-25",
+     "2026-11-26"
     ],
     "fech": [
-     61.12,
      62.54,
      61.8,
      62.88,
@@ -5131,10 +5130,10 @@
      60.2,
      58.22,
      59.6,
-     60.5
+     60.5,
+     62.45
     ],
     "mm50": [
-     65.64,
      65.53,
      65.43,
      65.31,
@@ -5253,7 +5252,8 @@
      64.69,
      64.61,
      64.52,
-     64.44
+     64.44,
+     64.41
     ]
    },
    "opcoes": {
@@ -5325,7 +5325,7 @@
     "vencimento_ref": "2026-12-18",
     "vi_vs_vol_ano": 1.03,
     "leitura_vi": "em linha",
-    "vi_vs_vol20": 0.83,
+    "vi_vs_vol20": 0.8,
     "n_liquidas": 3
    },
    "fundamentos": {
@@ -5337,8 +5337,8 @@
     "patrimonio": 30852862000.0,
     "acoes": 792111206.0,
     "lpa": 7.77,
-    "p_l": 7.8,
-    "p_vp": 1.55,
+    "p_l": 8.0,
+    "p_vp": 1.6,
     "roe_pct": 20.0,
     "cresc_lucro_pct": 125.9,
     "margem_liquida_pct": 23.5,
@@ -5371,27 +5371,26 @@
   },
   {
    "ativo": "BOVA11",
-   "data": "2026-11-25",
-   "preco": 164.01,
-   "var_dia_pct": 1.56,
-   "var_21d_pct": -18.68,
-   "mm21": 166.59,
-   "mm50": 181.74,
-   "mm200": 177.73,
-   "dist_mm50_pct": -9.76,
-   "ifr14": 36.1,
+   "data": "2026-11-26",
+   "preco": 174.49,
+   "var_dia_pct": 6.39,
+   "var_21d_pct": 1.2,
+   "mm21": 166.69,
+   "mm50": 181.58,
+   "mm200": 177.71,
+   "dist_mm50_pct": -3.9,
+   "ifr14": 53.2,
    "ifr_leitura": "neutro",
-   "atr14": 4.0,
-   "atr_pct": 2.44,
-   "vol20_pct": 20.5,
-   "vol_1ano_pct": 26.0,
+   "atr14": 4.47,
+   "atr_pct": 2.56,
+   "vol20_pct": 30.7,
+   "vol_1ano_pct": 26.7,
    "suporte_20d": 161.48,
-   "resistencia_20d": 175.66,
-   "volume_vs_media20": 0.93,
+   "resistencia_20d": 174.49,
+   "volume_vs_media20": 1.25,
    "tendencia": "lateral",
    "historico": {
     "datas": [
-     "2026-06-05",
      "2026-06-08",
      "2026-06-09",
      "2026-06-10",
@@ -5510,10 +5509,10 @@
      "2026-11-19",
      "2026-11-23",
      "2026-11-24",
-     "2026-11-25"
+     "2026-11-25",
+     "2026-11-26"
     ],
     "fech": [
-     165.75,
      165.5,
      166.42,
      165.82,
@@ -5632,10 +5631,10 @@
      163.6,
      162.35,
      161.49,
-     164.01
+     164.01,
+     174.49
     ],
     "mm50": [
-     180.95,
      180.67,
      180.36,
      180.08,
@@ -5754,7 +5753,8 @@
      183.02,
      182.61,
      182.14,
-     181.74
+     181.74,
+     181.58
     ]
    },
    "opcoes": {
@@ -5964,9 +5964,9 @@
     ],
     "vi_atm": 21.6,
     "vencimento_ref": "2026-12-18",
-    "vi_vs_vol_ano": 0.83,
+    "vi_vs_vol_ano": 0.81,
     "leitura_vi": "em linha",
-    "vi_vs_vol20": 1.05,
+    "vi_vs_vol20": 0.7,
     "n_liquidas": 49
    }
   }
@@ -6110,8 +6110,8 @@
     "roe_pct": 27.8,
     "p_l": 3.9,
     "balanco": "2026-09-30",
-    "preco_hoje": 41.36,
-    "var_desde_troca_pct": -3.1
+    "preco_hoje": 43.19,
+    "var_desde_troca_pct": 1.2
    },
    {
     "ticker": "VBBR3",
@@ -6120,8 +6120,8 @@
     "roe_pct": 27.9,
     "p_l": 5.1,
     "balanco": "2026-09-30",
-    "preco_hoje": 32.47,
-    "var_desde_troca_pct": 7.8
+    "preco_hoje": 35.2,
+    "var_desde_troca_pct": 16.8
    },
    {
     "ticker": "DIRR3",
@@ -6130,8 +6130,8 @@
     "roe_pct": 27.9,
     "p_l": 5.5,
     "balanco": "2026-09-30",
-    "preco_hoje": 9.33,
-    "var_desde_troca_pct": 6.8
+    "preco_hoje": 9.93,
+    "var_desde_troca_pct": 13.6
    },
    {
     "ticker": "POMO4",
@@ -6140,8 +6140,8 @@
     "roe_pct": 24.7,
     "p_l": 4.2,
     "balanco": "2026-09-30",
-    "preco_hoje": 3.43,
-    "var_desde_troca_pct": -5.2
+    "preco_hoje": 3.62,
+    "var_desde_troca_pct": 0.0
    },
    {
     "ticker": "BBSE3",
@@ -6150,8 +6150,8 @@
     "roe_pct": 68.2,
     "p_l": 7.8,
     "balanco": "2026-09-30",
-    "preco_hoje": 36.52,
-    "var_desde_troca_pct": -1.3
+    "preco_hoje": 37.56,
+    "var_desde_troca_pct": 1.5
    },
    {
     "ticker": "UGPA3",
@@ -6160,8 +6160,8 @@
     "roe_pct": 25.0,
     "p_l": 6.3,
     "balanco": "2026-09-30",
-    "preco_hoje": 30.84,
-    "var_desde_troca_pct": -1.7
+    "preco_hoje": 32.92,
+    "var_desde_troca_pct": 5.0
    },
    {
     "ticker": "PSSA3",
@@ -6170,8 +6170,8 @@
     "roe_pct": 22.0,
     "p_l": 7.6,
     "balanco": "2026-09-30",
-    "preco_hoje": 41.88,
-    "var_desde_troca_pct": -4.7
+    "preco_hoje": 43.06,
+    "var_desde_troca_pct": -2.0
    },
    {
     "ticker": "CMIG4",
@@ -6180,8 +6180,8 @@
     "roe_pct": 18.0,
     "p_l": 5.7,
     "balanco": "2026-09-30",
-    "preco_hoje": 10.73,
-    "var_desde_troca_pct": -1.9
+    "preco_hoje": 11.29,
+    "var_desde_troca_pct": 3.2
    },
    {
     "ticker": "CYRE3",
@@ -6190,8 +6190,8 @@
     "roe_pct": 15.0,
     "p_l": 4.1,
     "balanco": "2026-09-30",
-    "preco_hoje": 19.66,
-    "var_desde_troca_pct": 6.7
+    "preco_hoje": 21.0,
+    "var_desde_troca_pct": 13.9
    },
    {
     "ticker": "CXSE3",
@@ -6200,14 +6200,14 @@
     "roe_pct": 32.6,
     "p_l": 13.5,
     "balanco": "2026-09-30",
-    "preco_hoje": 20.3,
-    "var_desde_troca_pct": -1.3
+    "preco_hoje": 21.07,
+    "var_desde_troca_pct": 2.4
    }
   ],
   "analisadas": 42,
   "aprovadas_no_filtro": 32,
   "montada_em": "2026-11-21",
-  "var_media_desde_troca_pct": 0.2,
+  "var_media_desde_troca_pct": 5.6,
   "proxima_troca": "2027-04-01",
   "teste": {
    "periodo": "abril/2018 a novembro/2026",
@@ -6235,50 +6235,50 @@
    "pior_queda_bova11_pct": -46.9
   },
   "precos": {
-   "PETR4": 41.36,
-   "VALE3": 56.9,
-   "ITUB4": 40.01,
-   "BBDC4": 14.19,
-   "BBAS3": 14.69,
-   "B3SA3": 14.58,
-   "ABEV3": 15.81,
-   "WEGE3": 49.65,
-   "PRIO3": 60.5,
-   "ITSA4": 13.09,
-   "SBSP3": 28.48,
-   "EQTL3": 34.87,
-   "RENT3": 29.32,
-   "SUZB3": 55.4,
-   "GGBR4": 25.86,
-   "RADL3": 15.43,
-   "RDOR3": 36.8,
-   "LREN3": 9.26,
-   "MGLU3": 9.29,
-   "TIMS3": 21.83,
-   "VIVT3": 34.8,
-   "CMIG4": 10.73,
-   "BBSE3": 36.52,
-   "CXSE3": 20.3,
-   "HYPE3": 22.59,
-   "UGPA3": 30.84,
-   "VBBR3": 32.47,
-   "ENEV3": 27.53,
-   "TOTS3": 31.81,
-   "RAIL3": 17.03,
-   "CMIN3": 4.85,
-   "CSAN3": 3.42,
-   "EGIE3": 24.94,
-   "CPFE3": 42.89,
-   "CSMG3": 60.02,
-   "FLRY3": 22.45,
-   "MULT3": 26.64,
-   "CYRE3": 19.66,
-   "DIRR3": 9.33,
-   "POMO4": 3.43,
-   "PSSA3": 41.88,
-   "KLBN4": 3.34,
-   "TAEE4": 13.25,
-   "SANB4": 13.69
+   "PETR4": 43.19,
+   "VALE3": 58.73,
+   "ITUB4": 42.56,
+   "BBDC4": 15.83,
+   "BBAS3": 16.54,
+   "B3SA3": 16.16,
+   "ABEV3": 16.43,
+   "WEGE3": 51.36,
+   "PRIO3": 62.45,
+   "ITSA4": 13.99,
+   "SBSP3": 30.35,
+   "EQTL3": 37.73,
+   "RENT3": 33.77,
+   "SUZB3": 54.87,
+   "GGBR4": 26.5,
+   "RADL3": 17.46,
+   "RDOR3": 39.16,
+   "LREN3": 10.02,
+   "MGLU3": 9.65,
+   "TIMS3": 22.99,
+   "VIVT3": 36.05,
+   "CMIG4": 11.29,
+   "BBSE3": 37.56,
+   "CXSE3": 21.07,
+   "HYPE3": 24.32,
+   "UGPA3": 32.92,
+   "VBBR3": 35.2,
+   "ENEV3": 28.72,
+   "TOTS3": 35.4,
+   "RAIL3": 17.9,
+   "CMIN3": 5.07,
+   "CSAN3": 3.84,
+   "EGIE3": 26.56,
+   "CPFE3": 45.7,
+   "CSMG3": 63.41,
+   "FLRY3": 24.3,
+   "MULT3": 28.99,
+   "CYRE3": 21.0,
+   "DIRR3": 9.93,
+   "POMO4": 3.62,
+   "PSSA3": 43.06,
+   "KLBN4": 3.41,
+   "TAEE4": 13.69,
+   "SANB4": 13.88
   },
   "teste_realizar_lucro": {
    "sem_realizar": {
