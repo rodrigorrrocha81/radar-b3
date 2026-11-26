@@ -1,29 +1,7 @@
 {
  "inicio": "2026-11-19",
- "ultimo_pregao": "2026-11-24",
- "pendentes": [
-  {
-   "estrategia": "compra",
-   "ativo": "WEGE3",
-   "tipo": "call",
-   "codigo": "WEGEA510",
-   "strike": 51.03,
-   "vencimento": "2027-01-15",
-   "sinal": "2026-11-24"
-  },
-  {
-   "estrategia": "venda",
-   "ativo": "BOVA11",
-   "tipo": "call",
-   "vendida": "BOVAA170",
-   "protecao": "BOVAA18",
-   "strike_vendida": 170.0,
-   "strike_protecao": 180.0,
-   "largura": 10.0,
-   "vencimento": "2027-01-15",
-   "sinal": "2026-11-24"
-  }
- ],
+ "ultimo_pregao": "2026-11-25",
+ "pendentes": [],
  "abertas": [
   {
    "estrategia": "venda",
@@ -39,8 +17,8 @@
    "entrada": "2026-11-23",
    "credito": 0.11,
    "qtd": 60.975609756097555,
-   "custo_zerar": 0.17,
-   "resultado": -3.66
+   "custo_zerar": 0.21,
+   "resultado": -6.1
   },
   {
    "estrategia": "venda",
@@ -56,8 +34,8 @@
    "entrada": "2026-11-23",
    "credito": 0.05,
    "qtd": 51.282051282051285,
-   "custo_zerar": 0.16,
-   "resultado": -5.64
+   "custo_zerar": 0.22,
+   "resultado": -8.72
   },
   {
    "estrategia": "venda",
@@ -73,8 +51,8 @@
    "entrada": "2026-11-23",
    "credito": 0.07,
    "qtd": 147.05882352941177,
-   "custo_zerar": 0.09,
-   "resultado": -2.94
+   "custo_zerar": 0.27,
+   "resultado": -29.41
   },
   {
    "estrategia": "venda",
@@ -90,8 +68,8 @@
    "entrada": "2026-11-23",
    "credito": 0.2,
    "qtd": 64.51612903225806,
-   "custo_zerar": 0.24,
-   "resultado": -2.58
+   "custo_zerar": 0.41,
+   "resultado": -13.55
   },
   {
    "estrategia": "venda",
@@ -107,8 +85,22 @@
    "entrada": "2026-11-23",
    "credito": 0.12,
    "qtd": 158.73015873015873,
-   "custo_zerar": 0.13,
-   "resultado": -1.59
+   "custo_zerar": 0.2,
+   "resultado": -12.7
+  },
+  {
+   "estrategia": "compra",
+   "ativo": "WEGE3",
+   "tipo": "call",
+   "codigo": "WEGEA510",
+   "strike": 51.03,
+   "vencimento": "2027-01-15",
+   "sinal": "2026-11-24",
+   "entrada": "2026-11-25",
+   "preco_entrada": 2.2,
+   "qtd": 45.43181818181818,
+   "valor_un": 1.21,
+   "resultado": -45.05
   }
  ],
  "fechadas": []
