@@ -8,8 +8,8 @@
    "roe_pct": 27.8,
    "p_l": 3.9,
    "balanco": "2026-09-30",
-   "preco_hoje": 43.19,
-   "var_desde_troca_pct": 1.2
+   "preco_hoje": 42.14,
+   "var_desde_troca_pct": -1.2
   },
   {
    "ticker": "VBBR3",
@@ -18,8 +18,8 @@
    "roe_pct": 27.9,
    "p_l": 5.1,
    "balanco": "2026-09-30",
-   "preco_hoje": 35.2,
-   "var_desde_troca_pct": 16.8
+   "preco_hoje": 34.17,
+   "var_desde_troca_pct": 13.4
   },
   {
    "ticker": "DIRR3",
@@ -28,8 +28,8 @@
    "roe_pct": 27.9,
    "p_l": 5.5,
    "balanco": "2026-09-30",
-   "preco_hoje": 9.93,
-   "var_desde_troca_pct": 13.6
+   "preco_hoje": 10.34,
+   "var_desde_troca_pct": 18.3
   },
   {
    "ticker": "POMO4",
@@ -38,8 +38,8 @@
    "roe_pct": 24.7,
    "p_l": 4.2,
    "balanco": "2026-09-30",
-   "preco_hoje": 3.62,
-   "var_desde_troca_pct": 0.0
+   "preco_hoje": 3.78,
+   "var_desde_troca_pct": 4.4
   },
   {
    "ticker": "BBSE3",
@@ -48,8 +48,8 @@
    "roe_pct": 68.2,
    "p_l": 7.8,
    "balanco": "2026-09-30",
-   "preco_hoje": 37.56,
-   "var_desde_troca_pct": 1.5
+   "preco_hoje": 37.34,
+   "var_desde_troca_pct": 0.9
   },
   {
    "ticker": "UGPA3",
@@ -58,8 +58,8 @@
    "roe_pct": 25.0,
    "p_l": 6.3,
    "balanco": "2026-09-30",
-   "preco_hoje": 32.92,
-   "var_desde_troca_pct": 5.0
+   "preco_hoje": 32.47,
+   "var_desde_troca_pct": 3.5
   },
   {
    "ticker": "PSSA3",
@@ -68,8 +68,8 @@
    "roe_pct": 22.0,
    "p_l": 7.6,
    "balanco": "2026-09-30",
-   "preco_hoje": 43.06,
-   "var_desde_troca_pct": -2.0
+   "preco_hoje": 43.65,
+   "var_desde_troca_pct": -0.7
   },
   {
    "ticker": "CMIG4",
@@ -78,8 +78,8 @@
    "roe_pct": 18.0,
    "p_l": 5.7,
    "balanco": "2026-09-30",
-   "preco_hoje": 11.29,
-   "var_desde_troca_pct": 3.2
+   "preco_hoje": 11.32,
+   "var_desde_troca_pct": 3.5
   },
   {
    "ticker": "CYRE3",
@@ -88,8 +88,8 @@
    "roe_pct": 15.0,
    "p_l": 4.1,
    "balanco": "2026-09-30",
-   "preco_hoje": 21.0,
-   "var_desde_troca_pct": 13.9
+   "preco_hoje": 22.35,
+   "var_desde_troca_pct": 21.3
   },
   {
    "ticker": "CXSE3",
@@ -98,14 +98,14 @@
    "roe_pct": 32.6,
    "p_l": 13.5,
    "balanco": "2026-09-30",
-   "preco_hoje": 21.07,
-   "var_desde_troca_pct": 2.4
+   "preco_hoje": 20.52,
+   "var_desde_troca_pct": -0.2
   }
  ],
  "analisadas": 42,
  "aprovadas_no_filtro": 32,
  "montada_em": "2026-11-21",
- "var_media_desde_troca_pct": 5.6,
+ "var_media_desde_troca_pct": 6.3,
  "proxima_troca": "2027-04-01",
  "teste": {
   "periodo": "abril/2018 a novembro/2026",
@@ -133,50 +133,50 @@
   "pior_queda_bova11_pct": -46.9
  },
  "precos": {
-  "PETR4": 43.19,
-  "VALE3": 58.73,
-  "ITUB4": 42.56,
-  "BBDC4": 15.83,
-  "BBAS3": 16.54,
-  "B3SA3": 16.16,
-  "ABEV3": 16.43,
-  "WEGE3": 51.36,
-  "PRIO3": 62.45,
-  "ITSA4": 13.99,
-  "SBSP3": 30.35,
-  "EQTL3": 37.73,
-  "RENT3": 33.77,
-  "SUZB3": 54.87,
-  "GGBR4": 26.5,
-  "RADL3": 17.46,
-  "RDOR3": 39.16,
-  "LREN3": 10.02,
-  "MGLU3": 9.65,
-  "TIMS3": 22.99,
-  "VIVT3": 36.05,
-  "CMIG4": 11.29,
-  "BBSE3": 37.56,
-  "CXSE3": 21.07,
-  "HYPE3": 24.32,
-  "UGPA3": 32.92,
-  "VBBR3": 35.2,
-  "ENEV3": 28.72,
-  "TOTS3": 35.4,
-  "RAIL3": 17.9,
-  "CMIN3": 5.07,
-  "CSAN3": 3.84,
-  "EGIE3": 26.56,
-  "CPFE3": 45.7,
-  "CSMG3": 63.41,
+  "PETR4": 42.14,
+  "VALE3": 57.19,
+  "ITUB4": 42.73,
+  "BBDC4": 16.07,
+  "BBAS3": 16.9,
+  "B3SA3": 17.23,
+  "ABEV3": 16.26,
+  "WEGE3": 49.87,
+  "PRIO3": 61.93,
+  "ITSA4": 14.09,
+  "SBSP3": 29.95,
+  "EQTL3": 38.46,
+  "RENT3": 34.65,
+  "SUZB3": 51.98,
+  "GGBR4": 25.89,
+  "RADL3": 16.98,
+  "RDOR3": 39.57,
+  "LREN3": 10.4,
+  "MGLU3": 10.59,
+  "TIMS3": 21.96,
+  "VIVT3": 35.0,
+  "CMIG4": 11.32,
+  "BBSE3": 37.34,
+  "CXSE3": 20.52,
+  "HYPE3": 24.39,
+  "UGPA3": 32.47,
+  "VBBR3": 34.17,
+  "ENEV3": 29.38,
+  "TOTS3": 37.44,
+  "RAIL3": 17.8,
+  "CMIN3": 5.21,
+  "CSAN3": 3.85,
+  "EGIE3": 26.45,
+  "CPFE3": 45.26,
+  "CSMG3": 62.9,
   "FLRY3": 24.3,
-  "MULT3": 28.99,
-  "CYRE3": 21.0,
-  "DIRR3": 9.93,
-  "POMO4": 3.62,
-  "PSSA3": 43.06,
-  "KLBN4": 3.41,
-  "TAEE4": 13.69,
-  "SANB4": 13.88
+  "MULT3": 30.11,
+  "CYRE3": 22.35,
+  "DIRR3": 10.34,
+  "POMO4": 3.78,
+  "PSSA3": 43.65,
+  "KLBN4": 3.36,
+  "TAEE4": 13.86,
+  "SANB4": 13.72
  },
  "teste_realizar_lucro": {
   "sem_realizar": {
