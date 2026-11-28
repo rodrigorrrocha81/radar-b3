@@ -1,6 +1,6 @@
 {
  "inicio": "2026-11-19",
- "ultimo_pregao": "2026-11-26",
+ "ultimo_pregao": "2026-11-27",
  "pendentes": [
   {
    "estrategia": "venda",
@@ -12,7 +12,7 @@
    "strike_protecao": 200.0,
    "largura": 15.0,
    "vencimento": "2027-01-15",
-   "sinal": "2026-11-26"
+   "sinal": "2026-11-27"
   }
  ],
  "abertas": [
@@ -30,8 +30,8 @@
    "entrada": "2026-11-23",
    "credito": 0.11,
    "qtd": 60.975609756097555,
-   "custo_zerar": 0.46,
-   "resultado": -21.34
+   "custo_zerar": 0.24,
+   "resultado": -7.93
   },
   {
    "estrategia": "venda",
@@ -47,8 +47,8 @@
    "entrada": "2026-11-23",
    "credito": 0.05,
    "qtd": 51.282051282051285,
-   "custo_zerar": 0.29,
-   "resultado": -12.31
+   "custo_zerar": 0.31,
+   "resultado": -13.33
   },
   {
    "estrategia": "venda",
@@ -64,8 +64,8 @@
    "entrada": "2026-11-23",
    "credito": 0.07,
    "qtd": 147.05882352941177,
-   "custo_zerar": 0.46,
-   "resultado": -57.35
+   "custo_zerar": 0.75,
+   "resultado": -100.0
   },
   {
    "estrategia": "venda",
@@ -81,8 +81,8 @@
    "entrada": "2026-11-23",
    "credito": 0.2,
    "qtd": 64.51612903225806,
-   "custo_zerar": 1.1,
-   "resultado": -58.06
+   "custo_zerar": 1.73,
+   "resultado": -98.71
   },
   {
    "estrategia": "venda",
@@ -112,8 +112,8 @@
    "entrada": "2026-11-25",
    "preco_entrada": 2.2,
    "qtd": 45.43181818181818,
-   "valor_un": 1.15,
-   "resultado": -47.78
+   "valor_un": 1.56,
+   "resultado": -29.16
   }
  ],
  "fechadas": []
